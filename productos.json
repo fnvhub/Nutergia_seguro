@@ -1,0 +1,1818 @@
+[
+  {
+    "id": "NUT001",
+    "nombre": "ACEROL C",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Vitamina C natural en comprimidos.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT002",
+    "nombre": "ACEROL C 15",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Vitamina C natural en formato reducido.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT003",
+    "nombre": "BARRITAS",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Barritas nutricionales.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT004",
+    "nombre": "BICEBE PLUS 30",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Complejo de vitaminas del grupo B.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT005",
+    "nombre": "BICEBE PLUS 90",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Complejo de vitaminas del grupo B en formato grande.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT006",
+    "nombre": "BILEINA 180",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Aceites esenciales ricos en GLA.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT007",
+    "nombre": "BILEINA 60",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Aceites esenciales ricos en GLA.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT008",
+    "nombre": "DETOX EXPOSITOR",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Material expositor.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT009",
+    "nombre": "ERGY 3 180",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Omega 3 EPA/DHA.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT010",
+    "nombre": "ERGY 3 60",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Omega 3 EPA/DHA en formato pequeño.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT011",
+    "nombre": "ERGY C",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Vitamina C con bioflavonoides.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT012",
+    "nombre": "ERGY D",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Vitamina D3.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT013",
+    "nombre": "ERGY D PLUS",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Vitamina D3 con cofactores.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT014",
+    "nombre": "ERGY YAM",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Extracto de ñame.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT015",
+    "nombre": "ERGYACTIV",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Complejo energético con vitaminas y minerales.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT016",
+    "nombre": "ERGYANTIOX FORTE",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Antioxidantes de amplio espectro.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT017",
+    "nombre": "ERGYBASE",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Minerales alcalinizantes.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT018",
+    "nombre": "ERGYCALM",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Extractos vegetales para relajación.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT019",
+    "nombre": "ERGYCARDIO",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Apoyo cardiovascular.",
+    "nota_delegado": "Producto con interacción con anticoagulantes.",
+    "contraindicaciones": "Anticoagulantes.",
+    "precauciones": "Controlar en pacientes con tratamiento anticoagulante."
+  },
+  {
+    "id": "NUT020",
+    "nombre": "ERGYCARE",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Complejo de apoyo general.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT021",
+    "nombre": "ERGYCELL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Antioxidantes celulares.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT022",
+    "nombre": "ERGYCLEAN",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Detox suave.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT023",
+    "nombre": "ERGYCOL",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "estatinas"
+    ],
+    "meds_interaccion": [
+      "Atorvastatina",
+      "Simvastatina",
+      "Rosuvastatina",
+      "Pravastatina",
+      "Lovastatina",
+      "Fluvastatina",
+      "Pitavastatina",
+      "Atorvastatina/amlodipino"
+    ],
+    "descripcion_corta": "Apoyo al metabolismo del colesterol.",
+    "nota_delegado": "Precaución en pacientes con medicación para el colesterol.",
+    "contraindicaciones": "Tratamiento con estatinas.",
+    "precauciones": "Sensibilidad a estatinas o medicación para el colesterol."
+  },
+  {
+    "id": "NUT024",
+    "nombre": "ERGYCOX 30",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes",
+      "analgésicos salicílicos",
+      "patología hepática",
+      "embarazo",
+      "lactancia"
+    ],
+    "meds_interaccion": [
+      "Aspirina",
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Apoyo articular con cúrcuma y té verde.",
+    "nota_delegado": "Reservado adultos. Riesgo con anticoagulantes, salicílicos y cúrcuma.",
+    "contraindicaciones": "Úlcera gástrica o duodenal, cálculos biliares, alergia a salicílicos.",
+    "precauciones": "No superar 800 mg EGCG/día. Embarazo y lactancia."
+  },
+  {
+    "id": "NUT025",
+    "nombre": "ERGYCOX 90",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes",
+      "analgésicos salicílicos",
+      "patología hepática",
+      "embarazo",
+      "lactancia"
+    ],
+    "meds_interaccion": [
+      "Aspirina",
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Apoyo articular con cúrcuma y té verde.",
+    "nota_delegado": "Reservado adultos. Riesgo con anticoagulantes, salicílicos y cúrcuma.",
+    "contraindicaciones": "Úlcera gástrica o duodenal, cálculos biliares, alergia a salicílicos.",
+    "precauciones": "No superar 800 mg EGCG/día. Embarazo y lactancia."
+  },
+  {
+    "id": "NUT026",
+    "nombre": "ERGYCOX EXPOSITOR",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Material expositor.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT027",
+    "nombre": "ERGYCRANBERRYL",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Arándano rojo para bienestar urinario.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT028",
+    "nombre": "ERGYDIGEST",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "medicación para la tiroides"
+    ],
+    "meds_interaccion": [
+      "Levotiroxina sódica",
+      "Liotironina sódica",
+      "Tiroides desecada"
+    ],
+    "descripcion_corta": "Apoyo digestivo con plantas y minerales.",
+    "nota_delegado": "Precaución en hipotiroidismo o tratamiento tiroideo.",
+    "contraindicaciones": "",
+    "precauciones": "Separar de medicación tiroidea."
+  },
+  {
+    "id": "NUT029",
+    "nombre": "ERGYDREN",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "insuficiencia cardiaca",
+      "insuficiencia renal"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Drenante con plantas.",
+    "nota_delegado": "",
+    "contraindicaciones": "Insuficiencia cardiaca o renal.",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT030",
+    "nombre": "ERGYEPUR",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "obstrucción biliar",
+      "embarazo",
+      "lactancia",
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Detox hepático.",
+    "nota_delegado": "",
+    "contraindicaciones": "Obstrucción de vías biliares.",
+    "precauciones": "Niños, embarazo, lactancia."
+  },
+  {
+    "id": "NUT031",
+    "nombre": "ERGYFEM BIENESTAR",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Apoyo femenino.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT032",
+    "nombre": "ERGYFEM CICLE",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Apoyo al ciclo menstrual.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT033",
+    "nombre": "ERGYFEM EQUILIBRIO",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Equilibrio hormonal femenino.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT034",
+    "nombre": "ERGYFERIL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Hierro biodisponible.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT035",
+    "nombre": "ERGYFIBRA",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Fibra prebiótica.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT036",
+    "nombre": "ERGYFLAVONA",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Extractos vegetales antioxidantes.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT037",
+    "nombre": "ERGYFLEX",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Apoyo articular.",
+    "nota_delegado": "Precaución con anticoagulantes.",
+    "contraindicaciones": "Anticoagulantes.",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT038",
+    "nombre": "ERGYFOSFORYL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Fosfatidilserina y omega 3 para función cognitiva.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT039",
+    "nombre": "ERGYIN",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Complejo de plantas para energía y vitalidad.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT040",
+    "nombre": "ERGYKID BIENESTAR",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Fórmula infantil para bienestar general.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "A partir de 3 años."
+  },
+  {
+    "id": "NUT041",
+    "nombre": "ERGYKID DEFENS",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Apoyo inmunitario infantil.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "A partir de 3 años."
+  },
+  {
+    "id": "NUT042",
+    "nombre": "ERGYKID MULTIVIT",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Multivitamínico infantil.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "A partir de 3 años."
+  },
+  {
+    "id": "NUT043",
+    "nombre": "ERGYLASE",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Enzimas digestivas.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT044",
+    "nombre": "ERGYLIVER",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "obstrucción biliar",
+      "embarazo",
+      "lactancia",
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Detox hepático con plantas.",
+    "nota_delegado": "",
+    "contraindicaciones": "Obstrucción de vías biliares.",
+    "precauciones": "Niños, embarazo, lactancia."
+  },
+  {
+    "id": "NUT045",
+    "nombre": "ERGYLIXIR",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "medicación para la tiroides"
+    ],
+    "meds_interaccion": [
+      "Levotiroxina sódica",
+      "Liotironina sódica",
+      "Tiroides desecada"
+    ],
+    "descripcion_corta": "Drenante hepático con plantas.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Precaución en hipotiroidismo o tratamiento tiroideo."
+  },
+  {
+    "id": "NUT046",
+    "nombre": "ERGYMAG 90",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Magnesio biodisponible.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT047",
+    "nombre": "ERGYMAG 180",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Magnesio biodisponible en formato grande.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT048",
+    "nombre": "ERGYMUNIL",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para defensas.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Embarazo y lactancia."
+  },
+  {
+    "id": "NUT049",
+    "nombre": "ERGYNATAL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Multivitamínico para embarazo y lactancia.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT050",
+    "nombre": "ERGYNUTRIL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Preparado proteico.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT051",
+    "nombre": "ERGYOPTIM",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Apoyo ocular antioxidante.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT052",
+    "nombre": "ERGYOSEO K2",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "vitamina K",
+      "anticoagulantes"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Acenocumarol"
+    ],
+    "descripcion_corta": "Vitamina D3 + K2 para huesos.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Precaución con anticoagulantes antagonistas de vitamina K."
+  },
+  {
+    "id": "NUT053",
+    "nombre": "ERGYPAINA PLUS",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para confort digestivo.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Embarazo y lactancia."
+  },
+  {
+    "id": "NUT054",
+    "nombre": "ERGYPAR",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "obstrucción biliar",
+      "embarazo",
+      "lactancia",
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas hepáticas y digestivas.",
+    "nota_delegado": "",
+    "contraindicaciones": "Obstrucción biliar.",
+    "precauciones": "Niños, embarazo, lactancia."
+  },
+  {
+    "id": "NUT055",
+    "nombre": "ERGYPHILUS ATB",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "antibióticos"
+    ],
+    "meds_interaccion": [
+      "Amoxicilina",
+      "Azitromicina",
+      "Ciprofloxacino",
+      "Cefalexina",
+      "Levofloxacino",
+      "Metronidazol",
+      "Trimetoprim/sulfametoxazol",
+      "Vancomicina",
+      "Ceftriaxona",
+      "Amoxicilina/clavulanato"
+    ],
+    "descripcion_corta": "Probiótico para uso junto a antibióticos.",
+    "nota_delegado": "Tomar separado del antibiótico 2 horas.",
+    "contraindicaciones": "",
+    "precauciones": "Separar 2 horas de antibióticos."
+  },
+  {
+    "id": "NUT056",
+    "nombre": "ERGYPHILUS BEBE",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "bebés"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Probiótico adaptado para bebés.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Adaptado para bebés."
+  },
+  {
+    "id": "NUT057",
+    "nombre": "ERGYPHILUS CONFORT",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Probiótico para confort intestinal.",
+    "nota_delegado": "",
+    "contraindicaciones": "Anticoagulantes.",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT058",
+    "nombre": "ERGYPHILUS HPy",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Probiótico específico para H. pylori.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT059",
+    "nombre": "ERGYPHILUS INMUNO",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Probiótico para defensas.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT060",
+    "nombre": "ERGYPHILUS INTIMA",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Probiótico para flora íntima.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT061",
+    "nombre": "ERGYPHILUS NIÑOS",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Probiótico infantil.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "A partir de 3 años."
+  },
+  {
+    "id": "NUT062",
+    "nombre": "ERGYPHILUS PLUS",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Probiótico de amplio espectro.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT063",
+    "nombre": "ERGYPHILUS PLUS 30",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Probiótico de amplio espectro en formato pequeño.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT064",
+    "nombre": "ERGYPHYTUM",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "niños",
+      "úlceras",
+      "cálculos biliares"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para articulaciones.",
+    "nota_delegado": "",
+    "contraindicaciones": "Úlceras o cálculos biliares.",
+    "precauciones": "Niños, embarazo, lactancia."
+  },
+  {
+    "id": "NUT065",
+    "nombre": "ERGYPROTECT CONF",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Apoyo intestinal con plantas.",
+    "nota_delegado": "",
+    "contraindicaciones": "Anticoagulantes.",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT066",
+    "nombre": "ERGYPROTECT PLUS",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Apoyo intestinal avanzado.",
+    "nota_delegado": "",
+    "contraindicaciones": "Anticoagulantes.",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT067",
+    "nombre": "ERGYPROTEIN",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Proteína en polvo.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT068",
+    "nombre": "ERGYQUER",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "anticoagulantes",
+      "medicamentos"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Quercetina y antioxidantes.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Productos con cúrcuma: embarazo, lactancia, anticoagulantes."
+  },
+  {
+    "id": "NUT069",
+    "nombre": "ERGYREG",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "obstrucción biliar",
+      "insuficiencia renal",
+      "insuficiencia cardiaca"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para regulación metabólica.",
+    "nota_delegado": "",
+    "contraindicaciones": "Obstrucción biliar.",
+    "precauciones": "Insuficiencia cardiaca o renal."
+  },
+  {
+    "id": "NUT070",
+    "nombre": "ERGYREN",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "insuficiencia renal",
+      "insuficiencia cardiaca"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Apoyo renal.",
+    "nota_delegado": "",
+    "contraindicaciones": "Insuficiencia renal o cardiaca.",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT071",
+    "nombre": "ERGYSIL GEL 75 ml",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Gel de silicio orgánico.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT072",
+    "nombre": "ERGYSIL GEL 200 ml",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Gel de silicio orgánico en formato grande.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT073",
+    "nombre": "ERGYSIL SOLUCIÓN",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Silicio orgánico en solución.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT074",
+    "nombre": "ERGYSLIM",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "anticoagulantes",
+      "diabetes",
+      "asma",
+      "vitamina K",
+      "sodio",
+      "potasio",
+      "enfermedad hepática",
+      "vesícula biliar"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Fórmula para control de peso con plantas.",
+    "nota_delegado": "Contiene cúrcuma y condroitina/glucosamina: precaución en anticoagulantes, diabetes y vitamina K.",
+    "contraindicaciones": "",
+    "precauciones": "Prediabetes, diabetes, asma, tratamiento vitamina K, dieta controlada en sodio/potasio."
+  },
+  {
+    "id": "NUT075",
+    "nombre": "ERGYSPORT BARRAS",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Barritas energéticas deportivas.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT076",
+    "nombre": "ERGYSPORT ESFUERZO",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Fórmula para rendimiento deportivo.",
+    "nota_delegado": "Garantía SPORT Protect.",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT077",
+    "nombre": "ERGYSPORT GEL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Gel energético deportivo.",
+    "nota_delegado": "Garantía SPORT Protect.",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT078",
+    "nombre": "ERGYSPORT OLIGOMAX",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Oligoelementos para deportistas.",
+    "nota_delegado": "Garantía SPORT Protect.",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT079",
+    "nombre": "ERGYSPORT RECUP",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Recuperador deportivo.",
+    "nota_delegado": "Garantía SPORT Protect.",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT080",
+    "nombre": "ERGYSPORT REGEN",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Regeneración muscular.",
+    "nota_delegado": "Garantía SPORT Protect.",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT081",
+    "nombre": "ERGYSPORT STIM",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Estimulante deportivo natural.",
+    "nota_delegado": "Garantía SPORT Protect.",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT082",
+    "nombre": "ERGYSTAM",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "niños",
+      "úlceras",
+      "cálculos biliares"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para confort articular.",
+    "nota_delegado": "",
+    "contraindicaciones": "Úlceras o cálculos biliares.",
+    "precauciones": "Niños, embarazo, lactancia."
+  },
+  {
+    "id": "NUT083",
+    "nombre": "ERGYSTEROL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Vitamina D3 natural.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT084",
+    "nombre": "ERGYSTRESS",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "niños",
+      "epilepsia"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para estrés y sueño.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Valeriana: no en <12 años. Eschscholtzia: embarazo y lactancia."
+  },
+  {
+    "id": "NUT085",
+    "nombre": "ERGYTAURINA",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "tiroides",
+      "anticoagulantes",
+      "antidiabéticos"
+    ],
+    "meds_interaccion": [
+      "Levotiroxina sódica",
+      "Liotironina sódica",
+      "Tiroides desecada",
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán",
+      "Metformina",
+      "Sitagliptina",
+      "Pioglitazona",
+      "Glimepirida",
+      "Saxagliptina",
+      "Linagliptina",
+      "Glipizida"
+    ],
+    "descripcion_corta": "Taurina y plantas detox.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Precaución en tiroides, anticoagulantes y antidiabéticos."
+  },
+  {
+    "id": "NUT086",
+    "nombre": "ERGYTONIL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Tónico general con plantas.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT087",
+    "nombre": "ERGYVEN",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes",
+      "cirugía"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán"
+    ],
+    "descripcion_corta": "Plantas para circulación venosa.",
+    "nota_delegado": "",
+    "contraindicaciones": "Menor de 12 años.",
+    "precauciones": "Suspender 3 días antes de cirugía."
+  },
+  {
+    "id": "NUT088",
+    "nombre": "ERGYVIOL",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Aceites vegetales ricos en GLA.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "No recomendado en embarazo o lactancia."
+  },
+  {
+    "id": "NUT089",
+    "nombre": "ERGYVITAL HOMBRE",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Multivitamínico masculino.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT090",
+    "nombre": "ERGYZEN",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "niños",
+      "epilepsia"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para relajación y sueño.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Valeriana: no en <12 años. Eschscholtzia: embarazo y lactancia."
+  },
+  {
+    "id": "NUT091",
+    "nombre": "GREEN’FLOR",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes",
+      "antidiabéticos"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán",
+      "Metformina",
+      "Sitagliptina",
+      "Pioglitazona",
+      "Glimepirida",
+      "Saxagliptina",
+      "Linagliptina",
+      "Glipizida"
+    ],
+    "descripcion_corta": "Probiótico con extractos vegetales.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Precaución en anticoagulantes y antidiabéticos."
+  },
+  {
+    "id": "NUT092",
+    "nombre": "MY’COKYL",
+    "categoria": "",
+    "semaforo": "rojo",
+    "riesgos": [
+      "anticoagulantes",
+      "antidiabéticos"
+    ],
+    "meds_interaccion": [
+      "Warfarina",
+      "Enoxaparina",
+      "Clopidogrel",
+      "Rivaroxabán",
+      "Apixabán",
+      "Dabigatrán",
+      "Dalteparina",
+      "Fondaparinux",
+      "Bivalirudina",
+      "Edoxabán",
+      "Metformina",
+      "Sitagliptina",
+      "Pioglitazona",
+      "Glimepirida",
+      "Saxagliptina",
+      "Linagliptina",
+      "Glipizida"
+    ],
+    "descripcion_corta": "Probiótico con extractos antifúngicos.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Precaución en anticoagulantes y antidiabéticos."
+  },
+  {
+    "id": "NUT093",
+    "nombre": "NATUR’ALKYL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Extractos vegetales alcalinizantes.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT094",
+    "nombre": "OLIGOVIOL A",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Oligoelementos A.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT095",
+    "nombre": "OLIGOVIOL B",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Oligoelementos B.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT096",
+    "nombre": "OLIGOVIOL C",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Oligoelementos C.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT097",
+    "nombre": "OLIGOVIOL H",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Oligoelementos H.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT098",
+    "nombre": "OLIGOVIOL I",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Oligoelementos I.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT099",
+    "nombre": "OLIGOVIOL N",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Oligoelementos N.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT100",
+    "nombre": "OLIGOVIOL O",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Oligoelementos O.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT101",
+    "nombre": "SERENIDAD EXPOSITOR",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Material expositor de la gama Serenidad.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT102",
+    "nombre": "STIMULÉIM",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para apoyo inmunitario.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Niños, embarazo, lactancia."
+  },
+  {
+    "id": "NUT103",
+    "nombre": "SUP. DESMODIUM",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "obstrucción biliar",
+      "embarazo",
+      "lactancia",
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Extracto de desmodium para apoyo hepático.",
+    "nota_delegado": "",
+    "contraindicaciones": "Obstrucción de vías biliares.",
+    "precauciones": "Niños, embarazo, lactancia."
+  },
+  {
+    "id": "NUT104",
+    "nombre": "SUPRALFA",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Complemento con oligoelementos.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT105",
+    "nombre": "SYNERVIOL 180",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Omega 3 y vitaminas para apoyo cognitivo.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT106",
+    "nombre": "SYNERVIOL 60",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Omega 3 y vitaminas en formato pequeño.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT107",
+    "nombre": "VECTIDORM GABA",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "niños",
+      "epilepsia"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas y GABA para el sueño.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "Valeriana: no en <12 años. Eschscholtzia: embarazo y lactancia."
+  },
+  {
+    "id": "NUT108",
+    "nombre": "VECTIDORM MELATONINA",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "niños"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Melatonina para conciliación del sueño.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "No recomendado en embarazo, lactancia o niños."
+  },
+  {
+    "id": "NUT109",
+    "nombre": "VECTIDYN",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas para energía y vitalidad.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "No recomendado en embarazo o lactancia."
+  },
+  {
+    "id": "NUT110",
+    "nombre": "VECTIPUR",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "niños",
+      "obstrucción biliar"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas detox para hígado y vesícula.",
+    "nota_delegado": "",
+    "contraindicaciones": "Obstrucción biliar.",
+    "precauciones": "Niños, embarazo, lactancia."
+  },
+  {
+    "id": "NUT111",
+    "nombre": "VECTIREGEN",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Regeneración celular con antioxidantes.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "No recomendado en embarazo o lactancia."
+  },
+  {
+    "id": "NUT112",
+    "nombre": "VECTISEREN",
+    "categoria": "",
+    "semaforo": "amarillo",
+    "riesgos": [
+      "embarazo",
+      "lactancia",
+      "insuficiencia renal",
+      "insuficiencia cardiaca"
+    ],
+    "meds_interaccion": [],
+    "descripcion_corta": "Plantas calmantes y relajantes.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": "No usar en insuficiencia cardiaca o renal edematosa."
+  },
+  {
+    "id": "NUT113",
+    "nombre": "VEGENUTRIL",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Proteína vegetal en polvo.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT114",
+    "nombre": "Elidim Ayuda",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Complemento de apoyo digestivo.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT115",
+    "nombre": "Elidim esencias",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Esencias naturales de apoyo emocional.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT116",
+    "nombre": "Elidim Kit completo",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Kit completo de la gama Elidim.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT117",
+    "nombre": "Libro ¿Qué es una dieta sana?",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Libro divulgativo sobre alimentación saludable.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT118",
+    "nombre": "Entender la NCA",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Libro sobre nutrición celular activa.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT119",
+    "nombre": "Equilibrio del sistema inmune a través de la alimentación",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Libro sobre inmunidad y alimentación.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT120",
+    "nombre": "La magia de la alimentación desde la ciencia",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Libro sobre ciencia y nutrición.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  },
+  {
+    "id": "NUT121",
+    "nombre": "Nutrición para la salud femenina",
+    "categoria": "",
+    "semaforo": "verde",
+    "riesgos": [],
+    "meds_interaccion": [],
+    "descripcion_corta": "Libro sobre nutrición y salud de la mujer.",
+    "nota_delegado": "",
+    "contraindicaciones": "",
+    "precauciones": ""
+  }
+]
