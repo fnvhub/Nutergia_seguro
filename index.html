@@ -668,19 +668,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function cargarDatos() {
-  try {
-    const raw = localStorage.getItem(SK.productos);
-    if (raw) {
-      state.productos = JSON.parse(raw);
-    } else {
-      // Primera vez: cargar base de datos precargada
+  state.pin = localStorage.getItem(SK.pin) || PIN_DEFAULT;
+  const raw = localStorage.getItem(SK.productos);
+  if (raw) {
+    try { state.productos = JSON.parse(raw); } catch(e) { state.productos = []; }
+    return;
+  }
+  fetch('./productos.json')
+    .then(r => r.json())
+    .then(data => {
+      state.productos = data;
+      guardarDatos();
+      actualizarEstadisticas();
+      actualizarListaEditor();
+      mostrarToast('✅ ' + data.length + ' productos cargados');
+    })
+    .catch(() => {
       state.productos = DB_PRECARGADA.map(p => ({...p}));
       guardarDatos();
-    }
-  } catch(e) {
-    state.productos = DB_PRECARGADA.map(p => ({...p}));
-  }
-  state.pin = localStorage.getItem(SK.pin) || PIN_DEFAULT;
+    });
 }
 
 function guardarDatos() {
