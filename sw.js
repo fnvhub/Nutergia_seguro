@@ -1,4 +1,4 @@
-const CACHE = 'nutergia-v2';
+const CACHE = 'nutergia-v3';
 const ARCHIVOS = [
   './',
   './index.html',
