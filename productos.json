@@ -1,1633 +1,2560 @@
-[
-  {
-    "id": "NUT001",
-    "nombre": "ACEROL C",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_bicebeplus",
-    "nombre": "BICEBE Plus",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_bileina",
-    "nombre": "BILEINA",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT011",
-    "nombre": "ERGY C",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT012",
-    "nombre": "ERGY D",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_ergy3",
-    "nombre": "ERGY3",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT015",
-    "nombre": "ERGYACTIV",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT016",
-    "nombre": "ERGYANTIOX Forte",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT017",
-    "nombre": "ERGYBASE",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Menores de 6 años, Embarazo y lactancia"
-  },
-  {
-    "id": "NUT018",
-    "nombre": "ERGYCALM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_ergycardioforte",
-    "nombre": "ERGYCARDIO FORTE",
-    "descripcion": "",
-    "grupos": [
-      "G01"
-    ],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "OJO HAY UN ERGYCARIDO FORTE1"
-  },
-  {
-    "id": "x_ergycardioforte1",
-    "nombre": "ERGYCARDIO FORTE1",
-    "descripcion": "",
-    "grupos": [
-      "G07"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Embarazo, lactancia, antirretroviral, anticoagulante o agente antiplaquetario (relacionado con el ajo)"
-  },
-  {
-    "id": "NUT020",
-    "nombre": "ERGYCARE",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT021",
-    "nombre": "ERGYCELL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT022",
-    "nombre": "ERGYCLEAN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Tomar con el estómago vacío o fuera de las comidas"
-  },
-  {
-    "id": "x_ergycolbalance",
-    "nombre": "ERGYCOL Balance",
-    "descripcion": "",
-    "grupos": [
-      "G02"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos. Mayores de 70 años, embarazo, lactancia, sensibilidad a las estatinas o medicación para el colesterol (relacionado con la monacolina K). Puede contener trazas de alérgenos comunes."
-  },
-  {
-    "id": "x_ergycox",
-    "nombre": "ERGYCOX",
-    "descripcion": "",
-    "grupos": [
-      "G06"
-    ],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "OJO HAY UN ERGYCOX1"
-  },
-  {
-    "id": "x_ergycox1",
-    "nombre": "ERGYCOX1",
-    "descripcion": "",
-    "grupos": [
-      "G01"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos (relacionado con té verde, cúrcuma). Embarazo, lactancia (relacionado con té verde, cúrcuma), Úlcera gástrica o duodenal o cálculos biliares (relacionado con harpagofito), Alergia a los derivados salicílicos (relacionado con sauce), Anticoagulantes, medicamentos, patología hepática (relacionado con cúrcuma). No superar la dosis de 800 mg de EGCG (té verde) al día."
-  },
-  {
-    "id": "NUT027",
-    "nombre": "ERGYCRANBERRYL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Insuficiencia cardiaca o renal (relacionado con cola de caballo), Niños, embarazo, lactancia"
-  },
-  {
-    "id": "NUT013",
-    "nombre": "ERGYD Plus",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT028",
-    "nombre": "ERGYDIGEST",
-    "descripcion": "",
-    "grupos": [
-      "G03"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Niños, embarazo, lactancia (relacionado con rábano negro), Obstrucción de las vías biliares (relacionado con alcachofa), Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro)"
-  },
-  {
-    "id": "NUT029",
-    "nombre": "ERGYDREN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Insuficiencia cardiaca o renal"
-  },
-  {
-    "id": "NUT030",
-    "nombre": "ERGYEPUR",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Obstrucción de las vías biliares (relacionado con alcachofa, boldo), Niños, embarazo, lactancia"
-  },
-  {
-    "id": "x_ergyfemcycle",
-    "nombre": "ERGYFEM Cycle",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos"
-  },
-  {
-    "id": "NUT033",
-    "nombre": "ERGYFEM Equilibrio",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos. Embarazo, lactancia (relacionado con diente de león, y azafrán), Obstrucción biliar, insuficiencia cardiaca o renal familia de las asteráceas (relacionado con diente de león), Alergia Puede contener trazas de alérgenos comunes."
-  },
-  {
-    "id": "NUT034",
-    "nombre": "ERGYFERIL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_ergyfibral",
-    "nombre": "ERGYFIBRAL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Menores de 6 años. Embarazo o lactancia, Uso prolongado (relacionado con ruibarbo)."
-  },
-  {
-    "id": "NUT037",
-    "nombre": "ERGYFLEX",
-    "descripcion": "",
-    "grupos": [
-      "G01"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos. Embarazo, lactancia, Anticoagulantes, productos con cúrcuma (relacionado con cúrcuma), Prediabetes, diabetes, asma, tratamiento de vitamina K o dieta controlada en sodio y potasio (relacionado con condroitina, glucosamina), Enfermedad de hígado, vesícula biliar, toma medicamentos (relacionado con cúrcuma)"
-  },
-  {
-    "id": "NUT038",
-    "nombre": "ERGYFOSFORYL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_ergyim",
-    "nombre": "ERGYIM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT040",
-    "nombre": "ERGYKID Bien Estar",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "A partir de los 3 años"
-  },
-  {
-    "id": "NUT041",
-    "nombre": "ERGYKID Defens",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "A partir de los 3 años"
-  },
-  {
-    "id": "NUT042",
-    "nombre": "ERGYKID MultiVit",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "A partir de los 3 años"
-  },
-  {
-    "id": "x_ergylaseplus",
-    "nombre": "ERGYLASE Plus",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos. Embarazo o lactancia, Alergia a uno de los ingredientes. No abrir la cápsula. No destinado a sustituir una dieta sin gluten o tratar la enfermedad celíaca."
-  },
-  {
-    "id": "x_ergylivercomplex",
-    "nombre": "ERGYLIVER Complex",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Obstrucción de las vías biliares (relacionado con alcachofa), Niños, embarazo, lactancia (relacionado con ingredientes como alcachofa, cardo mariano, desmodium)"
-  },
-  {
-    "id": "NUT045",
-    "nombre": "ERGYLIXIR",
-    "descripcion": "",
-    "grupos": [
-      "G03"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Niños, embarazo, lactancia (relacionado con rábano negro), Obstrucción de las vías biliares (relacionado con alcachofa), Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro)"
-  },
-  {
-    "id": "x_ergymag",
-    "nombre": "ERGYMAG",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Embarazo, lactancia"
-  },
-  {
-    "id": "NUT048",
-    "nombre": "ERGYMUNIL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT049",
-    "nombre": "ERGYNATAL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_ergynutril(gama)",
-    "nombre": "ERGYNUTRIL (Gama)",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT051",
-    "nombre": "ERGYOPTIM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT052",
-    "nombre": "ERGYOSEO K2",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT053",
-    "nombre": "ERGYPAINA Plus",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "No abrir la cápsula"
-  },
-  {
-    "id": "NUT054",
-    "nombre": "ERGYPAR",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT055",
-    "nombre": "ERGYPHILUS ATB",
-    "descripcion": "",
-    "grupos": [
-      "G05"
-    ],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Tomar distanciado del antibiótico 2 h mínimo."
-  },
-  {
-    "id": "x_ergyphilusbebé",
-    "nombre": "ERGYPHILUS Bebé",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Adaptado para bebés"
-  },
-  {
-    "id": "x_ergyphilusconf",
-    "nombre": "ERGYPHILUS Conf",
-    "descripcion": "",
-    "grupos": [
-      "G01"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos. Embarazo o lactancia/ Productos con cúrcuma, Anticoagulantes o medicamentos (relacionado con cebolla, cúrcuma) /Problemas de hígado o vesícula biliar (relacionado con cúrcuma)"
-  },
-  {
-    "id": "NUT058",
-    "nombre": "ERGYPHILUS HPy",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Tomar 2 h distanciado de los medicamentos"
-  },
-  {
-    "id": "x_ergyphilusimmunocomplex",
-    "nombre": "ERGYPHILUS Immuno Complex",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT060",
-    "nombre": "ERGYPHILUS Intima",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT061",
-    "nombre": "ERGYPHILUS Niños",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "A partir de 3 años"
-  },
-  {
-    "id": "NUT062",
-    "nombre": "ERGYPHILUS PLUS",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT064",
-    "nombre": "ERGYPHYTUM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Niños, embarazo o lactancia (relacionado con bambú), Úlceras (estómago o duodeno) o de cálculos biliares (relacionado con harpagofito)"
-  },
-  {
-    "id": "NUT065",
-    "nombre": "ERGYPROTECT Conf",
-    "descripcion": "",
-    "grupos": [
-      "G01"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos. Embarazo o lactancia/ Productos con cúrcuma, Anticoagulantes o medicamentos (relacionado con cebolla, cúrcuma) /Problemas de hígado o vesícula biliar (relacionado con cúrcuma)"
-  },
-  {
-    "id": "NUT066",
-    "nombre": "ERGYPROTECT Plus",
-    "descripcion": "",
-    "grupos": [
-      "G01"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos. Embarazo y lactancia/ Productos con cúrcuma, Anticoagulantes, medicamentos, enfermedad hepática o enfermedad vesícula biliar (relacionado con Cúrcuma). Puede contener trazas de alérgenos comunes."
-  },
-  {
-    "id": "NUT067",
-    "nombre": "ERGYPROTEIN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "100% natural, sin gluten, sin OGM, apto para lactovegetarianos, bajo en glúcidos, sin edulcorantes y sin azúcares"
-  },
-  {
-    "id": "x_ergyquerforte",
-    "nombre": "ERGYQUER Forte",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Reservado adultos. Embarazo o lactancia/ Toma de productos con té verde o con el estomago vacio (relacionado con té verde), Toma de medicamentos (relacionado con Trans-resveratrol)"
-  },
-  {
-    "id": "NUT069",
-    "nombre": "ERGYREG",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_ergyrensupport",
-    "nombre": "ERGYREN Support",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Niños, embarazo, lactancia"
-  },
-  {
-    "id": "x_ergysilgel",
-    "nombre": "ERGYSIL Gel",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Embarazo, lactancia. Más de 10 años, Ortiga en la composición."
-  },
-  {
-    "id": "NUT073",
-    "nombre": "ERGYSIL Solución",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT074",
-    "nombre": "ERGYSLIM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "x_ergysport(gama)",
-    "nombre": "ERGYSPORT (Gama)",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Garantía SPORT Protect (ausencia de sustancias dopantes según norma NF EN 17444)"
-  },
-  {
-    "id": "NUT076",
-    "nombre": "ERGYSPORT Esfuerzo",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT078",
-    "nombre": "ERGYSPORT OLiGOMAX",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT079",
-    "nombre": "ERGYSPORT Recup",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT080",
-    "nombre": "ERGYSPORT Regen",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT081",
-    "nombre": "ERGYSPORT Stim",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT082",
-    "nombre": "ERGYSTAM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "No recomendado para mujeres embarazadas o en periodo de lactancia (grosella negra y llantén). Sólo para adultos (grosella negra). No utilizar en caso de insuficiencia cardíaca o renal edematosa (grosella negra)."
-  },
-  {
-    "id": "x_ergytaurinadetox",
-    "nombre": "ERGYTAURINA Detox",
-    "descripcion": "",
-    "grupos": [
-      "G01",
-      "G03",
-      "G04"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Niños, embarazo, lactancia (relacionado con rábano negro). Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro), Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea (relacionado con ajo)."
-  },
-  {
-    "id": "x_ergytonyl",
-    "nombre": "ERGYTONYL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT087",
-    "nombre": "ERGYVEN",
-    "descripcion": "",
-    "grupos": [
-      "G01"
-    ],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": "Embarazo y lactancia (relacionado con meliloto). Menor de 12 años y anticoagulantes (relacionado con castaño de indias), En caso de cirugía, dejar de tomarlo 3 días antes."
-  },
-  {
-    "id": "NUT088",
-    "nombre": "ERGYVIOL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT089",
-    "nombre": "ERGYVITAL Hombre",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT090",
-    "nombre": "ERGYZEN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": true,
-    "notas": "Embarazo, lactancia (relacionado con eschscholtzia), Niños de menos de 12 años (relacionado con valeriana), Epilepsia"
-  },
-  {
-    "id": "NUT091",
-    "nombre": "GREEN’FLOR",
-    "descripcion": "",
-    "grupos": [
-      "G01",
-      "G04"
-    ],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea (relacionado con ajo de oso/ajo), Obstrucción biliar, insuficiencia cardiaca o renal familia de las asteráceas (relacionado con diente de león)"
-  },
-  {
-    "id": "NUT092",
-    "nombre": "MY’COKYL",
-    "descripcion": "",
-    "grupos": [
-      "G01",
-      "G04"
-    ],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": "Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea"
-  },
-  {
-    "id": "NUT002",
-    "nombre": "ACEROL C 15",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT003",
-    "nombre": "BARRITAS",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT004",
-    "nombre": "BICEBE PLUS 30",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT005",
-    "nombre": "BICEBE PLUS 90",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT006",
-    "nombre": "BILEINA 180",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT007",
-    "nombre": "BILEINA 60",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT008",
-    "nombre": "DETOX EXPOSITOR",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT009",
-    "nombre": "ERGY 3 180",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT010",
-    "nombre": "ERGY 3 60",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT014",
-    "nombre": "ERGY YAM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT019",
-    "nombre": "ERGYCARDIO",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT023",
-    "nombre": "ERGYCOL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT024",
-    "nombre": "ERGYCOX 30",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT025",
-    "nombre": "ERGYCOX 90",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT026",
-    "nombre": "ERGYCOX EXPOSITOR",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT031",
-    "nombre": "ERGYFEM BIENESTAR",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT032",
-    "nombre": "ERGYFEM CICLE",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT035",
-    "nombre": "ERGYFIBRA",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT036",
-    "nombre": "ERGYFLAVONA",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT039",
-    "nombre": "ERGYIN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT043",
-    "nombre": "ERGYLASE",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT044",
-    "nombre": "ERGYLIVER",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT046",
-    "nombre": "ERGYMAG 90",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT047",
-    "nombre": "ERGYMAG 180",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT050",
-    "nombre": "ERGYNUTRIL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT056",
-    "nombre": "ERGYPHILUS BEBE",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT057",
-    "nombre": "ERGYPHILUS CONFORT",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT059",
-    "nombre": "ERGYPHILUS INMUNO",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT063",
-    "nombre": "ERGYPHILUS PLUS 30",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT068",
-    "nombre": "ERGYQUER",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT070",
-    "nombre": "ERGYREN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT071",
-    "nombre": "ERGYSIL GEL 75 ml",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT072",
-    "nombre": "ERGYSIL GEL 200 ml",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT075",
-    "nombre": "ERGYSPORT BARRAS",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT077",
-    "nombre": "ERGYSPORT GEL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT083",
-    "nombre": "ERGYSTEROL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT084",
-    "nombre": "ERGYSTRESS",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": true,
-    "notas": ""
-  },
-  {
-    "id": "NUT085",
-    "nombre": "ERGYTAURINA",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT086",
-    "nombre": "ERGYTONIL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT093",
-    "nombre": "NATUR’ALKYL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT094",
-    "nombre": "OLIGOVIOL A",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT095",
-    "nombre": "OLIGOVIOL B",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT096",
-    "nombre": "OLIGOVIOL C",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT097",
-    "nombre": "OLIGOVIOL H",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT098",
-    "nombre": "OLIGOVIOL I",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT099",
-    "nombre": "OLIGOVIOL N",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT100",
-    "nombre": "OLIGOVIOL O",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT101",
-    "nombre": "SERENIDAD EXPOSITOR",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT102",
-    "nombre": "STIMULÉIM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT103",
-    "nombre": "SUP. DESMODIUM",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT104",
-    "nombre": "SUPRALFA",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT105",
-    "nombre": "SYNERVIOL 180",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT106",
-    "nombre": "SYNERVIOL 60",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT107",
-    "nombre": "VECTIDORM GABA",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": true,
-    "notas": ""
-  },
-  {
-    "id": "NUT108",
-    "nombre": "VECTIDORM MELATONINA",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT109",
-    "nombre": "VECTIDYN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT110",
-    "nombre": "VECTIPUR",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": true,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT111",
-    "nombre": "VECTIREGEN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT112",
-    "nombre": "VECTISEREN",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": true,
-    "lactancia": true,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT113",
-    "nombre": "VEGENUTRIL",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT114",
-    "nombre": "Elidim Ayuda",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT115",
-    "nombre": "Elidim esencias",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT116",
-    "nombre": "Elidim Kit completo",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT117",
-    "nombre": "Libro ¿Qué es una dieta sana?",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT118",
-    "nombre": "Entender la NCA",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT119",
-    "nombre": "Equilibrio del sistema inmune a través de la alimentación",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT120",
-    "nombre": "La magia de la alimentación desde la ciencia",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  },
-  {
-    "id": "NUT121",
-    "nombre": "Nutrición para la salud femenina",
-    "descripcion": "",
-    "grupos": [],
-    "embarazo": false,
-    "lactancia": false,
-    "ninos": false,
-    "epilepsia": false,
-    "notas": ""
-  }
-]
+{
+  "grupos": [
+    {
+      "id": "G01",
+      "nombre": "Analgésicos",
+      "medicamentos": [
+        {
+          "nombre": "Tylenol",
+          "principioActivo": "Acetaminofén"
+        },
+        {
+          "nombre": "Percocet",
+          "principioActivo": "Oxicodona"
+        },
+        {
+          "nombre": "Vicodin",
+          "principioActivo": "Hidrocodona"
+        },
+        {
+          "nombre": "OxyContin",
+          "principioActivo": "Oxicodona"
+        },
+        {
+          "nombre": "MS Contin",
+          "principioActivo": "Morfina"
+        },
+        {
+          "nombre": "Duragesic",
+          "principioActivo": "Fentanilo"
+        },
+        {
+          "nombre": "Ultram",
+          "principioActivo": "Tramadol"
+        },
+        {
+          "nombre": "Advil",
+          "principioActivo": "Ibuprofeno"
+        },
+        {
+          "nombre": "Aleve",
+          "principioActivo": "Naproxeno"
+        },
+        {
+          "nombre": "Motrin",
+          "principioActivo": "Ibuprofeno"
+        },
+        {
+          "nombre": "Advil",
+          "principioActivo": "Amilorida"
+        },
+        {
+          "nombre": "Aleve",
+          "principioActivo": "Amlodipino"
+        },
+        {
+          "nombre": "Aspirina",
+          "principioActivo": "Budesonida"
+        },
+        {
+          "nombre": "Duragesic",
+          "principioActivo": "Fluoxetina"
+        },
+        {
+          "nombre": "Motrin",
+          "principioActivo": "Oxaprozina"
+        },
+        {
+          "nombre": "MS Contin",
+          "principioActivo": "Oxcarbazepina"
+        },
+        {
+          "nombre": "OxyContin",
+          "principioActivo": "Risedronato"
+        },
+        {
+          "nombre": "Percocet",
+          "principioActivo": "Rosuvastatina"
+        },
+        {
+          "nombre": "Tylenol"
+        },
+        {
+          "nombre": "Ultram"
+        },
+        {
+          "nombre": "Vicodin"
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "nombre": "Antibióticos",
+      "medicamentos": [
+        {
+          "nombre": "Amoxil",
+          "principioActivo": "Amoxicilina"
+        },
+        {
+          "nombre": "Zithromax",
+          "principioActivo": "Azitromicina"
+        },
+        {
+          "nombre": "Cipro",
+          "principioActivo": "Ciprofloxacino"
+        },
+        {
+          "nombre": "Keflex",
+          "principioActivo": "Cefalexina"
+        },
+        {
+          "nombre": "Levaquin",
+          "principioActivo": "Levofloxacino"
+        },
+        {
+          "nombre": "Flagyl",
+          "principioActivo": "Metronidazol"
+        },
+        {
+          "nombre": "Bactrim",
+          "principioActivo": "Trimetoprim"
+        },
+        {
+          "nombre": "Bactrim",
+          "principioActivo": "Sulfametoxazol"
+        },
+        {
+          "nombre": "Vancomycin",
+          "principioActivo": "Vancomicina"
+        },
+        {
+          "nombre": "Rocephin",
+          "principioActivo": "Ceftriaxona"
+        },
+        {
+          "nombre": "Augmentin",
+          "principioActivo": "Amoxicilina"
+        },
+        {
+          "nombre": "Augmentin",
+          "principioActivo": "Clavulanato"
+        },
+        {
+          "nombre": "Amoxil",
+          "principioActivo": "Baclofeno"
+        },
+        {
+          "nombre": "Augmentin",
+          "principioActivo": "Carbamazepina"
+        },
+        {
+          "nombre": "Augmentin",
+          "principioActivo": "Carisoprodol"
+        },
+        {
+          "nombre": "Bactrim",
+          "principioActivo": "Carvedilol"
+        },
+        {
+          "nombre": "Bactrim",
+          "principioActivo": "Cefalexina"
+        },
+        {
+          "nombre": "Cipro",
+          "principioActivo": "Dantroleno"
+        },
+        {
+          "nombre": "Flagyl",
+          "principioActivo": "Griseofulvina"
+        },
+        {
+          "nombre": "Keflex",
+          "principioActivo": "Lamivudina"
+        },
+        {
+          "nombre": "Levaquin",
+          "principioActivo": "Liotironina sódica"
+        },
+        {
+          "nombre": "Rocephin",
+          "principioActivo": "Tizanidina"
+        },
+        {
+          "nombre": "Vancomycin"
+        },
+        {
+          "nombre": "Zithromax"
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "nombre": "Antidepresivos",
+      "medicamentos": [
+        {
+          "nombre": "Prozac",
+          "principioActivo": "Fluoxetina"
+        },
+        {
+          "nombre": "Zoloft",
+          "principioActivo": "Sertralina"
+        },
+        {
+          "nombre": "Paxil",
+          "principioActivo": "Paroxetina"
+        },
+        {
+          "nombre": "Celexa",
+          "principioActivo": "Citalopram"
+        },
+        {
+          "nombre": "Lexapro",
+          "principioActivo": "Escitalopram"
+        },
+        {
+          "nombre": "Wellbutrin",
+          "principioActivo": "Bupropión"
+        },
+        {
+          "nombre": "Effexor",
+          "principioActivo": "Venlafaxina"
+        },
+        {
+          "nombre": "Cymbalta",
+          "principioActivo": "Duloxetina"
+        },
+        {
+          "nombre": "Elavil",
+          "principioActivo": "Amitriptilina"
+        },
+        {
+          "nombre": "Desyrel",
+          "principioActivo": "Trazodona"
+        },
+        {
+          "nombre": "Celexa",
+          "principioActivo": "Dalteparina"
+        },
+        {
+          "nombre": "Cymbalta",
+          "principioActivo": "Escitalopram"
+        },
+        {
+          "nombre": "Desyrel",
+          "principioActivo": "Felodipino"
+        },
+        {
+          "nombre": "Effexor",
+          "principioActivo": "Fondaparinux"
+        },
+        {
+          "nombre": "Elavil",
+          "principioActivo": "Formoterol"
+        },
+        {
+          "nombre": "Lexapro",
+          "principioActivo": "Losartán"
+        },
+        {
+          "nombre": "Paxil",
+          "principioActivo": "Rivaroxabán"
+        },
+        {
+          "nombre": "Prozac",
+          "principioActivo": "Tenofovir"
+        },
+        {
+          "nombre": "Wellbutrin"
+        },
+        {
+          "nombre": "Zoloft"
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "nombre": "Antiinflamatorios no esteroideos (AINE)",
+      "medicamentos": [
+        {
+          "nombre": "Celebrex",
+          "principioActivo": "Celecoxib"
+        },
+        {
+          "nombre": "Voltaren",
+          "principioActivo": "Diclofenaco"
+        },
+        {
+          "nombre": "Mobic",
+          "principioActivo": "Meloxicam"
+        },
+        {
+          "nombre": "Feldene",
+          "principioActivo": "Piroxicam"
+        },
+        {
+          "nombre": "Naprosyn",
+          "principioActivo": "Nabumetona"
+        },
+        {
+          "nombre": "Relafen",
+          "principioActivo": "Oxaprozina"
+        },
+        {
+          "nombre": "Lodine",
+          "principioActivo": "Etodolaco"
+        },
+        {
+          "nombre": "Sulindaco",
+          "principioActivo": "Sulindaco"
+        },
+        {
+          "nombre": "Celebrex",
+          "principioActivo": "Dabigatrán"
+        },
+        {
+          "nombre": "Feldene",
+          "principioActivo": "Glipizida"
+        },
+        {
+          "nombre": "Lodine",
+          "principioActivo": "Metformina"
+        },
+        {
+          "nombre": "Mobic",
+          "principioActivo": "Nisoldipino"
+        },
+        {
+          "nombre": "Naprosyn",
+          "principioActivo": "Oxicodona"
+        },
+        {
+          "nombre": "Relafen",
+          "principioActivo": "Testosterona"
+        },
+        {
+          "nombre": "Sulindaco",
+          "principioActivo": "Valproato"
+        },
+        {
+          "nombre": "Voltaren"
+        }
+      ]
+    },
+    {
+      "id": "G05",
+      "nombre": "Antihipertensivos",
+      "medicamentos": [
+        {
+          "nombre": "Norvasc",
+          "principioActivo": "Amlodipino"
+        },
+        {
+          "nombre": "Cozaar",
+          "principioActivo": "Losartán"
+        },
+        {
+          "nombre": "Diovan",
+          "principioActivo": "Valsartán"
+        },
+        {
+          "nombre": "Lopressor",
+          "principioActivo": "Metoprolol"
+        },
+        {
+          "nombre": "Toprol XL",
+          "principioActivo": "Succinato de metoprolol"
+        },
+        {
+          "nombre": "Tenormin",
+          "principioActivo": "Atenolol"
+        },
+        {
+          "nombre": "Cardizem",
+          "principioActivo": "Diltiazem"
+        },
+        {
+          "nombre": "Procardia",
+          "principioActivo": "Nifedipino"
+        },
+        {
+          "nombre": "Zestril",
+          "principioActivo": "Lisinopril"
+        },
+        {
+          "nombre": "Cardizem",
+          "principioActivo": "Clotrimazol"
+        },
+        {
+          "nombre": "Cozaar",
+          "principioActivo": "Emtricitabina"
+        },
+        {
+          "nombre": "Diovan",
+          "principioActivo": "Fexofenadina"
+        },
+        {
+          "nombre": "Lopressor",
+          "principioActivo": "Metocarbamol"
+        },
+        {
+          "nombre": "Norvasc",
+          "principioActivo": "Pravastatina"
+        },
+        {
+          "nombre": "Procardia",
+          "principioActivo": "Sulindaco"
+        },
+        {
+          "nombre": "Tenormin"
+        },
+        {
+          "nombre": "Toprol XL"
+        },
+        {
+          "nombre": "Zestril"
+        }
+      ]
+    },
+    {
+      "id": "G06",
+      "nombre": "Antidiabéticos",
+      "medicamentos": [
+        {
+          "nombre": "Metformin",
+          "principioActivo": "Metformina"
+        },
+        {
+          "nombre": "Glucophage",
+          "principioActivo": "Metformina"
+        },
+        {
+          "nombre": "Januvia",
+          "principioActivo": "Sitagliptina"
+        },
+        {
+          "nombre": "Humalog",
+          "principioActivo": "Insulina lispro"
+        },
+        {
+          "nombre": "Lantus",
+          "principioActivo": "Insulina glargina"
+        },
+        {
+          "nombre": "Novolog",
+          "principioActivo": "Insulina aspart"
+        },
+        {
+          "nombre": "Actos",
+          "principioActivo": "Pioglitazona"
+        },
+        {
+          "nombre": "Amaryl",
+          "principioActivo": "Glimepirida"
+        },
+        {
+          "nombre": "Onglyza",
+          "principioActivo": "Saxagliptina"
+        },
+        {
+          "nombre": "Tradjenta",
+          "principioActivo": "Linagliptina"
+        },
+        {
+          "nombre": "Glipizida",
+          "principioActivo": "Glipizida"
+        },
+        {
+          "nombre": "Actos",
+          "principioActivo": "Aciclovir"
+        },
+        {
+          "nombre": "Amaryl",
+          "principioActivo": "Azitromicina"
+        },
+        {
+          "nombre": "Glipizida",
+          "principioActivo": "Ibuprofeno"
+        },
+        {
+          "nombre": "Glucophage",
+          "principioActivo": "Indapamida"
+        },
+        {
+          "nombre": "Januvia",
+          "principioActivo": "Labetalol"
+        },
+        {
+          "nombre": "Lantus",
+          "principioActivo": "Levofloxacino"
+        },
+        {
+          "nombre": "Metformin",
+          "principioActivo": "Nadolol"
+        },
+        {
+          "nombre": "Novolog",
+          "principioActivo": "Propranolol"
+        },
+        {
+          "nombre": "Onglyza",
+          "principioActivo": "Ramipril"
+        },
+        {
+          "nombre": "Tradjenta"
+        }
+      ]
+    },
+    {
+      "id": "G07",
+      "nombre": "Anticoagulantes",
+      "medicamentos": [
+        {
+          "nombre": "Coumadin",
+          "principioActivo": "Warfarina"
+        },
+        {
+          "nombre": "Lovenox",
+          "principioActivo": "Enoxaparina"
+        },
+        {
+          "nombre": "Plavix",
+          "principioActivo": "Clopidogrel"
+        },
+        {
+          "nombre": "Xarelto",
+          "principioActivo": "Rivaroxabán"
+        },
+        {
+          "nombre": "Eliquis",
+          "principioActivo": "Apixabán"
+        },
+        {
+          "nombre": "Pradaxa",
+          "principioActivo": "Dabigatrán"
+        },
+        {
+          "nombre": "Savaysa",
+          "principioActivo": "Edoxabán"
+        },
+        {
+          "nombre": "Fragmin",
+          "principioActivo": "Dalteparina"
+        },
+        {
+          "nombre": "Arixtra",
+          "principioActivo": "Fondaparinux"
+        },
+        {
+          "nombre": "Angiomax",
+          "principioActivo": "Bivalirudina"
+        },
+        {
+          "nombre": "Angiomax",
+          "principioActivo": "Bisoprolol"
+        },
+        {
+          "nombre": "Arixtra",
+          "principioActivo": "Bivalirudina"
+        },
+        {
+          "nombre": "Coumadin",
+          "principioActivo": "Edoxabán"
+        },
+        {
+          "nombre": "Eliquis",
+          "principioActivo": "Fosinopril"
+        },
+        {
+          "nombre": "Fragmin",
+          "principioActivo": "Hidroxizina"
+        },
+        {
+          "nombre": "Lovenox",
+          "principioActivo": "Miconazol"
+        },
+        {
+          "nombre": "Plavix",
+          "principioActivo": "Saxagliptina"
+        },
+        {
+          "nombre": "Pradaxa",
+          "principioActivo": "Simvastatina"
+        },
+        {
+          "nombre": "Savaysa",
+          "principioActivo": "Topiramato"
+        },
+        {
+          "nombre": "Xarelto"
+        }
+      ]
+    },
+    {
+      "id": "G08",
+      "nombre": "Anticonvulsivos",
+      "medicamentos": [
+        {
+          "nombre": "Dilantin",
+          "principioActivo": "Fenitoína"
+        },
+        {
+          "nombre": "Tegretol",
+          "principioActivo": "Carbamazepina"
+        },
+        {
+          "nombre": "Neurontin",
+          "principioActivo": "Gabapentina"
+        },
+        {
+          "nombre": "Klonopin",
+          "principioActivo": "Clonazepam"
+        },
+        {
+          "nombre": "Lamictal",
+          "principioActivo": "Lamotrigina"
+        },
+        {
+          "nombre": "Topamax",
+          "principioActivo": "Topiramato"
+        },
+        {
+          "nombre": "Keppra",
+          "principioActivo": "Levetiracetam"
+        },
+        {
+          "nombre": "Lyrica",
+          "principioActivo": "Pregabalina"
+        },
+        {
+          "nombre": "Depakote",
+          "principioActivo": "Valproato"
+        },
+        {
+          "nombre": "Trileptal",
+          "principioActivo": "Oxcarbazepina"
+        },
+        {
+          "nombre": "Depakote",
+          "principioActivo": "Etodolaco"
+        },
+        {
+          "nombre": "Dilantin",
+          "principioActivo": "Fentanilo"
+        },
+        {
+          "nombre": "Keppra",
+          "principioActivo": "Lamotrigina"
+        },
+        {
+          "nombre": "Klonopin",
+          "principioActivo": "Levalbuterol"
+        },
+        {
+          "nombre": "Lamictal",
+          "principioActivo": "Levetiracetam"
+        },
+        {
+          "nombre": "Lyrica",
+          "principioActivo": "Morfina"
+        },
+        {
+          "nombre": "Neurontin",
+          "principioActivo": "Pioglitazona"
+        },
+        {
+          "nombre": "Tegretol",
+          "principioActivo": "Zidovudina"
+        },
+        {
+          "nombre": "Topamax"
+        },
+        {
+          "nombre": "Trileptal"
+        }
+      ]
+    },
+    {
+      "id": "G09",
+      "nombre": "Antihistamínicos",
+      "medicamentos": [
+        {
+          "nombre": "Benadryl",
+          "principioActivo": "Difenhidramina"
+        },
+        {
+          "nombre": "Zyrtec",
+          "principioActivo": "Cetirizina"
+        },
+        {
+          "nombre": "Allegra",
+          "principioActivo": "Fexofenadina"
+        },
+        {
+          "nombre": "Claritin",
+          "principioActivo": "Loratadina"
+        },
+        {
+          "nombre": "Xyzal",
+          "principioActivo": "Levocetirizina"
+        },
+        {
+          "nombre": "Clarinex",
+          "principioActivo": "Desloratadina"
+        },
+        {
+          "nombre": "Atarax",
+          "principioActivo": "Hidroxizina"
+        },
+        {
+          "nombre": "Vistaril",
+          "principioActivo": "Hidroxizina"
+        },
+        {
+          "nombre": "Tavist",
+          "principioActivo": "Clemastina"
+        },
+        {
+          "nombre": "Bromfed",
+          "principioActivo": "Bromfeniramina"
+        },
+        {
+          "nombre": "Allegra",
+          "principioActivo": "Apixabán"
+        },
+        {
+          "nombre": "Atarax",
+          "principioActivo": "Bumetanida"
+        },
+        {
+          "nombre": "Benadryl",
+          "principioActivo": "Ceftriaxona"
+        },
+        {
+          "nombre": "Bromfed",
+          "principioActivo": "Ciprofloxacino"
+        },
+        {
+          "nombre": "Claritin",
+          "principioActivo": "Diazepam"
+        },
+        {
+          "nombre": "Tavist",
+          "principioActivo": "Warfarina"
+        },
+        {
+          "nombre": "Vistaril"
+        },
+        {
+          "nombre": "Xyzal"
+        },
+        {
+          "nombre": "Zyrtec"
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "nombre": "Broncodilatadores",
+      "medicamentos": [
+        {
+          "nombre": "Ventolin",
+          "principioActivo": "Albuterol"
+        },
+        {
+          "nombre": "ProAir",
+          "principioActivo": "Albuterol"
+        },
+        {
+          "nombre": "Combivent",
+          "principioActivo": "Ipratropio"
+        },
+        {
+          "nombre": "Combivent",
+          "principioActivo": "Albuterol"
+        },
+        {
+          "nombre": "Spiriva",
+          "principioActivo": "Tiotropio"
+        },
+        {
+          "nombre": "Advair",
+          "principioActivo": "Fluticasona"
+        },
+        {
+          "nombre": "Advair",
+          "principioActivo": "Salmeterol"
+        },
+        {
+          "nombre": "Symbicort",
+          "principioActivo": "Budesonida"
+        },
+        {
+          "nombre": "Symbicort",
+          "principioActivo": "Formoterol"
+        },
+        {
+          "nombre": "Pulmicort",
+          "principioActivo": "Budesonida"
+        },
+        {
+          "nombre": "Xopenex",
+          "principioActivo": "Levalbuterol"
+        },
+        {
+          "nombre": "Serevent",
+          "principioActivo": "Salmeterol"
+        },
+        {
+          "nombre": "Breo Ellipta",
+          "principioActivo": "Fluticasona"
+        },
+        {
+          "nombre": "Breo Ellipta",
+          "principioActivo": "Vilanterol"
+        },
+        {
+          "nombre": "Advair",
+          "principioActivo": "Albuterol"
+        },
+        {
+          "nombre": "Advair",
+          "principioActivo": "Alendronato"
+        },
+        {
+          "nombre": "Breo Ellipta",
+          "principioActivo": "Cetirizina"
+        },
+        {
+          "nombre": "Breo Ellipta",
+          "principioActivo": "Ciclobenzaprina"
+        },
+        {
+          "nombre": "Combivent",
+          "principioActivo": "Diclofenaco"
+        },
+        {
+          "nombre": "Combivent",
+          "principioActivo": "Difenhidramina"
+        },
+        {
+          "nombre": "ProAir",
+          "principioActivo": "Sulfametoxazol"
+        },
+        {
+          "nombre": "Pulmicort",
+          "principioActivo": "Terbinafina"
+        },
+        {
+          "nombre": "Serevent",
+          "principioActivo": "Tramadol"
+        },
+        {
+          "nombre": "Spiriva",
+          "principioActivo": "Triamtereno"
+        },
+        {
+          "nombre": "Symbicort",
+          "principioActivo": "Vancomicina"
+        },
+        {
+          "nombre": "Symbicort",
+          "principioActivo": "Venlafaxina"
+        },
+        {
+          "nombre": "Ventolin"
+        },
+        {
+          "nombre": "Xopenex"
+        }
+      ]
+    },
+    {
+      "id": "G11",
+      "nombre": "Diuréticos",
+      "medicamentos": [
+        {
+          "nombre": "Lasix",
+          "principioActivo": "Furosemida"
+        },
+        {
+          "nombre": "HCTZ",
+          "principioActivo": "Hidroclorotiazida"
+        },
+        {
+          "nombre": "Diuril",
+          "principioActivo": "Clorotiazida"
+        },
+        {
+          "nombre": "Lozol",
+          "principioActivo": "Indapamida"
+        },
+        {
+          "nombre": "Bumex",
+          "principioActivo": "Bumetanida"
+        },
+        {
+          "nombre": "Demadex",
+          "principioActivo": "Torsemida"
+        },
+        {
+          "nombre": "Aldactone",
+          "principioActivo": "Espironolactona"
+        },
+        {
+          "nombre": "Midamor",
+          "principioActivo": "Amilorida"
+        },
+        {
+          "nombre": "Dyrenium",
+          "principioActivo": "Triamtereno"
+        },
+        {
+          "nombre": "Edecrin",
+          "principioActivo": "Ácido etacrínico"
+        },
+        {
+          "nombre": "Aldactone",
+          "principioActivo": "Amitriptilina"
+        },
+        {
+          "nombre": "Bumex",
+          "principioActivo": "Citalopram"
+        },
+        {
+          "nombre": "Demadex",
+          "principioActivo": "Estrógenos conjugados"
+        },
+        {
+          "nombre": "Diuril",
+          "principioActivo": "Fluconazol"
+        },
+        {
+          "nombre": "Dyrenium",
+          "principioActivo": "Fluticasona"
+        },
+        {
+          "nombre": "Edecrin",
+          "principioActivo": "Fluvastatina"
+        },
+        {
+          "nombre": "HCTZ",
+          "principioActivo": "Insulina glargina"
+        },
+        {
+          "nombre": "Lasix",
+          "principioActivo": "Levotiroxina sódica"
+        },
+        {
+          "nombre": "Lozol",
+          "principioActivo": "Moexipril"
+        },
+        {
+          "nombre": "Midamor",
+          "principioActivo": "Nifedipino"
+        }
+      ]
+    },
+    {
+      "id": "G12",
+      "nombre": "Bloqueadores beta",
+      "medicamentos": [
+        {
+          "nombre": "Inderal",
+          "principioActivo": "Propranolol"
+        },
+        {
+          "nombre": "Coreg",
+          "principioActivo": "Carvedilol"
+        },
+        {
+          "nombre": "Sectral",
+          "principioActivo": "Acebutolol"
+        },
+        {
+          "nombre": "Corgard",
+          "principioActivo": "Nadolol"
+        },
+        {
+          "nombre": "Zebeta",
+          "principioActivo": "Bisoprolol"
+        },
+        {
+          "nombre": "Bystolic",
+          "principioActivo": "Nebivolol"
+        },
+        {
+          "nombre": "Normodyne",
+          "principioActivo": "Labetalol"
+        },
+        {
+          "nombre": "Bystolic",
+          "principioActivo": "Clavulanato"
+        },
+        {
+          "nombre": "Coreg",
+          "principioActivo": "Diltiazem"
+        },
+        {
+          "nombre": "Corgard",
+          "principioActivo": "Duloxetina"
+        },
+        {
+          "nombre": "Inderal",
+          "principioActivo": "Itraconazol"
+        },
+        {
+          "nombre": "Normodyne",
+          "principioActivo": "Posaconazol"
+        },
+        {
+          "nombre": "Sectral",
+          "principioActivo": "Torsemida"
+        },
+        {
+          "nombre": "Zebeta"
+        }
+      ]
+    },
+    {
+      "id": "G13",
+      "nombre": "Inhibidores de la ECA",
+      "medicamentos": [
+        {
+          "nombre": "Prinivil",
+          "principioActivo": "Lisinopril"
+        },
+        {
+          "nombre": "Altace",
+          "principioActivo": "Ramipril"
+        },
+        {
+          "nombre": "Accupril",
+          "principioActivo": "Quinapril"
+        },
+        {
+          "nombre": "Mavik",
+          "principioActivo": "Trandolapril"
+        },
+        {
+          "nombre": "Lotensin",
+          "principioActivo": "Benazepril"
+        },
+        {
+          "nombre": "Capoten",
+          "principioActivo": "Captopril"
+        },
+        {
+          "nombre": "Monopril",
+          "principioActivo": "Fosinopril"
+        },
+        {
+          "nombre": "Univasc",
+          "principioActivo": "Moexipril"
+        },
+        {
+          "nombre": "Accupril",
+          "principioActivo": "Acebutolol"
+        },
+        {
+          "nombre": "Altace",
+          "principioActivo": "Atenolol"
+        },
+        {
+          "nombre": "Capoten",
+          "principioActivo": "Clorzoxazona"
+        },
+        {
+          "nombre": "Lotensin",
+          "principioActivo": "Metoprolol"
+        },
+        {
+          "nombre": "Mavik",
+          "principioActivo": "Nabumetona"
+        },
+        {
+          "nombre": "Monopril",
+          "principioActivo": "Oseltamivir"
+        },
+        {
+          "nombre": "Prinivil",
+          "principioActivo": "Succinato de metoprolol"
+        },
+        {
+          "nombre": "Univasc"
+        }
+      ]
+    },
+    {
+      "id": "G14",
+      "nombre": "Bloqueadores de los canales de calcio",
+      "medicamentos": [
+        {
+          "nombre": "Calan",
+          "principioActivo": "Verapamilo"
+        },
+        {
+          "nombre": "Plendil",
+          "principioActivo": "Felodipino"
+        },
+        {
+          "nombre": "Sular",
+          "principioActivo": "Nisoldipino"
+        },
+        {
+          "nombre": "Isoptin",
+          "principioActivo": "Verapamilo"
+        },
+        {
+          "nombre": "Covera",
+          "principioActivo": "Verapamilo"
+        },
+        {
+          "nombre": "Tiazac",
+          "principioActivo": "Diltiazem"
+        },
+        {
+          "nombre": "Adalat",
+          "principioActivo": "Nifedipino"
+        },
+        {
+          "nombre": "Adalat",
+          "principioActivo": "Ácido etacrínico"
+        },
+        {
+          "nombre": "Calan",
+          "principioActivo": "Clopidogrel"
+        },
+        {
+          "nombre": "Covera",
+          "principioActivo": "Efavirenz"
+        },
+        {
+          "nombre": "Isoptin",
+          "principioActivo": "Ketoconazol"
+        },
+        {
+          "nombre": "Plendil",
+          "principioActivo": "Sertralina"
+        },
+        {
+          "nombre": "Sular",
+          "principioActivo": "Valaciclovir"
+        },
+        {
+          "nombre": "Tiazac"
+        }
+      ]
+    },
+    {
+      "id": "G15",
+      "nombre": "Estatinas",
+      "medicamentos": [
+        {
+          "nombre": "Lipitor",
+          "principioActivo": "Atorvastatina"
+        },
+        {
+          "nombre": "Zocor",
+          "principioActivo": "Simvastatina"
+        },
+        {
+          "nombre": "Crestor",
+          "principioActivo": "Rosuvastatina"
+        },
+        {
+          "nombre": "Pravachol",
+          "principioActivo": "Pravastatina"
+        },
+        {
+          "nombre": "Mevacor",
+          "principioActivo": "Lovastatina"
+        },
+        {
+          "nombre": "Lescol",
+          "principioActivo": "Fluvastatina"
+        },
+        {
+          "nombre": "Livalo",
+          "principioActivo": "Pitavastatina"
+        },
+        {
+          "nombre": "Pitava",
+          "principioActivo": "Pitavastatina"
+        },
+        {
+          "nombre": "Altoprev",
+          "principioActivo": "Lovastatina"
+        },
+        {
+          "nombre": "Caduet",
+          "principioActivo": "Atorvastatina"
+        },
+        {
+          "nombre": "Caduet",
+          "principioActivo": "Amlodipino"
+        },
+        {
+          "nombre": "Altoprev",
+          "principioActivo": "Atorvastatina"
+        },
+        {
+          "nombre": "Caduet",
+          "principioActivo": "Clemastina"
+        },
+        {
+          "nombre": "Caduet",
+          "principioActivo": "Clonazepam"
+        },
+        {
+          "nombre": "Crestor",
+          "principioActivo": "Enoxaparina"
+        },
+        {
+          "nombre": "Lescol",
+          "principioActivo": "Linagliptina"
+        },
+        {
+          "nombre": "Lipitor",
+          "principioActivo": "Meloxicam"
+        },
+        {
+          "nombre": "Livalo",
+          "principioActivo": "Metaxalone"
+        },
+        {
+          "nombre": "Mevacor",
+          "principioActivo": "Naproxeno"
+        },
+        {
+          "nombre": "Pitava",
+          "principioActivo": "Salmeterol"
+        },
+        {
+          "nombre": "Pravachol",
+          "principioActivo": "Sitagliptina"
+        },
+        {
+          "nombre": "Zocor"
+        }
+      ]
+    },
+    {
+      "id": "G16",
+      "nombre": "Antifúngicos",
+      "medicamentos": [
+        {
+          "nombre": "Diflucan",
+          "principioActivo": "Fluconazol"
+        },
+        {
+          "nombre": "Nizoral",
+          "principioActivo": "Ketoconazol"
+        },
+        {
+          "nombre": "Lamisil",
+          "principioActivo": "Terbinafina"
+        },
+        {
+          "nombre": "Monistat",
+          "principioActivo": "Miconazol"
+        },
+        {
+          "nombre": "Lotrimin",
+          "principioActivo": "Clotrimazol"
+        },
+        {
+          "nombre": "Canesten",
+          "principioActivo": "Clotrimazol"
+        },
+        {
+          "nombre": "Sporanox",
+          "principioActivo": "Itraconazol"
+        },
+        {
+          "nombre": "Grifulvin V",
+          "principioActivo": "Griseofulvina"
+        },
+        {
+          "nombre": "Fulvicin P/G",
+          "principioActivo": "Griseofulvina"
+        },
+        {
+          "nombre": "Noxafil",
+          "principioActivo": "Posaconazol"
+        },
+        {
+          "nombre": "Canesten",
+          "principioActivo": "Clorotiazida"
+        },
+        {
+          "nombre": "Diflucan",
+          "principioActivo": "Fenitoína"
+        },
+        {
+          "nombre": "Fulvicin P/G",
+          "principioActivo": "Ibandronato"
+        },
+        {
+          "nombre": "Grifulvin V",
+          "principioActivo": "Insulina aspart"
+        },
+        {
+          "nombre": "Lamisil",
+          "principioActivo": "Levocetirizina"
+        },
+        {
+          "nombre": "Lotrimin",
+          "principioActivo": "Metronidazol"
+        },
+        {
+          "nombre": "Monistat",
+          "principioActivo": "Orfenadrina"
+        },
+        {
+          "nombre": "Nizoral",
+          "principioActivo": "Piroxicam"
+        },
+        {
+          "nombre": "Noxafil",
+          "principioActivo": "Quinapril"
+        },
+        {
+          "nombre": "Sporanox",
+          "principioActivo": "Trimetoprim"
+        }
+      ]
+    },
+    {
+      "id": "G17",
+      "nombre": "Antivirales",
+      "medicamentos": [
+        {
+          "nombre": "Valtrex",
+          "principioActivo": "Valaciclovir"
+        },
+        {
+          "nombre": "Zovirax",
+          "principioActivo": "Aciclovir"
+        },
+        {
+          "nombre": "Tamiflu",
+          "principioActivo": "Oseltamivir"
+        },
+        {
+          "nombre": "Retrovir",
+          "principioActivo": "Zidovudina"
+        },
+        {
+          "nombre": "Norvir",
+          "principioActivo": "Ritonavir"
+        },
+        {
+          "nombre": "Epivir",
+          "principioActivo": "Lamivudina"
+        },
+        {
+          "nombre": "Sustiva",
+          "principioActivo": "Efavirenz"
+        },
+        {
+          "nombre": "Viread",
+          "principioActivo": "Tenofovir"
+        },
+        {
+          "nombre": "Truvada",
+          "principioActivo": "Emtricitabina"
+        },
+        {
+          "nombre": "Truvada",
+          "principioActivo": "Tenofovir"
+        },
+        {
+          "nombre": "Atripla",
+          "principioActivo": "Efavirenz"
+        },
+        {
+          "nombre": "Atripla",
+          "principioActivo": "Emtricitabina"
+        },
+        {
+          "nombre": "Atripla",
+          "principioActivo": "Tenofovir"
+        },
+        {
+          "nombre": "Atripla",
+          "principioActivo": "Bupropión"
+        },
+        {
+          "nombre": "Atripla",
+          "principioActivo": "Calcitonina"
+        },
+        {
+          "nombre": "Atripla",
+          "principioActivo": "Captopril"
+        },
+        {
+          "nombre": "Epivir",
+          "principioActivo": "Furosemida"
+        },
+        {
+          "nombre": "Norvir",
+          "principioActivo": "Pregabalina"
+        },
+        {
+          "nombre": "Retrovir",
+          "principioActivo": "Tiotropio"
+        },
+        {
+          "nombre": "Sustiva",
+          "principioActivo": "Valsartán"
+        },
+        {
+          "nombre": "Tamiflu",
+          "principioActivo": "Vilanterol"
+        },
+        {
+          "nombre": "Truvada"
+        },
+        {
+          "nombre": "Valtrex"
+        },
+        {
+          "nombre": "Viread"
+        },
+        {
+          "nombre": "Zovirax"
+        }
+      ]
+    },
+    {
+      "id": "G18",
+      "nombre": "Hormonas",
+      "medicamentos": [
+        {
+          "nombre": "Premarin",
+          "principioActivo": "Estrógenos conjugados"
+        },
+        {
+          "nombre": "Estrace",
+          "principioActivo": "Estradiol"
+        },
+        {
+          "nombre": "Evista",
+          "principioActivo": "Raloxifeno"
+        },
+        {
+          "nombre": "Humatrope",
+          "principioActivo": "Somatropina"
+        },
+        {
+          "nombre": "Androgel",
+          "principioActivo": "Testosterona"
+        },
+        {
+          "nombre": "Actonel",
+          "principioActivo": "Risedronato"
+        },
+        {
+          "nombre": "Fosamax",
+          "principioActivo": "Alendronato"
+        },
+        {
+          "nombre": "Boniva",
+          "principioActivo": "Ibandronato"
+        },
+        {
+          "nombre": "Miacalcin",
+          "principioActivo": "Calcitonina"
+        },
+        {
+          "nombre": "Actonel",
+          "principioActivo": "Acetaminofén"
+        },
+        {
+          "nombre": "Androgel",
+          "principioActivo": "Benazepril"
+        },
+        {
+          "nombre": "Boniva",
+          "principioActivo": "Celecoxib"
+        },
+        {
+          "nombre": "Estrace",
+          "principioActivo": "Gabapentina"
+        },
+        {
+          "nombre": "Evista",
+          "principioActivo": "Glimepirida"
+        },
+        {
+          "nombre": "Fosamax",
+          "principioActivo": "Hidrocodona"
+        },
+        {
+          "nombre": "Humatrope",
+          "principioActivo": "Ipratropio"
+        },
+        {
+          "nombre": "Miacalcin",
+          "principioActivo": "Nebivolol"
+        },
+        {
+          "nombre": "Premarin",
+          "principioActivo": "Somatropina"
+        }
+      ]
+    },
+    {
+      "id": "G19",
+      "nombre": "Relajantes musculares",
+      "medicamentos": [
+        {
+          "nombre": "Flexeril",
+          "principioActivo": "Ciclobenzaprina"
+        },
+        {
+          "nombre": "Robaxin",
+          "principioActivo": "Metocarbamol"
+        },
+        {
+          "nombre": "Skelaxin",
+          "principioActivo": "Metaxalone"
+        },
+        {
+          "nombre": "Zanaflex",
+          "principioActivo": "Tizanidina"
+        },
+        {
+          "nombre": "Soma",
+          "principioActivo": "Carisoprodol"
+        },
+        {
+          "nombre": "Norflex",
+          "principioActivo": "Orfenadrina"
+        },
+        {
+          "nombre": "Lioresal",
+          "principioActivo": "Baclofeno"
+        },
+        {
+          "nombre": "Dantrium",
+          "principioActivo": "Dantroleno"
+        },
+        {
+          "nombre": "Parafon Forte",
+          "principioActivo": "Clorzoxazona"
+        },
+        {
+          "nombre": "Valium",
+          "principioActivo": "Diazepam"
+        },
+        {
+          "nombre": "Dantrium",
+          "principioActivo": "Estradiol"
+        },
+        {
+          "nombre": "Flexeril",
+          "principioActivo": "Hidroclorotiazida"
+        },
+        {
+          "nombre": "Lioresal",
+          "principioActivo": "Lovastatina"
+        },
+        {
+          "nombre": "Norflex",
+          "principioActivo": "Pitavastatina"
+        },
+        {
+          "nombre": "Parafon Forte",
+          "principioActivo": "Ritonavir"
+        },
+        {
+          "nombre": "Robaxin",
+          "principioActivo": "Tiroides desecada"
+        },
+        {
+          "nombre": "Skelaxin",
+          "principioActivo": "Trandolapril"
+        },
+        {
+          "nombre": "Soma",
+          "principioActivo": "Trazodona"
+        },
+        {
+          "nombre": "Valium"
+        },
+        {
+          "nombre": "Zanaflex"
+        }
+      ]
+    },
+    {
+      "id": "G20",
+      "nombre": "Medicamentos para la tiroide",
+      "medicamentos": [
+        {
+          "nombre": "Synthroid",
+          "principioActivo": "Levotiroxina sódica"
+        },
+        {
+          "nombre": "Levoxyl",
+          "principioActivo": "Levotiroxina sódica"
+        },
+        {
+          "nombre": "Levothroid",
+          "principioActivo": "Levotiroxina sódica"
+        },
+        {
+          "nombre": "Unithroid",
+          "principioActivo": "Levotiroxina sódica"
+        },
+        {
+          "nombre": "Tirosint",
+          "principioActivo": "Levotiroxina sódica"
+        },
+        {
+          "nombre": "Cytomel",
+          "principioActivo": "Liotironina sódica"
+        },
+        {
+          "nombre": "Armour Thyroid",
+          "principioActivo": "Tiroides desecada"
+        },
+        {
+          "nombre": "Nature-Throid",
+          "principioActivo": "Tiroides desecada"
+        },
+        {
+          "nombre": "Westhroid",
+          "principioActivo": "Tiroides desecada"
+        },
+        {
+          "nombre": "NP Thyroid",
+          "principioActivo": "Tiroides desecada"
+        },
+        {
+          "nombre": "Armour Thyroid",
+          "principioActivo": "Bromfeniramina"
+        },
+        {
+          "nombre": "Cytomel",
+          "principioActivo": "Espironolactona"
+        },
+        {
+          "nombre": "Levothroid",
+          "principioActivo": "Lisinopril"
+        },
+        {
+          "nombre": "Levoxyl",
+          "principioActivo": "Loratadina"
+        },
+        {
+          "nombre": "Nature-Throid",
+          "principioActivo": "Paroxetina"
+        },
+        {
+          "nombre": "NP Thyroid",
+          "principioActivo": "Raloxifeno"
+        },
+        {
+          "nombre": "Synthroid",
+          "principioActivo": "Verapamilo"
+        },
+        {
+          "nombre": "Tirosint"
+        },
+        {
+          "nombre": "Unithroid"
+        },
+        {
+          "nombre": "Westhroid"
+        }
+      ]
+    }
+  ],
+  "productos": [
+    {
+      "id": "NUT001",
+      "nombre": "ACEROL C",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_bicebeplus",
+      "nombre": "BICEBE Plus",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_bileina",
+      "nombre": "BILEINA",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT011",
+      "nombre": "ERGY C",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT012",
+      "nombre": "ERGY D",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_ergy3",
+      "nombre": "ERGY3",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT015",
+      "nombre": "ERGYACTIV",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT016",
+      "nombre": "ERGYANTIOX Forte",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT017",
+      "nombre": "ERGYBASE",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Menores de 6 años, Embarazo y lactancia"
+    },
+    {
+      "id": "NUT018",
+      "nombre": "ERGYCALM",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_ergycardioforte",
+      "nombre": "ERGYCARDIO FORTE",
+      "descripcion": "",
+      "grupos": [
+        "G07"
+      ],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "OJO HAY UN ERGYCARIDO FORTE1"
+    },
+    {
+      "id": "x_ergycardioforte1",
+      "nombre": "ERGYCARDIO FORTE1",
+      "descripcion": "",
+      "grupos": [
+        "G17"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Embarazo, lactancia, antirretroviral, anticoagulante o agente antiplaquetario (relacionado con el ajo)"
+    },
+    {
+      "id": "NUT020",
+      "nombre": "ERGYCARE",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT021",
+      "nombre": "ERGYCELL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT022",
+      "nombre": "ERGYCLEAN",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Tomar con el estómago vacío o fuera de las comidas"
+    },
+    {
+      "id": "x_ergycolbalance",
+      "nombre": "ERGYCOL Balance",
+      "descripcion": "",
+      "grupos": [
+        "G15"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos. Mayores de 70 años, embarazo, lactancia, sensibilidad a las estatinas o medicación para el colesterol (relacionado con la monacolina K). Puede contener trazas de alérgenos comunes."
+    },
+    {
+      "id": "x_ergycox",
+      "nombre": "ERGYCOX",
+      "descripcion": "",
+      "grupos": [
+        "G01"
+      ],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "OJO HAY UN ERGYCOX1"
+    },
+    {
+      "id": "x_ergycox1",
+      "nombre": "ERGYCOX1",
+      "descripcion": "",
+      "grupos": [
+        "G07"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos (relacionado con té verde, cúrcuma). Embarazo, lactancia (relacionado con té verde, cúrcuma), Úlcera gástrica o duodenal o cálculos biliares (relacionado con harpagofito), Alergia a los derivados salicílicos (relacionado con sauce), Anticoagulantes, medicamentos, patología hepática (relacionado con cúrcuma). No superar la dosis de 800 mg de EGCG (té verde) al día."
+    },
+    {
+      "id": "NUT027",
+      "nombre": "ERGYCRANBERRYL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Insuficiencia cardiaca o renal (relacionado con cola de caballo), Niños, embarazo, lactancia"
+    },
+    {
+      "id": "NUT013",
+      "nombre": "ERGYD Plus",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT028",
+      "nombre": "ERGYDIGEST",
+      "descripcion": "",
+      "grupos": [
+        "G20"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Niños, embarazo, lactancia (relacionado con rábano negro), Obstrucción de las vías biliares (relacionado con alcachofa), Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro)"
+    },
+    {
+      "id": "NUT029",
+      "nombre": "ERGYDREN",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Insuficiencia cardiaca o renal"
+    },
+    {
+      "id": "NUT030",
+      "nombre": "ERGYEPUR",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Obstrucción de las vías biliares (relacionado con alcachofa, boldo), Niños, embarazo, lactancia"
+    },
+    {
+      "id": "x_ergyfemcycle",
+      "nombre": "ERGYFEM Cycle",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos"
+    },
+    {
+      "id": "NUT033",
+      "nombre": "ERGYFEM Equilibrio",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos. Embarazo, lactancia (relacionado con diente de león, y azafrán), Obstrucción biliar, insuficiencia cardiaca o renal familia de las asteráceas (relacionado con diente de león), Alergia Puede contener trazas de alérgenos comunes."
+    },
+    {
+      "id": "NUT034",
+      "nombre": "ERGYFERIL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_ergyfibral",
+      "nombre": "ERGYFIBRAL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Menores de 6 años. Embarazo o lactancia, Uso prolongado (relacionado con ruibarbo)."
+    },
+    {
+      "id": "NUT037",
+      "nombre": "ERGYFLEX",
+      "descripcion": "",
+      "grupos": [
+        "G07"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos. Embarazo, lactancia, Anticoagulantes, productos con cúrcuma (relacionado con cúrcuma), Prediabetes, diabetes, asma, tratamiento de vitamina K o dieta controlada en sodio y potasio (relacionado con condroitina, glucosamina), Enfermedad de hígado, vesícula biliar, toma medicamentos (relacionado con cúrcuma)"
+    },
+    {
+      "id": "NUT038",
+      "nombre": "ERGYFOSFORYL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_ergyim",
+      "nombre": "ERGYIM",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT040",
+      "nombre": "ERGYKID Bien Estar",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "A partir de los 3 años"
+    },
+    {
+      "id": "NUT041",
+      "nombre": "ERGYKID Defens",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "A partir de los 3 años"
+    },
+    {
+      "id": "NUT042",
+      "nombre": "ERGYKID MultiVit",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "A partir de los 3 años"
+    },
+    {
+      "id": "x_ergylaseplus",
+      "nombre": "ERGYLASE Plus",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos. Embarazo o lactancia, Alergia a uno de los ingredientes. No abrir la cápsula. No destinado a sustituir una dieta sin gluten o tratar la enfermedad celíaca."
+    },
+    {
+      "id": "x_ergylivercomplex",
+      "nombre": "ERGYLIVER Complex",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Obstrucción de las vías biliares (relacionado con alcachofa), Niños, embarazo, lactancia (relacionado con ingredientes como alcachofa, cardo mariano, desmodium)"
+    },
+    {
+      "id": "NUT045",
+      "nombre": "ERGYLIXIR",
+      "descripcion": "",
+      "grupos": [
+        "G20"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Niños, embarazo, lactancia (relacionado con rábano negro), Obstrucción de las vías biliares (relacionado con alcachofa), Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro)"
+    },
+    {
+      "id": "x_ergymag",
+      "nombre": "ERGYMAG",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Embarazo, lactancia"
+    },
+    {
+      "id": "NUT048",
+      "nombre": "ERGYMUNIL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT049",
+      "nombre": "ERGYNATAL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_ergynutril(gama)",
+      "nombre": "ERGYNUTRIL (Gama)",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT051",
+      "nombre": "ERGYOPTIM",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT052",
+      "nombre": "ERGYOSEO K2",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT053",
+      "nombre": "ERGYPAINA Plus",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "No abrir la cápsula"
+    },
+    {
+      "id": "NUT054",
+      "nombre": "ERGYPAR",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT055",
+      "nombre": "ERGYPHILUS ATB",
+      "descripcion": "",
+      "grupos": [
+        "G02"
+      ],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Tomar distanciado del antibiótico 2 h mínimo."
+    },
+    {
+      "id": "x_ergyphilusbebé",
+      "nombre": "ERGYPHILUS Bebé",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Adaptado para bebés"
+    },
+    {
+      "id": "x_ergyphilusconf",
+      "nombre": "ERGYPHILUS Conf",
+      "descripcion": "",
+      "grupos": [
+        "G07"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos. Embarazo o lactancia/ Productos con cúrcuma, Anticoagulantes o medicamentos (relacionado con cebolla, cúrcuma) /Problemas de hígado o vesícula biliar (relacionado con cúrcuma)"
+    },
+    {
+      "id": "NUT058",
+      "nombre": "ERGYPHILUS HPy",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Tomar 2 h distanciado de los medicamentos"
+    },
+    {
+      "id": "x_ergyphilusimmunocomplex",
+      "nombre": "ERGYPHILUS Immuno Complex",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT060",
+      "nombre": "ERGYPHILUS Intima",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT061",
+      "nombre": "ERGYPHILUS Niños",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "A partir de 3 años"
+    },
+    {
+      "id": "NUT062",
+      "nombre": "ERGYPHILUS PLUS",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT064",
+      "nombre": "ERGYPHYTUM",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Niños, embarazo o lactancia (relacionado con bambú), Úlceras (estómago o duodeno) o de cálculos biliares (relacionado con harpagofito)"
+    },
+    {
+      "id": "NUT065",
+      "nombre": "ERGYPROTECT Conf",
+      "descripcion": "",
+      "grupos": [
+        "G07"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos. Embarazo o lactancia/ Productos con cúrcuma, Anticoagulantes o medicamentos (relacionado con cebolla, cúrcuma) /Problemas de hígado o vesícula biliar (relacionado con cúrcuma)"
+    },
+    {
+      "id": "NUT066",
+      "nombre": "ERGYPROTECT Plus",
+      "descripcion": "",
+      "grupos": [
+        "G07"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos. Embarazo y lactancia/ Productos con cúrcuma, Anticoagulantes, medicamentos, enfermedad hepática o enfermedad vesícula biliar (relacionado con Cúrcuma). Puede contener trazas de alérgenos comunes."
+    },
+    {
+      "id": "NUT067",
+      "nombre": "ERGYPROTEIN",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "100% natural, sin gluten, sin OGM, apto para lactovegetarianos, bajo en glúcidos, sin edulcorantes y sin azúcares"
+    },
+    {
+      "id": "x_ergyquerforte",
+      "nombre": "ERGYQUER Forte",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Reservado adultos. Embarazo o lactancia/ Toma de productos con té verde o con el estomago vacio (relacionado con té verde), Toma de medicamentos (relacionado con Trans-resveratrol)"
+    },
+    {
+      "id": "NUT069",
+      "nombre": "ERGYREG",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_ergyrensupport",
+      "nombre": "ERGYREN Support",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Niños, embarazo, lactancia"
+    },
+    {
+      "id": "x_ergysilgel",
+      "nombre": "ERGYSIL Gel",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Embarazo, lactancia. Más de 10 años, Ortiga en la composición."
+    },
+    {
+      "id": "NUT073",
+      "nombre": "ERGYSIL Solución",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT074",
+      "nombre": "ERGYSLIM",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "x_ergysport(gama)",
+      "nombre": "ERGYSPORT (Gama)",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Garantía SPORT Protect (ausencia de sustancias dopantes según norma NF EN 17444)"
+    },
+    {
+      "id": "NUT076",
+      "nombre": "ERGYSPORT Esfuerzo",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT078",
+      "nombre": "ERGYSPORT OLiGOMAX",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT079",
+      "nombre": "ERGYSPORT Recup",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT080",
+      "nombre": "ERGYSPORT Regen",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT081",
+      "nombre": "ERGYSPORT Stim",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT082",
+      "nombre": "ERGYSTAM",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "No recomendado para mujeres embarazadas o en periodo de lactancia (grosella negra y llantén). Sólo para adultos (grosella negra). No utilizar en caso de insuficiencia cardíaca o renal edematosa (grosella negra)."
+    },
+    {
+      "id": "x_ergytaurinadetox",
+      "nombre": "ERGYTAURINA Detox",
+      "descripcion": "",
+      "grupos": [
+        "G20",
+        "G07",
+        "G06"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": false,
+      "notas": "Niños, embarazo, lactancia (relacionado con rábano negro). Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro), Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea (relacionado con ajo)."
+    },
+    {
+      "id": "x_ergytonyl",
+      "nombre": "ERGYTONYL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT087",
+      "nombre": "ERGYVEN",
+      "descripcion": "",
+      "grupos": [
+        "G07"
+      ],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Embarazo y lactancia (relacionado con meliloto). Menor de 12 años y anticoagulantes (relacionado con castaño de indias), En caso de cirugía, dejar de tomarlo 3 días antes."
+    },
+    {
+      "id": "NUT088",
+      "nombre": "ERGYVIOL",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT089",
+      "nombre": "ERGYVITAL Hombre",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": ""
+    },
+    {
+      "id": "NUT090",
+      "nombre": "ERGYZEN",
+      "descripcion": "",
+      "grupos": [],
+      "embarazo": true,
+      "lactancia": true,
+      "ninos": true,
+      "epilepsia": true,
+      "notas": "Embarazo, lactancia (relacionado con eschscholtzia), Niños de menos de 12 años (relacionado con valeriana), Epilepsia"
+    },
+    {
+      "id": "NUT_green’flor",
+      "nombre": "GREEN’FLOR",
+      "descripcion": "",
+      "grupos": [
+        "G07",
+        "G06"
+      ],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea (relacionado con ajo de oso/ajo), Obstrucción biliar, insuficiencia cardiaca o renal familia de las asteráceas (relacionado con diente de león)"
+    },
+    {
+      "id": "NUT_my’cokyl",
+      "nombre": "MY’COKYL",
+      "descripcion": "",
+      "grupos": [
+        "G07",
+        "G06"
+      ],
+      "embarazo": false,
+      "lactancia": false,
+      "ninos": false,
+      "epilepsia": false,
+      "notas": "Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea"
+    }
+  ]
+}
