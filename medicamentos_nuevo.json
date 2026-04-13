@@ -1,0 +1,2487 @@
+[
+  {
+    "id": "M001",
+    "nombre": "Celecoxib",
+    "tipo": "principio_activo",
+    "grupoId": "G04",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M002",
+    "nombre": "Celebrex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G04",
+    "principioActivoId": "M001"
+  },
+  {
+    "id": "M003",
+    "nombre": "Accupril",
+    "tipo": "nombre_comercial",
+    "grupoId": "G13",
+    "principioActivoId": null
+  },
+  {
+    "id": "M004",
+    "nombre": "Acebutolol",
+    "tipo": "principio_activo",
+    "grupoId": "G12",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M005",
+    "nombre": "Diclofenaco",
+    "tipo": "principio_activo",
+    "grupoId": "G04",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M006",
+    "nombre": "Voltaren",
+    "tipo": "nombre_comercial",
+    "grupoId": "G04",
+    "principioActivoId": "M005"
+  },
+  {
+    "id": "M007",
+    "nombre": "Actonel",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M008",
+    "nombre": "Acetaminofén",
+    "tipo": "principio_activo",
+    "grupoId": "G01",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M009",
+    "nombre": "Meloxicam",
+    "tipo": "principio_activo",
+    "grupoId": "G04",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M010",
+    "nombre": "Mobic",
+    "tipo": "nombre_comercial",
+    "grupoId": "G04",
+    "principioActivoId": "M009"
+  },
+  {
+    "id": "M011",
+    "nombre": "Actos",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": null
+  },
+  {
+    "id": "M012",
+    "nombre": "Aciclovir",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M013",
+    "nombre": "Piroxicam",
+    "tipo": "principio_activo",
+    "grupoId": "G04",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M014",
+    "nombre": "Feldene",
+    "tipo": "nombre_comercial",
+    "grupoId": "G04",
+    "principioActivoId": "M013"
+  },
+  {
+    "id": "M015",
+    "nombre": "Adalat",
+    "tipo": "nombre_comercial",
+    "grupoId": "G14",
+    "principioActivoId": null
+  },
+  {
+    "id": "M016",
+    "nombre": "Ácido etacrínico",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M017",
+    "nombre": "Nabumetona",
+    "tipo": "principio_activo",
+    "grupoId": "G04",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M018",
+    "nombre": "Naprosyn",
+    "tipo": "nombre_comercial",
+    "grupoId": "G04",
+    "principioActivoId": "M017"
+  },
+  {
+    "id": "M019",
+    "nombre": "Advair",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": null
+  },
+  {
+    "id": "M020",
+    "nombre": "Albuterol",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M021",
+    "nombre": "Oxaprozina",
+    "tipo": "principio_activo",
+    "grupoId": "G04",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M022",
+    "nombre": "Relafen",
+    "tipo": "nombre_comercial",
+    "grupoId": "G04",
+    "principioActivoId": "M021"
+  },
+  {
+    "id": "M023",
+    "nombre": "Alendronato",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M024",
+    "nombre": "Etodolaco",
+    "tipo": "principio_activo",
+    "grupoId": "G04",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M025",
+    "nombre": "Lodine",
+    "tipo": "nombre_comercial",
+    "grupoId": "G04",
+    "principioActivoId": "M024"
+  },
+  {
+    "id": "M026",
+    "nombre": "Advil",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": null
+  },
+  {
+    "id": "M027",
+    "nombre": "Amilorida",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M028",
+    "nombre": "Sulindaco",
+    "tipo": "principio_activo",
+    "grupoId": "G04",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M029",
+    "nombre": "Aldactone",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M030",
+    "nombre": "Amitriptilina",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M031",
+    "nombre": "Tylenol",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": "M008"
+  },
+  {
+    "id": "M032",
+    "nombre": "Aleve",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": null
+  },
+  {
+    "id": "M033",
+    "nombre": "Amlodipino",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M034",
+    "nombre": "Oxicodona",
+    "tipo": "principio_activo",
+    "grupoId": "G01",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M035",
+    "nombre": "Percocet",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": "M034"
+  },
+  {
+    "id": "M036",
+    "nombre": "Allegra",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": null
+  },
+  {
+    "id": "M037",
+    "nombre": "Apixabán",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M038",
+    "nombre": "Hidrocodona",
+    "tipo": "principio_activo",
+    "grupoId": "G01",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M039",
+    "nombre": "Vicodin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": "M038"
+  },
+  {
+    "id": "M040",
+    "nombre": "Altace",
+    "tipo": "nombre_comercial",
+    "grupoId": "G13",
+    "principioActivoId": null
+  },
+  {
+    "id": "M041",
+    "nombre": "Atenolol",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M042",
+    "nombre": "OxyContin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": "M034"
+  },
+  {
+    "id": "M043",
+    "nombre": "Altoprev",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M044",
+    "nombre": "Atorvastatina",
+    "tipo": "principio_activo",
+    "grupoId": "G15",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M045",
+    "nombre": "Morfina",
+    "tipo": "principio_activo",
+    "grupoId": "G01",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M046",
+    "nombre": "MS Contin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": "M045"
+  },
+  {
+    "id": "M047",
+    "nombre": "Amaryl",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": null
+  },
+  {
+    "id": "M048",
+    "nombre": "Azitromicina",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M049",
+    "nombre": "Fentanilo",
+    "tipo": "principio_activo",
+    "grupoId": "G01",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M050",
+    "nombre": "Duragesic",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": "M049"
+  },
+  {
+    "id": "M051",
+    "nombre": "Amoxil",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": null
+  },
+  {
+    "id": "M052",
+    "nombre": "Baclofeno",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M053",
+    "nombre": "Tramadol",
+    "tipo": "principio_activo",
+    "grupoId": "G01",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M054",
+    "nombre": "Ultram",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": "M053"
+  },
+  {
+    "id": "M055",
+    "nombre": "Androgel",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M056",
+    "nombre": "Benazepril",
+    "tipo": "principio_activo",
+    "grupoId": "G13",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M057",
+    "nombre": "Ibuprofeno",
+    "tipo": "principio_activo",
+    "grupoId": "G01",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M058",
+    "nombre": "Angiomax",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": null
+  },
+  {
+    "id": "M059",
+    "nombre": "Bisoprolol",
+    "tipo": "principio_activo",
+    "grupoId": "G12",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M060",
+    "nombre": "Naproxeno",
+    "tipo": "principio_activo",
+    "grupoId": "G01",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M061",
+    "nombre": "Arixtra",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": null
+  },
+  {
+    "id": "M062",
+    "nombre": "Bivalirudina",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M063",
+    "nombre": "Motrin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": "M057"
+  },
+  {
+    "id": "M064",
+    "nombre": "Armour Thyroid",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M065",
+    "nombre": "Bromfeniramina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M066",
+    "nombre": "Amoxicilina",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M067",
+    "nombre": "Aspirina",
+    "tipo": "nombre_comercial",
+    "grupoId": "G01",
+    "principioActivoId": null
+  },
+  {
+    "id": "M068",
+    "nombre": "Budesonida",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M069",
+    "nombre": "Zithromax",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": "M048"
+  },
+  {
+    "id": "M070",
+    "nombre": "Atarax",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": null
+  },
+  {
+    "id": "M071",
+    "nombre": "Bumetanida",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M072",
+    "nombre": "Ciprofloxacino",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M073",
+    "nombre": "Cipro",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": "M072"
+  },
+  {
+    "id": "M074",
+    "nombre": "Atripla",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": null
+  },
+  {
+    "id": "M075",
+    "nombre": "Bupropión",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M076",
+    "nombre": "Cefalexina",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M077",
+    "nombre": "Keflex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": "M076"
+  },
+  {
+    "id": "M078",
+    "nombre": "Calcitonina",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M079",
+    "nombre": "Levofloxacino",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M080",
+    "nombre": "Levaquin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": "M079"
+  },
+  {
+    "id": "M081",
+    "nombre": "Captopril",
+    "tipo": "principio_activo",
+    "grupoId": "G13",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M082",
+    "nombre": "Metronidazol",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M083",
+    "nombre": "Flagyl",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": "M082"
+  },
+  {
+    "id": "M084",
+    "nombre": "Augmentin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": null
+  },
+  {
+    "id": "M085",
+    "nombre": "Carbamazepina",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M086",
+    "nombre": "Trimetoprim",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M087",
+    "nombre": "Bactrim",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": "M086"
+  },
+  {
+    "id": "M088",
+    "nombre": "Carisoprodol",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M089",
+    "nombre": "Sulfametoxazol",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M090",
+    "nombre": "Carvedilol",
+    "tipo": "principio_activo",
+    "grupoId": "G12",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M091",
+    "nombre": "Vancomicina",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M092",
+    "nombre": "Vancomycin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": "M091"
+  },
+  {
+    "id": "M093",
+    "nombre": "Ceftriaxona",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M094",
+    "nombre": "Rocephin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G02",
+    "principioActivoId": "M093"
+  },
+  {
+    "id": "M095",
+    "nombre": "Benadryl",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": null
+  },
+  {
+    "id": "M096",
+    "nombre": "Boniva",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M097",
+    "nombre": "Clavulanato",
+    "tipo": "principio_activo",
+    "grupoId": "G02",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M098",
+    "nombre": "Breo Ellipta",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": null
+  },
+  {
+    "id": "M099",
+    "nombre": "Cetirizina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M100",
+    "nombre": "Warfarina",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M101",
+    "nombre": "Coumadin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": "M100"
+  },
+  {
+    "id": "M102",
+    "nombre": "Ciclobenzaprina",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M103",
+    "nombre": "Enoxaparina",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M104",
+    "nombre": "Lovenox",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": "M103"
+  },
+  {
+    "id": "M105",
+    "nombre": "Bromfed",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": null
+  },
+  {
+    "id": "M106",
+    "nombre": "Clopidogrel",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M107",
+    "nombre": "Plavix",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": "M106"
+  },
+  {
+    "id": "M108",
+    "nombre": "Bumex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M109",
+    "nombre": "Citalopram",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M110",
+    "nombre": "Rivaroxabán",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M111",
+    "nombre": "Xarelto",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": "M110"
+  },
+  {
+    "id": "M112",
+    "nombre": "Bystolic",
+    "tipo": "nombre_comercial",
+    "grupoId": "G12",
+    "principioActivoId": null
+  },
+  {
+    "id": "M113",
+    "nombre": "Eliquis",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": "M037"
+  },
+  {
+    "id": "M114",
+    "nombre": "Caduet",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M115",
+    "nombre": "Clemastina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M116",
+    "nombre": "Dabigatrán",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M117",
+    "nombre": "Pradaxa",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": "M116"
+  },
+  {
+    "id": "M118",
+    "nombre": "Clonazepam",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M119",
+    "nombre": "Edoxabán",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M120",
+    "nombre": "Savaysa",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": "M119"
+  },
+  {
+    "id": "M121",
+    "nombre": "Calan",
+    "tipo": "nombre_comercial",
+    "grupoId": "G14",
+    "principioActivoId": null
+  },
+  {
+    "id": "M122",
+    "nombre": "Dalteparina",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M123",
+    "nombre": "Fragmin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G07",
+    "principioActivoId": "M122"
+  },
+  {
+    "id": "M124",
+    "nombre": "Canesten",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": null
+  },
+  {
+    "id": "M125",
+    "nombre": "Clorotiazida",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M126",
+    "nombre": "Fondaparinux",
+    "tipo": "principio_activo",
+    "grupoId": "G07",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M127",
+    "nombre": "Capoten",
+    "tipo": "nombre_comercial",
+    "grupoId": "G13",
+    "principioActivoId": null
+  },
+  {
+    "id": "M128",
+    "nombre": "Clorzoxazona",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M129",
+    "nombre": "Cardizem",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": null
+  },
+  {
+    "id": "M130",
+    "nombre": "Clotrimazol",
+    "tipo": "principio_activo",
+    "grupoId": "G16",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M131",
+    "nombre": "Fenitoína",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M132",
+    "nombre": "Dilantin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M131"
+  },
+  {
+    "id": "M133",
+    "nombre": "Tegretol",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M085"
+  },
+  {
+    "id": "M134",
+    "nombre": "Celexa",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": null
+  },
+  {
+    "id": "M135",
+    "nombre": "Gabapentina",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M136",
+    "nombre": "Neurontin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M135"
+  },
+  {
+    "id": "M137",
+    "nombre": "Dantroleno",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M138",
+    "nombre": "Klonopin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M118"
+  },
+  {
+    "id": "M139",
+    "nombre": "Clarinex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": null
+  },
+  {
+    "id": "M140",
+    "nombre": "Desloratadina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M141",
+    "nombre": "Lamotrigina",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M142",
+    "nombre": "Lamictal",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M141"
+  },
+  {
+    "id": "M143",
+    "nombre": "Claritin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": null
+  },
+  {
+    "id": "M144",
+    "nombre": "Diazepam",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M145",
+    "nombre": "Topiramato",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M146",
+    "nombre": "Topamax",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M145"
+  },
+  {
+    "id": "M147",
+    "nombre": "Combivent",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": null
+  },
+  {
+    "id": "M148",
+    "nombre": "Levetiracetam",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M149",
+    "nombre": "Keppra",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M148"
+  },
+  {
+    "id": "M150",
+    "nombre": "Difenhidramina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M151",
+    "nombre": "Pregabalina",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M152",
+    "nombre": "Lyrica",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M151"
+  },
+  {
+    "id": "M153",
+    "nombre": "Coreg",
+    "tipo": "nombre_comercial",
+    "grupoId": "G12",
+    "principioActivoId": null
+  },
+  {
+    "id": "M154",
+    "nombre": "Diltiazem",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M155",
+    "nombre": "Valproato",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M156",
+    "nombre": "Depakote",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M155"
+  },
+  {
+    "id": "M157",
+    "nombre": "Corgard",
+    "tipo": "nombre_comercial",
+    "grupoId": "G12",
+    "principioActivoId": null
+  },
+  {
+    "id": "M158",
+    "nombre": "Duloxetina",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M159",
+    "nombre": "Oxcarbazepina",
+    "tipo": "principio_activo",
+    "grupoId": "G08",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M160",
+    "nombre": "Trileptal",
+    "tipo": "nombre_comercial",
+    "grupoId": "G08",
+    "principioActivoId": "M159"
+  },
+  {
+    "id": "M161",
+    "nombre": "Fluoxetina",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M162",
+    "nombre": "Prozac",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": "M161"
+  },
+  {
+    "id": "M163",
+    "nombre": "Covera",
+    "tipo": "nombre_comercial",
+    "grupoId": "G14",
+    "principioActivoId": null
+  },
+  {
+    "id": "M164",
+    "nombre": "Efavirenz",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M165",
+    "nombre": "Sertralina",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M166",
+    "nombre": "Zoloft",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": "M165"
+  },
+  {
+    "id": "M167",
+    "nombre": "Cozaar",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": null
+  },
+  {
+    "id": "M168",
+    "nombre": "Emtricitabina",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M169",
+    "nombre": "Paroxetina",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M170",
+    "nombre": "Paxil",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": "M169"
+  },
+  {
+    "id": "M171",
+    "nombre": "Crestor",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M172",
+    "nombre": "Cymbalta",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": null
+  },
+  {
+    "id": "M173",
+    "nombre": "Escitalopram",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M174",
+    "nombre": "Lexapro",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": "M173"
+  },
+  {
+    "id": "M175",
+    "nombre": "Cytomel",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M176",
+    "nombre": "Espironolactona",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M177",
+    "nombre": "Wellbutrin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": "M075"
+  },
+  {
+    "id": "M178",
+    "nombre": "Dantrium",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M179",
+    "nombre": "Estradiol",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M180",
+    "nombre": "Venlafaxina",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M181",
+    "nombre": "Effexor",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": "M180"
+  },
+  {
+    "id": "M182",
+    "nombre": "Demadex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M183",
+    "nombre": "Estrógenos conjugados",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M184",
+    "nombre": "Elavil",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": "M030"
+  },
+  {
+    "id": "M185",
+    "nombre": "Desyrel",
+    "tipo": "nombre_comercial",
+    "grupoId": "G03",
+    "principioActivoId": null
+  },
+  {
+    "id": "M186",
+    "nombre": "Felodipino",
+    "tipo": "principio_activo",
+    "grupoId": "G14",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M187",
+    "nombre": "Trazodona",
+    "tipo": "principio_activo",
+    "grupoId": "G03",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M188",
+    "nombre": "Diflucan",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": null
+  },
+  {
+    "id": "M189",
+    "nombre": "Metformina",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M190",
+    "nombre": "Metformin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": "M189"
+  },
+  {
+    "id": "M191",
+    "nombre": "Glucophage",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": "M189"
+  },
+  {
+    "id": "M192",
+    "nombre": "Diovan",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": null
+  },
+  {
+    "id": "M193",
+    "nombre": "Fexofenadina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M194",
+    "nombre": "Sitagliptina",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M195",
+    "nombre": "Januvia",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": "M194"
+  },
+  {
+    "id": "M196",
+    "nombre": "Diuril",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M197",
+    "nombre": "Fluconazol",
+    "tipo": "principio_activo",
+    "grupoId": "G16",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M198",
+    "nombre": "Insulina lispro",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M199",
+    "nombre": "Humalog",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": "M198"
+  },
+  {
+    "id": "M200",
+    "nombre": "Insulina glargina",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M201",
+    "nombre": "Lantus",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": "M200"
+  },
+  {
+    "id": "M202",
+    "nombre": "Dyrenium",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M203",
+    "nombre": "Fluticasona",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M204",
+    "nombre": "Insulina aspart",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M205",
+    "nombre": "Novolog",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": "M204"
+  },
+  {
+    "id": "M206",
+    "nombre": "Edecrin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M207",
+    "nombre": "Fluvastatina",
+    "tipo": "principio_activo",
+    "grupoId": "G15",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M208",
+    "nombre": "Pioglitazona",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M209",
+    "nombre": "Glimepirida",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M210",
+    "nombre": "Formoterol",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M211",
+    "nombre": "Saxagliptina",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M212",
+    "nombre": "Onglyza",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": "M211"
+  },
+  {
+    "id": "M213",
+    "nombre": "Fosinopril",
+    "tipo": "principio_activo",
+    "grupoId": "G13",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M214",
+    "nombre": "Linagliptina",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M215",
+    "nombre": "Tradjenta",
+    "tipo": "nombre_comercial",
+    "grupoId": "G06",
+    "principioActivoId": "M214"
+  },
+  {
+    "id": "M216",
+    "nombre": "Epivir",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": null
+  },
+  {
+    "id": "M217",
+    "nombre": "Furosemida",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M218",
+    "nombre": "Glipizida",
+    "tipo": "principio_activo",
+    "grupoId": "G06",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M219",
+    "nombre": "Estrace",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M220",
+    "nombre": "Evista",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M221",
+    "nombre": "Ketoconazol",
+    "tipo": "principio_activo",
+    "grupoId": "G16",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M222",
+    "nombre": "Nizoral",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": "M221"
+  },
+  {
+    "id": "M223",
+    "nombre": "Terbinafina",
+    "tipo": "principio_activo",
+    "grupoId": "G16",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M224",
+    "nombre": "Lamisil",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": "M223"
+  },
+  {
+    "id": "M225",
+    "nombre": "Griseofulvina",
+    "tipo": "principio_activo",
+    "grupoId": "G16",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M226",
+    "nombre": "Miconazol",
+    "tipo": "principio_activo",
+    "grupoId": "G16",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M227",
+    "nombre": "Monistat",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": "M226"
+  },
+  {
+    "id": "M228",
+    "nombre": "Flexeril",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M229",
+    "nombre": "Hidroclorotiazida",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M230",
+    "nombre": "Lotrimin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": "M130"
+  },
+  {
+    "id": "M231",
+    "nombre": "Fosamax",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M232",
+    "nombre": "Hidroxizina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M233",
+    "nombre": "Itraconazol",
+    "tipo": "principio_activo",
+    "grupoId": "G16",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M234",
+    "nombre": "Sporanox",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": "M233"
+  },
+  {
+    "id": "M235",
+    "nombre": "Fulvicin P/G",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": null
+  },
+  {
+    "id": "M236",
+    "nombre": "Ibandronato",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M237",
+    "nombre": "Grifulvin V",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": "M225"
+  },
+  {
+    "id": "M238",
+    "nombre": "Indapamida",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M239",
+    "nombre": "Posaconazol",
+    "tipo": "principio_activo",
+    "grupoId": "G16",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M240",
+    "nombre": "Noxafil",
+    "tipo": "nombre_comercial",
+    "grupoId": "G16",
+    "principioActivoId": "M239"
+  },
+  {
+    "id": "M241",
+    "nombre": "Norvasc",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": "M033"
+  },
+  {
+    "id": "M242",
+    "nombre": "HCTZ",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M243",
+    "nombre": "Losartán",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M244",
+    "nombre": "Valsartán",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M245",
+    "nombre": "Humatrope",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M246",
+    "nombre": "Ipratropio",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M247",
+    "nombre": "Metoprolol",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M248",
+    "nombre": "Lopressor",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": "M247"
+  },
+  {
+    "id": "M249",
+    "nombre": "Inderal",
+    "tipo": "nombre_comercial",
+    "grupoId": "G12",
+    "principioActivoId": null
+  },
+  {
+    "id": "M250",
+    "nombre": "Succinato de metoprolol",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M251",
+    "nombre": "Toprol XL",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": "M250"
+  },
+  {
+    "id": "M252",
+    "nombre": "Isoptin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G14",
+    "principioActivoId": null
+  },
+  {
+    "id": "M253",
+    "nombre": "Tenormin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": "M041"
+  },
+  {
+    "id": "M254",
+    "nombre": "Labetalol",
+    "tipo": "principio_activo",
+    "grupoId": "G12",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M255",
+    "nombre": "Lamivudina",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M256",
+    "nombre": "Nifedipino",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M257",
+    "nombre": "Procardia",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": "M256"
+  },
+  {
+    "id": "M258",
+    "nombre": "Lisinopril",
+    "tipo": "principio_activo",
+    "grupoId": "G05",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M259",
+    "nombre": "Zestril",
+    "tipo": "nombre_comercial",
+    "grupoId": "G05",
+    "principioActivoId": "M258"
+  },
+  {
+    "id": "M260",
+    "nombre": "Levalbuterol",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M261",
+    "nombre": "Zyrtec",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": "M099"
+  },
+  {
+    "id": "M262",
+    "nombre": "Levocetirizina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M263",
+    "nombre": "Loratadina",
+    "tipo": "principio_activo",
+    "grupoId": "G09",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M264",
+    "nombre": "Lasix",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M265",
+    "nombre": "Levotiroxina sódica",
+    "tipo": "principio_activo",
+    "grupoId": "G20",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M266",
+    "nombre": "Xyzal",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": "M262"
+  },
+  {
+    "id": "M267",
+    "nombre": "Lescol",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M268",
+    "nombre": "Liotironina sódica",
+    "tipo": "principio_activo",
+    "grupoId": "G20",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M269",
+    "nombre": "Levothroid",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M270",
+    "nombre": "Vistaril",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": "M232"
+  },
+  {
+    "id": "M271",
+    "nombre": "Levoxyl",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M272",
+    "nombre": "Tavist",
+    "tipo": "nombre_comercial",
+    "grupoId": "G09",
+    "principioActivoId": "M115"
+  },
+  {
+    "id": "M273",
+    "nombre": "Lioresal",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M274",
+    "nombre": "Lovastatina",
+    "tipo": "principio_activo",
+    "grupoId": "G15",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M275",
+    "nombre": "Valaciclovir",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M276",
+    "nombre": "Valtrex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": "M275"
+  },
+  {
+    "id": "M277",
+    "nombre": "Lipitor",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M278",
+    "nombre": "Zovirax",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": "M012"
+  },
+  {
+    "id": "M279",
+    "nombre": "Livalo",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M280",
+    "nombre": "Metaxalone",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M281",
+    "nombre": "Oseltamivir",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M282",
+    "nombre": "Tamiflu",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": "M281"
+  },
+  {
+    "id": "M283",
+    "nombre": "Zidovudina",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M284",
+    "nombre": "Retrovir",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": "M283"
+  },
+  {
+    "id": "M285",
+    "nombre": "Metocarbamol",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M286",
+    "nombre": "Ritonavir",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M287",
+    "nombre": "Norvir",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": "M286"
+  },
+  {
+    "id": "M288",
+    "nombre": "Lotensin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G13",
+    "principioActivoId": null
+  },
+  {
+    "id": "M289",
+    "nombre": "Sustiva",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": "M164"
+  },
+  {
+    "id": "M290",
+    "nombre": "Tenofovir",
+    "tipo": "principio_activo",
+    "grupoId": "G17",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M291",
+    "nombre": "Viread",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": "M290"
+  },
+  {
+    "id": "M292",
+    "nombre": "Lozol",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M293",
+    "nombre": "Moexipril",
+    "tipo": "principio_activo",
+    "grupoId": "G13",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M294",
+    "nombre": "Truvada",
+    "tipo": "nombre_comercial",
+    "grupoId": "G17",
+    "principioActivoId": "M168"
+  },
+  {
+    "id": "M295",
+    "nombre": "Mavik",
+    "tipo": "nombre_comercial",
+    "grupoId": "G13",
+    "principioActivoId": null
+  },
+  {
+    "id": "M296",
+    "nombre": "Nadolol",
+    "tipo": "principio_activo",
+    "grupoId": "G12",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M297",
+    "nombre": "Mevacor",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M298",
+    "nombre": "Miacalcin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M299",
+    "nombre": "Nebivolol",
+    "tipo": "principio_activo",
+    "grupoId": "G12",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M300",
+    "nombre": "Propranolol",
+    "tipo": "principio_activo",
+    "grupoId": "G12",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M301",
+    "nombre": "Midamor",
+    "tipo": "nombre_comercial",
+    "grupoId": "G11",
+    "principioActivoId": null
+  },
+  {
+    "id": "M302",
+    "nombre": "Nisoldipino",
+    "tipo": "principio_activo",
+    "grupoId": "G14",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M303",
+    "nombre": "Sectral",
+    "tipo": "nombre_comercial",
+    "grupoId": "G12",
+    "principioActivoId": "M004"
+  },
+  {
+    "id": "M304",
+    "nombre": "Orfenadrina",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M305",
+    "nombre": "Monopril",
+    "tipo": "nombre_comercial",
+    "grupoId": "G13",
+    "principioActivoId": null
+  },
+  {
+    "id": "M306",
+    "nombre": "Zebeta",
+    "tipo": "nombre_comercial",
+    "grupoId": "G12",
+    "principioActivoId": "M059"
+  },
+  {
+    "id": "M307",
+    "nombre": "Normodyne",
+    "tipo": "nombre_comercial",
+    "grupoId": "G12",
+    "principioActivoId": "M254"
+  },
+  {
+    "id": "M308",
+    "nombre": "Verapamilo",
+    "tipo": "principio_activo",
+    "grupoId": "G14",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M309",
+    "nombre": "Nature-Throid",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M310",
+    "nombre": "Plendil",
+    "tipo": "nombre_comercial",
+    "grupoId": "G14",
+    "principioActivoId": "M186"
+  },
+  {
+    "id": "M311",
+    "nombre": "Sular",
+    "tipo": "nombre_comercial",
+    "grupoId": "G14",
+    "principioActivoId": "M302"
+  },
+  {
+    "id": "M312",
+    "nombre": "Norflex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M313",
+    "nombre": "Pitavastatina",
+    "tipo": "principio_activo",
+    "grupoId": "G15",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M314",
+    "nombre": "Tiazac",
+    "tipo": "nombre_comercial",
+    "grupoId": "G14",
+    "principioActivoId": null
+  },
+  {
+    "id": "M315",
+    "nombre": "Pravastatina",
+    "tipo": "principio_activo",
+    "grupoId": "G15",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M316",
+    "nombre": "Ventolin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": "M020"
+  },
+  {
+    "id": "M317",
+    "nombre": "ProAir",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": "M020"
+  },
+  {
+    "id": "M318",
+    "nombre": "Quinapril",
+    "tipo": "principio_activo",
+    "grupoId": "G13",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M319",
+    "nombre": "NP Thyroid",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M320",
+    "nombre": "Raloxifeno",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M321",
+    "nombre": "Ramipril",
+    "tipo": "principio_activo",
+    "grupoId": "G13",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M322",
+    "nombre": "Tiotropio",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M323",
+    "nombre": "Spiriva",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": "M322"
+  },
+  {
+    "id": "M324",
+    "nombre": "Risedronato",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M325",
+    "nombre": "Parafon Forte",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M326",
+    "nombre": "Salmeterol",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M327",
+    "nombre": "Symbicort",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": "M068"
+  },
+  {
+    "id": "M328",
+    "nombre": "Rosuvastatina",
+    "tipo": "principio_activo",
+    "grupoId": "G15",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M329",
+    "nombre": "Pitava",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M330",
+    "nombre": "Pulmicort",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": "M068"
+  },
+  {
+    "id": "M331",
+    "nombre": "Xopenex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": "M260"
+  },
+  {
+    "id": "M332",
+    "nombre": "Serevent",
+    "tipo": "nombre_comercial",
+    "grupoId": "G10",
+    "principioActivoId": "M326"
+  },
+  {
+    "id": "M333",
+    "nombre": "Simvastatina",
+    "tipo": "principio_activo",
+    "grupoId": "G15",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M334",
+    "nombre": "Pravachol",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": null
+  },
+  {
+    "id": "M335",
+    "nombre": "Vilanterol",
+    "tipo": "principio_activo",
+    "grupoId": "G10",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M336",
+    "nombre": "Premarin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G18",
+    "principioActivoId": null
+  },
+  {
+    "id": "M337",
+    "nombre": "Somatropina",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M338",
+    "nombre": "Prinivil",
+    "tipo": "nombre_comercial",
+    "grupoId": "G13",
+    "principioActivoId": null
+  },
+  {
+    "id": "M339",
+    "nombre": "Torsemida",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M340",
+    "nombre": "Testosterona",
+    "tipo": "principio_activo",
+    "grupoId": "G18",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M341",
+    "nombre": "Robaxin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M342",
+    "nombre": "Tiroides desecada",
+    "tipo": "principio_activo",
+    "grupoId": "G20",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M343",
+    "nombre": "Triamtereno",
+    "tipo": "principio_activo",
+    "grupoId": "G11",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M344",
+    "nombre": "Tizanidina",
+    "tipo": "principio_activo",
+    "grupoId": "G19",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M345",
+    "nombre": "Zocor",
+    "tipo": "nombre_comercial",
+    "grupoId": "G15",
+    "principioActivoId": "M333"
+  },
+  {
+    "id": "M346",
+    "nombre": "Skelaxin",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M347",
+    "nombre": "Trandolapril",
+    "tipo": "principio_activo",
+    "grupoId": "G13",
+    "nombres_comerciales": []
+  },
+  {
+    "id": "M348",
+    "nombre": "Soma",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M349",
+    "nombre": "Synthroid",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M350",
+    "nombre": "Tirosint",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M351",
+    "nombre": "Unithroid",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": null
+  },
+  {
+    "id": "M352",
+    "nombre": "Univasc",
+    "tipo": "nombre_comercial",
+    "grupoId": "G13",
+    "principioActivoId": "M293"
+  },
+  {
+    "id": "M353",
+    "nombre": "Valium",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": null
+  },
+  {
+    "id": "M354",
+    "nombre": "Westhroid",
+    "tipo": "nombre_comercial",
+    "grupoId": "G20",
+    "principioActivoId": "M342"
+  },
+  {
+    "id": "M355",
+    "nombre": "Zanaflex",
+    "tipo": "nombre_comercial",
+    "grupoId": "G19",
+    "principioActivoId": "M344"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "G01",
+    "nombre": "Analgésicos",
+    "emoji": "💊"
+  },
+  {
+    "id": "G02",
+    "nombre": "Antibióticos",
+    "emoji": "🔬"
+  },
+  {
+    "id": "G03",
+    "nombre": "Antidepresivos",
+    "emoji": "🧠"
+  },
+  {
+    "id": "G04",
+    "nombre": "Antiinflamatorios no esteroideos (AINE)",
+    "emoji": "💉"
+  },
+  {
+    "id": "G05",
+    "nombre": "Antihipertensivos",
+    "emoji": "❤️"
+  },
+  {
+    "id": "G06",
+    "nombre": "Antidiabéticos",
+    "emoji": "🩺"
+  },
+  {
+    "id": "G07",
+    "nombre": "Anticoagulantes",
+    "emoji": "🩸"
+  },
+  {
+    "id": "G08",
+    "nombre": "Anticonvulsivos",
+    "emoji": "⚡"
+  },
+  {
+    "id": "G09",
+    "nombre": "Antihistamínicos",
+    "emoji": "🌿"
+  },
+  {
+    "id": "G10",
+    "nombre": "Broncodilatadores",
+    "emoji": "🫁"
+  },
+  {
+    "id": "G11",
+    "nombre": "Diuréticos",
+    "emoji": "💧"
+  },
+  {
+    "id": "G12",
+    "nombre": "Bloqueadores beta",
+    "emoji": "🫀"
+  },
+  {
+    "id": "G13",
+    "nombre": "Inhibidores de la ECA",
+    "emoji": "🔬"
+  },
+  {
+    "id": "G14",
+    "nombre": "Bloqueadores de los canales de calcio",
+    "emoji": "🧪"
+  },
+  {
+    "id": "G15",
+    "nombre": "Estatinas",
+    "emoji": "💊"
+  },
+  {
+    "id": "G16",
+    "nombre": "Antifúngicos",
+    "emoji": "🦠"
+  },
+  {
+    "id": "G17",
+    "nombre": "Antivirales",
+    "emoji": "🦠"
+  },
+  {
+    "id": "G18",
+    "nombre": "Hormonas",
+    "emoji": "⚗️"
+  },
+  {
+    "id": "G19",
+    "nombre": "Relajantes musculares",
+    "emoji": "💪"
+  },
+  {
+    "id": "G20",
+    "nombre": "Medicamentos para la tiroides",
+    "emoji": "⚗️"
+  }
+]

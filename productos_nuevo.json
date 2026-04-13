@@ -1,0 +1,885 @@
+[
+  {
+    "id": "NUT_acerol_c",
+    "nombre": "ACEROL C",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_bicebe_plus",
+    "nombre": "BICEBE Plus",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_bileina",
+    "nombre": "BILEINA",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergy_c",
+    "nombre": "ERGY C",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergy_d",
+    "nombre": "ERGY D",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergy3",
+    "nombre": "ERGY3",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyactiv",
+    "nombre": "ERGYACTIV",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyantiox_forte",
+    "nombre": "ERGYANTIOX Forte",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergybase",
+    "nombre": "ERGYBASE",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Menores de 6 años, Embarazo y lactancia"
+  },
+  {
+    "id": "NUT_ergycalm",
+    "nombre": "ERGYCALM",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergycardio_forte",
+    "nombre": "ERGYCARDIO FORTE",
+    "descripcion": "",
+    "grupos": [
+      "G07"
+    ],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "OJO HAY UN ERGYCARIDO FORTE1"
+  },
+  {
+    "id": "NUT_ergycardio_forte1",
+    "nombre": "ERGYCARDIO FORTE1",
+    "descripcion": "",
+    "grupos": [
+      "G17"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Embarazo, lactancia, antirretroviral, anticoagulante o agente antiplaquetario (relacionado con el ajo)"
+  },
+  {
+    "id": "NUT_ergycare",
+    "nombre": "ERGYCARE",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergycell",
+    "nombre": "ERGYCELL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyclean",
+    "nombre": "ERGYCLEAN",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Tomar con el estómago vacío o fuera de las comidas"
+  },
+  {
+    "id": "NUT_ergycol_balance",
+    "nombre": "ERGYCOL Balance",
+    "descripcion": "",
+    "grupos": [
+      "G15"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos. Mayores de 70 años, embarazo, lactancia, sensibilidad a las estatinas o medicación para el colesterol (relacionado con la monacolina K). Puede contener trazas de alérgenos comunes."
+  },
+  {
+    "id": "NUT_ergycox",
+    "nombre": "ERGYCOX",
+    "descripcion": "",
+    "grupos": [
+      "G01"
+    ],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "OJO HAY UN ERGYCOX1"
+  },
+  {
+    "id": "NUT_ergycox1",
+    "nombre": "ERGYCOX1",
+    "descripcion": "",
+    "grupos": [
+      "G07"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos (relacionado con té verde, cúrcuma). Embarazo, lactancia (relacionado con té verde, cúrcuma), Úlcera gástrica o duodenal o cálculos biliares (relacionado con harpagofito), Alergia a los derivados salicílicos (relacionado con sauce), Anticoagulantes, medicamentos, patología hepática (relacionado con cúrcuma). No superar la dosis de 800 mg de EGCG (té verde) al día."
+  },
+  {
+    "id": "NUT_ergycranberryl",
+    "nombre": "ERGYCRANBERRYL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Insuficiencia cardiaca o renal (relacionado con cola de caballo), Niños, embarazo, lactancia"
+  },
+  {
+    "id": "NUT_ergyd_plus",
+    "nombre": "ERGYD Plus",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergydigest",
+    "nombre": "ERGYDIGEST",
+    "descripcion": "",
+    "grupos": [
+      "G20"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Niños, embarazo, lactancia (relacionado con rábano negro), Obstrucción de las vías biliares (relacionado con alcachofa), Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro)"
+  },
+  {
+    "id": "NUT_ergydren",
+    "nombre": "ERGYDREN",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Insuficiencia cardiaca o renal"
+  },
+  {
+    "id": "NUT_ergyepur",
+    "nombre": "ERGYEPUR",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Obstrucción de las vías biliares (relacionado con alcachofa, boldo), Niños, embarazo, lactancia"
+  },
+  {
+    "id": "NUT_ergyfem_cycle",
+    "nombre": "ERGYFEM Cycle",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos"
+  },
+  {
+    "id": "NUT_ergyfem_equilibrio",
+    "nombre": "ERGYFEM Equilibrio",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos. Embarazo, lactancia (relacionado con diente de león, y azafrán), Obstrucción biliar, insuficiencia cardiaca o renal familia de las asteráceas (relacionado con diente de león), Alergia Puede contener trazas de alérgenos comunes."
+  },
+  {
+    "id": "NUT_ergyferil",
+    "nombre": "ERGYFERIL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyfibral",
+    "nombre": "ERGYFIBRAL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Menores de 6 años. Embarazo o lactancia, Uso prolongado (relacionado con ruibarbo)."
+  },
+  {
+    "id": "NUT_ergyflex",
+    "nombre": "ERGYFLEX",
+    "descripcion": "",
+    "grupos": [
+      "G07"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos. Embarazo, lactancia, Anticoagulantes, productos con cúrcuma (relacionado con cúrcuma), Prediabetes, diabetes, asma, tratamiento de vitamina K o dieta controlada en sodio y potasio (relacionado con condroitina, glucosamina), Enfermedad de hígado, vesícula biliar, toma medicamentos (relacionado con cúrcuma)"
+  },
+  {
+    "id": "NUT_ergyfosforyl",
+    "nombre": "ERGYFOSFORYL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyim",
+    "nombre": "ERGYIM",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergykid_bien_estar",
+    "nombre": "ERGYKID Bien Estar",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "A partir de los 3 años"
+  },
+  {
+    "id": "NUT_ergykid_defens",
+    "nombre": "ERGYKID Defens",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "A partir de los 3 años"
+  },
+  {
+    "id": "NUT_ergykid_multivit",
+    "nombre": "ERGYKID MultiVit",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "A partir de los 3 años"
+  },
+  {
+    "id": "NUT_ergylase_plus",
+    "nombre": "ERGYLASE Plus",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos. Embarazo o lactancia, Alergia a uno de los ingredientes. No abrir la cápsula. No destinado a sustituir una dieta sin gluten o tratar la enfermedad celíaca."
+  },
+  {
+    "id": "NUT_ergyliver_complex",
+    "nombre": "ERGYLIVER Complex",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Obstrucción de las vías biliares (relacionado con alcachofa), Niños, embarazo, lactancia (relacionado con ingredientes como alcachofa, cardo mariano, desmodium)"
+  },
+  {
+    "id": "NUT_ergylixir",
+    "nombre": "ERGYLIXIR",
+    "descripcion": "",
+    "grupos": [
+      "G20"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Niños, embarazo, lactancia (relacionado con rábano negro), Obstrucción de las vías biliares (relacionado con alcachofa), Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro)"
+  },
+  {
+    "id": "NUT_ergymag",
+    "nombre": "ERGYMAG",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Embarazo, lactancia"
+  },
+  {
+    "id": "NUT_ergymunil",
+    "nombre": "ERGYMUNIL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergynatal",
+    "nombre": "ERGYNATAL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergynutril__gama_",
+    "nombre": "ERGYNUTRIL (Gama)",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyoptim",
+    "nombre": "ERGYOPTIM",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyoseo_k2",
+    "nombre": "ERGYOSEO K2",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergypaina_plus",
+    "nombre": "ERGYPAINA Plus",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "No abrir la cápsula"
+  },
+  {
+    "id": "NUT_ergypar",
+    "nombre": "ERGYPAR",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyphilus_atb",
+    "nombre": "ERGYPHILUS ATB",
+    "descripcion": "",
+    "grupos": [
+      "G02"
+    ],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Tomar distanciado del antibiótico 2 h mínimo."
+  },
+  {
+    "id": "NUT_ergyphilus_beb_",
+    "nombre": "ERGYPHILUS Bebé",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Adaptado para bebés"
+  },
+  {
+    "id": "NUT_ergyphilus_conf",
+    "nombre": "ERGYPHILUS Conf",
+    "descripcion": "",
+    "grupos": [
+      "G07"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos. Embarazo o lactancia/ Productos con cúrcuma, Anticoagulantes o medicamentos (relacionado con cebolla, cúrcuma) /Problemas de hígado o vesícula biliar (relacionado con cúrcuma)"
+  },
+  {
+    "id": "NUT_ergyphilus_hpy",
+    "nombre": "ERGYPHILUS HPy",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Tomar 2 h distanciado de los medicamentos"
+  },
+  {
+    "id": "NUT_ergyphilus_immuno_co",
+    "nombre": "ERGYPHILUS Immuno Complex",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyphilus_intima",
+    "nombre": "ERGYPHILUS Intima",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyphilus_ni_os",
+    "nombre": "ERGYPHILUS Niños",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "A partir de 3 años"
+  },
+  {
+    "id": "NUT_ergyphilus_plus",
+    "nombre": "ERGYPHILUS PLUS",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyphytum",
+    "nombre": "ERGYPHYTUM",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Niños, embarazo o lactancia (relacionado con bambú), Úlceras (estómago o duodeno) o de cálculos biliares (relacionado con harpagofito)"
+  },
+  {
+    "id": "NUT_ergyprotect_conf",
+    "nombre": "ERGYPROTECT Conf",
+    "descripcion": "",
+    "grupos": [
+      "G07"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos. Embarazo o lactancia/ Productos con cúrcuma, Anticoagulantes o medicamentos (relacionado con cebolla, cúrcuma) /Problemas de hígado o vesícula biliar (relacionado con cúrcuma)"
+  },
+  {
+    "id": "NUT_ergyprotect_plus",
+    "nombre": "ERGYPROTECT Plus",
+    "descripcion": "",
+    "grupos": [
+      "G07"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos. Embarazo y lactancia/ Productos con cúrcuma, Anticoagulantes, medicamentos, enfermedad hepática o enfermedad vesícula biliar (relacionado con Cúrcuma). Puede contener trazas de alérgenos comunes."
+  },
+  {
+    "id": "NUT_ergyprotein",
+    "nombre": "ERGYPROTEIN",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "100% natural, sin gluten, sin OGM, apto para lactovegetarianos, bajo en glúcidos, sin edulcorantes y sin azúcares"
+  },
+  {
+    "id": "NUT_ergyquer_forte",
+    "nombre": "ERGYQUER Forte",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Reservado adultos. Embarazo o lactancia/ Toma de productos con té verde o con el estomago vacio (relacionado con té verde), Toma de medicamentos (relacionado con Trans-resveratrol)"
+  },
+  {
+    "id": "NUT_ergyreg",
+    "nombre": "ERGYREG",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyren_support",
+    "nombre": "ERGYREN Support",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Niños, embarazo, lactancia"
+  },
+  {
+    "id": "NUT_ergysil_gel",
+    "nombre": "ERGYSIL Gel",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Embarazo, lactancia. Más de 10 años, Ortiga en la composición."
+  },
+  {
+    "id": "NUT_ergysil_soluci_n",
+    "nombre": "ERGYSIL Solución",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyslim",
+    "nombre": "ERGYSLIM",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergysport__gama_",
+    "nombre": "ERGYSPORT (Gama)",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Garantía SPORT Protect (ausencia de sustancias dopantes según norma NF EN 17444)"
+  },
+  {
+    "id": "NUT_ergysport_esfuerzo",
+    "nombre": "ERGYSPORT Esfuerzo",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergysport_oligomax",
+    "nombre": "ERGYSPORT OLiGOMAX",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergysport_recup",
+    "nombre": "ERGYSPORT Recup",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergysport_regen",
+    "nombre": "ERGYSPORT Regen",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergysport_stim",
+    "nombre": "ERGYSPORT Stim",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergystam",
+    "nombre": "ERGYSTAM",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": true,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "No recomendado para mujeres embarazadas o en periodo de lactancia (grosella negra y llantén). Sólo para adultos (grosella negra). No utilizar en caso de insuficiencia cardíaca o renal edematosa (grosella negra)."
+  },
+  {
+    "id": "NUT_ergytaurina_detox",
+    "nombre": "ERGYTAURINA Detox",
+    "descripcion": "",
+    "grupos": [
+      "G20",
+      "G07",
+      "G06"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Niños, embarazo, lactancia (relacionado con rábano negro). Hipotiroides o tratamiento para la tiroides (relacionado con rábano negro), Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea (relacionado con ajo)."
+  },
+  {
+    "id": "NUT_ergytonyl",
+    "nombre": "ERGYTONYL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyven",
+    "nombre": "ERGYVEN",
+    "descripcion": "",
+    "grupos": [
+      "G07"
+    ],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": false,
+    "notas": "Embarazo y lactancia (relacionado con meliloto). Menor de 12 años y anticoagulantes (relacionado con castaño de indias), En caso de cirugía, dejar de tomarlo 3 días antes."
+  },
+  {
+    "id": "NUT_ergyviol",
+    "nombre": "ERGYVIOL",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyvital_hombre",
+    "nombre": "ERGYVITAL Hombre",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": ""
+  },
+  {
+    "id": "NUT_ergyzen",
+    "nombre": "ERGYZEN",
+    "descripcion": "",
+    "grupos": [],
+    "embarazo": true,
+    "lactancia": true,
+    "ninos": true,
+    "epilepsia": true,
+    "notas": "Embarazo, lactancia (relacionado con eschscholtzia), Niños de menos de 12 años (relacionado con valeriana), Epilepsia"
+  },
+  {
+    "id": "NUT_green_flor",
+    "nombre": "GREEN’FLOR",
+    "descripcion": "",
+    "grupos": [
+      "G07",
+      "G06"
+    ],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea (relacionado con ajo de oso/ajo), Obstrucción biliar, insuficiencia cardiaca o renal familia de las asteráceas (relacionado con diente de león)"
+  },
+  {
+    "id": "NUT_my_cokyl",
+    "nombre": "MY’COKYL",
+    "descripcion": "",
+    "grupos": [
+      "G07",
+      "G06"
+    ],
+    "embarazo": false,
+    "lactancia": false,
+    "ninos": false,
+    "epilepsia": false,
+    "notas": "Anticoagulantes, inhibidores de la agregación plaquetaria o anlidlabélicos orales o trastornos de la coagulación sanguínea"
+  }
+]
