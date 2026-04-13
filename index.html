@@ -553,6 +553,7 @@ const SK = { prods:'ns2_prods', meds:'ns2_meds', grupos:'ns2_grupos', pin:'ns2_p
 // ESTADO
 // ═══════════════════════════════════════════════════
 let DB = { productos:[], medicamentos:[], grupos:[] };
+let _cache = new Map(); // cache temporal para compartir
 let ST = { pin:'', sinPin:false, tab:'prod', etab:'prod', filtro:'todos' };
 let deferredInstall = null;
 
@@ -594,6 +595,8 @@ function cargarDB() {
       {id:'G03', nombre:'Hormonas tiroideas', emoji:'⚗️'},
       {id:'G04', nombre:'Antidiabéticos orales', emoji:'🩺'},
       {id:'G05', nombre:'Antibióticos', emoji:'🔬'},
+      {id:'G06', nombre:'Analgésicos/AINEs', emoji:'💉'},
+      {id:'G07', nombre:'Antivirales', emoji:'🦠'},
     ];
     saveGrupos();
   }
@@ -643,6 +646,17 @@ function cargarDB() {
       {id:'M037',nombre:'Trimetoprim/sulfametoxazol',grupoId:'G05'},
       {id:'M038',nombre:'Vancomicina',grupoId:'G05'},
       {id:'M039',nombre:'Ceftriaxona',grupoId:'G05'},
+      {id:'M040',nombre:'Aspirina',grupoId:'G06'},
+      {id:'M041',nombre:'Ibuprofeno',grupoId:'G06'},
+      {id:'M042',nombre:'Naproxeno',grupoId:'G06'},
+      {id:'M043',nombre:'Diclofenaco',grupoId:'G06'},
+      {id:'M044',nombre:'Celecoxib',grupoId:'G06'},
+      {id:'M045',nombre:'Zidovudina',grupoId:'G07'},
+      {id:'M046',nombre:'Ritonavir',grupoId:'G07'},
+      {id:'M047',nombre:'Lamivudina',grupoId:'G07'},
+      {id:'M048',nombre:'Efavirenz',grupoId:'G07'},
+      {id:'M049',nombre:'Tenofovir',grupoId:'G07'},
+      {id:'M050',nombre:'Emtricitabina/tenofovir',grupoId:'G07'},
     ];
     saveMeds();
   }
@@ -970,7 +984,8 @@ function renderTarjeta(p, idx) {
 
   const sinNada = !(p.grupos||[]).length && !perfiles.length;
 
-  const pJson = JSON.stringify(p).replace(/'/g,'&#039;');
+  const cacheKey = 'p_' + (p.id||idx);
+  _cache.set(cacheKey, p);
 
   return `<div class="res-item ani" style="animation-delay:${idx*0.03}s">
     <div class="res-hdr" onclick="toggleDet('${id}')">
@@ -986,7 +1001,7 @@ function renderTarjeta(p, idx) {
       ${perfiles.length ? `<div class="det-sec"><div class="det-lbl">⚠️ Perfiles especiales</div><div>${perfiles.join('')}</div></div>` : ''}
       ${sinNada ? '<div class="badge badge-v">✅ Sin contraindicaciones registradas</div>' : ''}
       ${p.notas ? `<div class="det-sec" style="margin-top:8px;"><div class="det-lbl">📌 Notas</div><div class="det-txt">${esc(p.notas)}</div></div>` : ''}
-      <button class="btn-comp" onclick='prepComp(${pJson.replace(/"/g,"'")})'>📤 Compartir</button>
+      <button class="btn-comp" onclick="prepComp('${cacheKey}')">📤 Compartir</button>
     </div>
   </div>`;
 }
@@ -1310,7 +1325,8 @@ function cambiarPin() {
 // ═══════════════════════════════════════════════════
 // COMPARTIR
 // ═══════════════════════════════════════════════════
-function prepComp(p) {
+function prepComp(key) {
+  const p = _cache.get(key); if(!p){toast('❌ Error al compartir');return;}
   const s=semaforo(p);
   const semTxt=s==='rojo'?'🔴 CONTRAINDICADO':s==='amarillo'?'🟡 PRECAUCIÓN':'🟢 SEGURO';
   let txt=`🌿 *INFORME NUTERGIA SEGURO*\n━━━━━━━━━━━━━━━━━━━━━\n`;
