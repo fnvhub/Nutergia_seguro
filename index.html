@@ -236,6 +236,13 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
 </style>
 </head>
 <body>
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.getRegistrations().then(function(regs){
+    regs.forEach(function(r){ r.unregister(); });
+  });
+}
+</script>
 
 <div class="offline-b" id="offlineBadge">📡 Sin conexión — Modo offline</div>
 <div class="toast" id="toast"></div>
