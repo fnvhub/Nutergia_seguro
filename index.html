@@ -1468,11 +1468,7 @@ function detectarOffline(){
 }
 
 function registrarSW(){
-  if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('./sw.js')
-      .then(()=>console.log('SW OK'))
-      .catch(e=>console.warn('SW:',e));
-  }
+  // Service Worker desactivado - usando Firebase
 }
 </script>
 </body>
