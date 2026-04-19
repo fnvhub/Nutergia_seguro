@@ -1,13 +1,14 @@
-const CACHE = 'nutergia-v3';
+const CACHE = 'nutergia-v4';
 const ARCHIVOS = [
   './',
   './index.html',
   './productos.json',
   './manifest.json',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './firebase-init.js',  // ← añadir esto
+  './sync.js'            // ← y esto cuando lo crees
 ];
-
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE).then(c => c.addAll(ARCHIVOS)).then(() => self.skipWaiting())
