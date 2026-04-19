@@ -1,811 +1,754 @@
-o <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#1a3a2a">
+<meta name="theme-color" content="#2d6a4f">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-<!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
-<script src="firebase-init.js"></script>
-<link rel="manifest" href="/Nutergia_seguro/manifest.json">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Nutergia Seguro</title>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{
-  --vd:#1a3a2a;--vm:#2d6a4f;--vc:#40916c;--vl:#74c69d;--vs:#d8f3dc;
-  --bl:#ffffff;--gc:#f4f7f5;--gm:#e2ebe6;--gt:#7a8f84;--ns:#1c2b24;
-  --ro:#c0392b;--rc:#fde8e8;--am:#d97706;--ac:#fef3c7;
-  --ok:#16a34a;--okc:#dcfce7;
-  --sh:0 2px 16px rgba(26,58,42,0.10);--sh2:0 6px 28px rgba(26,58,42,0.18);
-  --r:14px;--rsm:8px;--rlg:22px;--tr:all 0.22s ease;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --vd: #2d6a4f; --vm: #40916c; --vc: #74c69d; --vs: #d8f3dc;
+  --bl: #ffffff; --gc: #f8f9fa; --gm: #e9ecef; --gt: #6c757d; --ns: #212529;
+  --ro: #dc3545; --rc: #f8d7da; --am: #fd7e14; --ac: #fff3cd;
+  --vs2: #28a745; --vc2: #d4edda;
+  --sh: 0 2px 12px rgba(0,0,0,0.1); --sh2: 0 4px 20px rgba(0,0,0,0.15);
+  --r: 16px; --rsm: 8px; --rlg: 24px; --tr: all 0.25s ease;
 }
-html,body{height:100%;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--gc);color:var(--ns);overflow:hidden;}
-
-/* ── INSTALL BANNER ── */
-#installBanner{position:fixed;inset:0;background:linear-gradient(160deg,var(--vd) 0%,var(--vm) 60%,var(--vc) 100%);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;text-align:center;}
-.ib-logo{font-size:72px;margin-bottom:16px;animation:pulse 2s ease infinite;}
-@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
-.ib-title{font-size:28px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-0.5px;}
-.ib-sub{font-size:14px;color:rgba(255,255,255,0.8);margin-bottom:32px;line-height:1.5;}
-.ib-btn{background:#fff;color:var(--vd);border:none;border-radius:50px;padding:16px 36px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,0.2);margin-bottom:12px;width:100%;max-width:320px;transition:var(--tr);}
-.ib-btn:active{transform:scale(0.97);}
-.ib-skip{color:rgba(255,255,255,0.65);font-size:13px;cursor:pointer;padding:8px;border:none;background:none;text-decoration:underline;}
-
-/* ── LOGIN ── */
-#loginScreen{position:fixed;inset:0;background:linear-gradient(160deg,var(--vd) 0%,var(--vm) 60%,var(--vc) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;padding:24px;}
-.lc{background:rgba(255,255,255,0.97);border-radius:var(--rlg);padding:36px 28px;width:100%;max-width:360px;box-shadow:0 24px 64px rgba(0,0,0,0.28);text-align:center;}
-.lc-logo{font-size:52px;margin-bottom:12px;}
-.lc-title{font-size:24px;font-weight:800;color:var(--vd);margin-bottom:4px;}
-.lc-sub{font-size:12px;color:var(--gt);margin-bottom:24px;}
-.lc-input{width:100%;padding:13px 16px;border:2px solid var(--gm);border-radius:var(--r);font-size:16px;text-align:center;letter-spacing:4px;outline:none;transition:var(--tr);background:var(--gc);margin-bottom:12px;}
-.lc-input:focus{border-color:var(--vc);background:#fff;box-shadow:0 0 0 3px rgba(64,145,108,0.15);}
-.lc-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--vd),var(--vc));color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(26,58,42,0.35);transition:var(--tr);}
-.lc-btn:active{transform:scale(0.98);}
-.lc-err{color:var(--ro);font-size:12px;margin-top:8px;min-height:18px;font-weight:600;}
-.lc-nopin{color:var(--gt);font-size:11px;margin-top:10px;cursor:pointer;text-decoration:underline;border:none;background:none;width:100%;}
-
-/* ── APP ── */
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--gc);color:var(--ns);overflow:hidden;}
+#loginScreen{position:fixed;inset:0;background:linear-gradient(135deg,var(--vd) 0%,var(--vm) 50%,var(--vc) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;padding:24px;}
+.login-card{background:rgba(255,255,255,0.97);border-radius:var(--rlg);padding:40px 32px;width:100%;max-width:380px;box-shadow:0 20px 60px rgba(0,0,0,0.3);text-align:center;}
+.login-logo{width:80px;height:80px;background:linear-gradient(135deg,var(--vd),var(--vc));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:36px;}
+.login-titulo{font-size:26px;font-weight:700;color:var(--vd);margin-bottom:6px;}
+.login-sub{font-size:13px;color:var(--gt);margin-bottom:28px;}
+.login-input-wrap{position:relative;margin-bottom:16px;}
+.login-input{width:100%;padding:14px 16px;border:2px solid var(--gm);border-radius:var(--r);font-size:16px;text-align:center;letter-spacing:3px;outline:none;transition:var(--tr);background:var(--gc);}
+.login-input:focus{border-color:var(--vm);background:var(--bl);box-shadow:0 0 0 3px rgba(64,145,108,0.15);}
+.login-btn{width:100%;padding:15px;background:linear-gradient(135deg,var(--vd),var(--vm));color:var(--bl);border:none;border-radius:var(--r);font-size:15px;font-weight:700;cursor:pointer;transition:var(--tr);box-shadow:0 4px 12px rgba(45,106,79,0.4);}
+.login-btn:active{transform:scale(0.98);}
+.login-error{color:var(--ro);font-size:13px;margin-top:12px;min-height:20px;font-weight:500;}
+.login-hint{color:var(--gt);font-size:11px;margin-top:8px;}
 #app{display:none;flex-direction:column;height:100vh;height:100dvh;}
 #app.visible{display:flex;}
-
-/* ── HEADER ── */
-.hdr{background:linear-gradient(135deg,var(--vd),var(--vm));color:#fff;padding:14px 18px 10px;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--sh);flex-shrink:0;z-index:100;}
-.hdr-left{display:flex;align-items:center;gap:10px;}
-.hdr-icon{font-size:26px;}
-.hdr-title{font-size:17px;font-weight:800;letter-spacing:-0.3px;}
-.hdr-sub{font-size:9px;opacity:0.75;text-transform:uppercase;letter-spacing:1px;}
-.hdr-btns{display:flex;gap:6px;}
-.hbtn{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:#fff;border-radius:var(--rsm);padding:7px 9px;cursor:pointer;font-size:15px;transition:var(--tr);}
-.hbtn:active{background:rgba(255,255,255,0.3);}
-
-/* ── CONTENT ── */
+.app-header{background:linear-gradient(135deg,var(--vd),var(--vm));color:var(--bl);padding:16px 20px 12px;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--sh);flex-shrink:0;z-index:100;}
+.header-logo{display:flex;align-items:center;gap:10px;}
+.header-logo-icon{width:38px;height:38px;background:rgba(255,255,255,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.header-titulo{font-size:18px;font-weight:700;letter-spacing:-0.3px;}
+.header-sub{font-size:10px;opacity:0.8;letter-spacing:0.5px;text-transform:uppercase;}
+.header-btns{display:flex;gap:8px;align-items:center;}
+.btn-h{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:var(--bl);border-radius:var(--rsm);padding:8px 10px;cursor:pointer;font-size:16px;transition:var(--tr);}
+.btn-h:hover,.btn-h:active{background:rgba(255,255,255,0.3);transform:scale(0.95);}
+/* INDICADOR SYNC */
+.sync-badge{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--rsm);padding:5px 9px;font-size:11px;font-weight:600;color:var(--bl);white-space:nowrap;}
+.sync-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.sync-dot.ok{background:#74c69d;}
+.sync-dot.syncing{background:#ffd166;animation:pulsar 1s infinite;}
+.sync-dot.error{background:#ef476f;}
+.sync-dot.offline{background:#aaa;}
+@keyframes pulsar{0%,100%{opacity:1}50%{opacity:0.3}}
 .app-cont{flex:1;overflow:hidden;position:relative;}
-.vista{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;padding:14px;display:none;-webkit-overflow-scrolling:touch;}
+.vista{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;padding:16px;display:none;-webkit-overflow-scrolling:touch;}
 .vista.activa{display:block;}
-
-/* ── NAV ── */
-.nav{background:#fff;border-top:1px solid var(--gm);display:flex;flex-shrink:0;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
-.ni{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:9px 4px 7px;cursor:pointer;border:none;background:none;color:var(--gt);font-size:9px;gap:3px;-webkit-tap-highlight-color:transparent;position:relative;transition:var(--tr);}
-.ni .ico{font-size:19px;transition:var(--tr);}
-.ni.on{color:var(--vm);}
-.ni.on .ico{transform:scale(1.15);}
-.ni.on::before{content:'';position:absolute;top:0;left:20%;right:20%;height:3px;background:var(--vm);border-radius:0 0 4px 4px;}
-
-/* ── CARDS ── */
-.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:14px;margin-bottom:10px;}
-.card-t{font-size:15px;font-weight:700;color:var(--vd);margin-bottom:3px;}
-.card-s{font-size:11px;color:var(--gt);margin-bottom:10px;}
-
-/* ── STATS ── */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;}
-.stat{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:14px 10px;text-align:center;}
-.stat-n{font-size:26px;font-weight:800;margin-bottom:2px;}
-.stat-l{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--gt);}
-.sv .stat-n{color:var(--ok);}
-.sa .stat-n{color:var(--am);}
-.sr .stat-n{color:var(--ro);}
-
-/* ── BUSCADOR ── */
-.bus-wrap{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:14px;margin-bottom:12px;}
-.btabs{display:flex;background:var(--gm);border-radius:var(--rsm);padding:3px;margin-bottom:10px;}
-.tbtn{flex:1;padding:7px 8px;border:none;background:none;border-radius:6px;cursor:pointer;font-size:11px;font-weight:700;color:var(--gt);transition:var(--tr);}
-.tbtn.on{background:#fff;color:var(--vd);box-shadow:0 1px 4px rgba(0,0,0,0.10);}
-.inp-wrap{position:relative;}
-.inp{width:100%;padding:12px 14px 12px 42px;border:2px solid var(--gm);border-radius:var(--r);font-size:15px;background:var(--gc);color:var(--ns);outline:none;transition:var(--tr);-webkit-appearance:none;}
-.inp:focus{border-color:var(--vc);background:#fff;box-shadow:0 0 0 3px rgba(64,145,108,0.12);}
-.inp-ico{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:17px;pointer-events:none;}
-.inp-x{position:absolute;right:11px;top:50%;transform:translateY(-50%);background:var(--gm);border:none;border-radius:50%;width:22px;height:22px;cursor:pointer;font-size:13px;display:none;align-items:center;justify-content:center;color:var(--gt);}
-.inp-x.vis{display:flex;}
-
-/* ── CHIPS RAPIDOS ── */
-.chips-scroll{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;scrollbar-width:none;}
-.chips-scroll::-webkit-scrollbar{display:none;}
-.chip{flex-shrink:0;padding:6px 12px;border-radius:20px;border:2px solid var(--gm);background:#fff;font-size:11px;font-weight:700;cursor:pointer;color:var(--gt);white-space:nowrap;transition:var(--tr);}
-.chip.on{background:var(--vm);border-color:var(--vm);color:#fff;}
-
-/* ── RESULTADOS ── */
-.res-item{background:#fff;border-radius:var(--r);box-shadow:var(--sh);margin-bottom:8px;overflow:hidden;cursor:pointer;transition:var(--tr);}
-.res-item:active{box-shadow:var(--sh2);transform:translateY(-1px);}
-.res-hdr{display:flex;align-items:center;padding:12px 14px;gap:10px;}
-.sem{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.sem-v{background:var(--okc);}
-.sem-a{background:var(--ac);}
-.sem-r{background:var(--rc);}
+.nav-bottom{background:var(--bl);border-top:1px solid var(--gm);display:flex;flex-shrink:0;box-shadow:0 -2px 10px rgba(0,0,0,0.08);}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 4px 8px;cursor:pointer;transition:var(--tr);border:none;background:none;color:var(--gt);font-size:10px;gap:4px;-webkit-tap-highlight-color:transparent;position:relative;}
+.nav-item .nav-icon{font-size:20px;transition:var(--tr);}
+.nav-item .nav-label{font-weight:500;}
+.nav-item.activo{color:var(--vd);}
+.nav-item.activo .nav-icon{transform:scale(1.15);}
+.nav-item.activo::before{content:'';position:absolute;top:0;left:20%;right:20%;height:3px;background:var(--vd);border-radius:0 0 4px 4px;}
+.card{background:var(--bl);border-radius:var(--r);box-shadow:var(--sh);padding:16px;margin-bottom:12px;}
+.card-titulo{font-size:16px;font-weight:700;color:var(--vd);margin-bottom:4px;}
+.card-sub{font-size:12px;color:var(--gt);margin-bottom:12px;}
+.buscador-wrap{background:var(--bl);border-radius:var(--r);box-shadow:var(--sh);padding:16px;margin-bottom:16px;}
+.btabs{display:flex;background:var(--gm);border-radius:var(--rsm);padding:4px;margin-bottom:12px;}
+.tab-btn{flex:1;padding:8px 12px;border:none;background:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;color:var(--gt);transition:var(--tr);}
+.tab-btn.activo{background:var(--bl);color:var(--vd);box-shadow:0 1px 4px rgba(0,0,0,0.12);}
+.input-wrap{position:relative;}
+.input-bus{width:100%;padding:14px 16px 14px 44px;border:2px solid var(--gm);border-radius:var(--r);font-size:15px;background:var(--gc);color:var(--ns);transition:var(--tr);outline:none;-webkit-appearance:none;}
+.input-bus:focus{border-color:var(--vm);background:var(--bl);box-shadow:0 0 0 3px rgba(64,145,108,0.15);}
+.input-ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:18px;pointer-events:none;}
+.input-limpiar{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--gm);border:none;border-radius:50%;width:24px;height:24px;cursor:pointer;font-size:14px;display:none;align-items:center;justify-content:center;color:var(--gt);}
+.input-limpiar.visible{display:flex;}
+.res-item{background:var(--bl);border-radius:var(--r);box-shadow:var(--sh);margin-bottom:10px;overflow:hidden;transition:var(--tr);cursor:pointer;}
+.res-item:hover,.res-item:active{box-shadow:var(--sh2);transform:translateY(-1px);}
+.res-header{display:flex;align-items:center;padding:14px 16px;gap:12px;}
+.sem-badge{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.15);}
+.sem-verde{background:var(--vc2);}
+.sem-amarillo{background:var(--ac);}
+.sem-rojo{background:var(--rc);}
 .res-info{flex:1;min-width:0;}
-.res-nom{font-size:14px;font-weight:700;color:var(--ns);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.res-cat{font-size:10px;color:var(--gt);margin-top:1px;text-transform:uppercase;letter-spacing:0.5px;}
-.res-chev{color:var(--gt);font-size:15px;transition:var(--tr);}
-.res-det{padding:0 14px;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.22s ease;border-top:0px solid var(--gm);}
-.res-det.open{max-height:800px;padding:12px 14px;border-top-width:1px;}
-
-/* ── BADGES ── */
-.badge{display:inline-flex;align-items:center;gap:3px;padding:4px 9px;border-radius:20px;font-size:11px;font-weight:700;margin:2px 2px 2px 0;}
-.badge-r{background:var(--rc);color:var(--ro);}
-.badge-a{background:var(--ac);color:#92400e;}
-.badge-v{background:var(--okc);color:#166534;}
-.badge-g{background:var(--vs);color:var(--vd);}
-
-/* ── DETAIL SECTIONS ── */
-.det-sec{margin-bottom:10px;}
-.det-lbl{font-size:10px;font-weight:800;color:var(--gt);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:5px;}
-.det-txt{font-size:12px;color:var(--ns);line-height:1.5;}
-.meds-list{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;}
-.med-tag{padding:3px 8px;background:var(--rc);color:var(--ro);border-radius:6px;font-size:11px;font-weight:600;}
-.med-tag-ok{background:var(--okc);color:#166534;}
-
-/* ── BOTÓN COMPARTIR ── */
-.btn-comp{width:100%;padding:9px;background:var(--vs);border:1px solid var(--vl);border-radius:var(--rsm);color:var(--vd);font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:5px;transition:var(--tr);}
-.btn-comp:active{background:var(--vl);}
-
-/* ── EMPTY STATE ── */
-.empty{text-align:center;padding:40px 20px;color:var(--gt);}
-.empty-ico{font-size:48px;margin-bottom:12px;}
-.empty-t{font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ns);}
-.empty-s{font-size:13px;line-height:1.5;}
-
-/* ── EDITOR / FORMS ── */
-.fg{margin-bottom:14px;}
-.fl{display:block;font-size:12px;font-weight:700;color:var(--vd);margin-bottom:5px;}
-.fi,.fs,.ft{width:100%;padding:11px 13px;border:2px solid var(--gm);border-radius:var(--rsm);font-size:14px;color:var(--ns);background:var(--gc);outline:none;font-family:inherit;-webkit-appearance:none;transition:var(--tr);}
-.fi:focus,.fs:focus,.ft:focus{border-color:var(--vc);background:#fff;box-shadow:0 0 0 3px rgba(64,145,108,0.12);}
-.ft{min-height:80px;resize:vertical;}
-.chk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;}
-.chk-item{display:flex;align-items:center;gap:7px;padding:9px 11px;background:var(--gc);border-radius:var(--rsm);border:2px solid var(--gm);cursor:pointer;transition:var(--tr);}
-.chk-item input{width:16px;height:16px;accent-color:var(--vd);cursor:pointer;flex-shrink:0;}
-.chk-item label{font-size:11px;font-weight:700;cursor:pointer;user-select:none;}
-.chk-item.sel-r{border-color:var(--ro);background:var(--rc);}
-.chk-item.sel-a{border-color:var(--am);background:var(--ac);}
-
-/* ── BUTTONS ── */
-.btn-pri{width:100%;padding:14px;background:linear-gradient(135deg,var(--vd),var(--vc));color:#fff;border:none;border-radius:var(--r);font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(26,58,42,0.3);transition:var(--tr);}
-.btn-pri:active{transform:translateY(1px);}
-.btn-sec{width:100%;padding:12px;background:#fff;color:var(--vd);border:2px solid var(--vm);border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;margin-bottom:7px;transition:var(--tr);}
-.btn-sec:active{background:var(--vs);}
-.btn-dan{width:100%;padding:12px;background:#fff;color:var(--ro);border:2px solid var(--ro);border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;transition:var(--tr);}
-.btn-dan:active{background:var(--rc);}
-
-/* ── LISTA EDITOR ── */
-.prod-row{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:11px 13px;margin-bottom:7px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:var(--tr);}
-.prod-row:active{box-shadow:var(--sh2);}
-.prod-sem{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
-.prod-acts{display:flex;gap:3px;}
-.bico{width:32px;height:32px;border:none;border-radius:var(--rsm);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:var(--tr);}
-.bico-e{background:var(--vs);color:var(--vd);}
-.bico-d{background:var(--rc);color:var(--ro);}
-
-/* ── ALERTA ── */
-.alerta{padding:10px 12px;border-radius:var(--rsm);font-size:12px;margin-bottom:10px;display:flex;gap:7px;align-items:flex-start;line-height:1.4;}
-.a-info{background:#dbeafe;color:#1e40af;border-left:4px solid #3b82f6;}
-.a-warn{background:var(--ac);color:#92400e;border-left:4px solid var(--am);}
-.a-ok{background:var(--okc);color:#166534;border-left:4px solid var(--ok);}
-
-/* ── ACERCA ── */
-.about-hdr{background:linear-gradient(135deg,var(--vd),var(--vc));border-radius:var(--r);padding:24px 18px;text-align:center;color:#fff;margin-bottom:12px;box-shadow:var(--sh);}
-.about-logo{font-size:48px;margin-bottom:10px;}
-.about-ver{font-size:12px;opacity:0.85;background:rgba(255,255,255,0.18);display:inline-block;padding:3px 14px;border-radius:20px;margin-bottom:6px;}
-.about-desc{font-size:12px;opacity:0.85;line-height:1.5;}
-.info-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--gm);font-size:12px;}
-.info-row:last-child{border-bottom:none;}
-
-/* ── CHANGELOG ── */
-.chlog{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:14px;margin-bottom:8px;border-left:4px solid var(--vc);}
-.chlog-v{font-size:13px;font-weight:800;color:var(--vd);}
-.chlog-d{font-size:10px;color:var(--gt);margin-bottom:6px;}
-.chlog-i{font-size:12px;color:var(--ns);padding:2px 0 2px 12px;position:relative;line-height:1.4;}
-.chlog-i::before{content:'▸';position:absolute;left:0;color:var(--vc);}
-
-/* ── MODAL ── */
-.modal-ov{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:1000;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(3px);}
-.modal-ov.vis{display:flex;}
-.modal-p{background:#fff;border-radius:var(--rlg) var(--rlg) 0 0;padding:22px 18px 34px;width:100%;max-width:600px;max-height:88vh;overflow-y:auto;animation:slideUp 0.28s ease;}
+.res-nombre{font-size:15px;font-weight:700;color:var(--ns);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.res-cat{font-size:11px;color:var(--gt);margin-top:2px;text-transform:uppercase;letter-spacing:0.5px;}
+.res-chev{color:var(--gt);font-size:16px;transition:var(--tr);}
+.res-detalle{padding:0 16px;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.25s ease;border-top:0px solid var(--gm);}
+.res-detalle.abierto{max-height:700px;padding:14px 16px;border-top-width:1px;}
+.riesgo-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;margin:3px 3px 3px 0;}
+.chip-rojo{background:var(--rc);color:var(--ro);}
+.chip-amarillo{background:var(--ac);color:#856404;}
+.chip-verde{background:var(--vc2);color:#155724;}
+.det-sec{margin-bottom:12px;}
+.det-label{font-size:11px;font-weight:700;color:var(--gt);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;}
+.det-txt{font-size:13px;color:var(--ns);line-height:1.5;}
+.btn-comp-res{width:100%;padding:10px;background:var(--vs);border:1px solid var(--vc);border-radius:var(--rsm);color:var(--vd);font-size:13px;font-weight:600;cursor:pointer;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:6px;transition:var(--tr);}
+.btn-comp-res:hover{background:var(--vc);}
+.st-vacio{text-align:center;padding:48px 24px;color:var(--gt);}
+.st-vacio-icon{font-size:56px;margin-bottom:16px;}
+.st-vacio-titulo{font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ns);}
+.st-vacio-txt{font-size:14px;line-height:1.6;}
+.filtros-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:16px;scrollbar-width:none;}
+.filtros-scroll::-webkit-scrollbar{display:none;}
+.filtro-chip{flex-shrink:0;padding:7px 14px;border-radius:20px;border:2px solid var(--gm);background:var(--bl);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr);color:var(--gt);white-space:nowrap;}
+.filtro-chip.activo{background:var(--vd);border-color:var(--vd);color:var(--bl);}
+.form-group{margin-bottom:16px;}
+.form-label{display:block;font-size:13px;font-weight:600;color:var(--vd);margin-bottom:6px;}
+.form-input,.form-select,.form-textarea{width:100%;padding:12px 14px;border:2px solid var(--gm);border-radius:var(--rsm);font-size:14px;color:var(--ns);background:var(--gc);transition:var(--tr);outline:none;font-family:inherit;-webkit-appearance:none;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--vm);background:var(--bl);box-shadow:0 0 0 3px rgba(64,145,108,0.15);}
+.form-textarea{min-height:90px;resize:vertical;}
+.chk-grupo{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.chk-item{display:flex;align-items:center;gap:8px;padding:10px 12px;background:var(--gc);border-radius:var(--rsm);border:2px solid var(--gm);cursor:pointer;transition:var(--tr);}
+.chk-item input[type=checkbox]{width:18px;height:18px;accent-color:var(--vd);cursor:pointer;}
+.chk-item label{font-size:12px;font-weight:600;cursor:pointer;user-select:none;}
+.chk-item.sel{border-color:var(--vm);background:var(--vs);}
+.chk-item.sel-ro{border-color:var(--ro);background:var(--rc);}
+.chk-item.sel-am{border-color:var(--am);background:var(--ac);}
+.btn-pri{width:100%;padding:15px;background:linear-gradient(135deg,var(--vd),var(--vm));color:var(--bl);border:none;border-radius:var(--r);font-size:15px;font-weight:700;cursor:pointer;transition:var(--tr);letter-spacing:0.3px;box-shadow:0 4px 12px rgba(45,106,79,0.4);}
+.btn-pri:active,.btn-pri:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(45,106,79,0.5);}
+.btn-sec{width:100%;padding:13px;background:var(--bl);color:var(--vd);border:2px solid var(--vm);border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;transition:var(--tr);margin-bottom:8px;}
+.btn-sec:hover,.btn-sec:active{background:var(--vs);transform:translateY(-1px);}
+.btn-peligro{width:100%;padding:13px;background:var(--bl);color:var(--ro);border:2px solid var(--ro);border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;transition:var(--tr);}
+.btn-peligro:hover,.btn-peligro:active{background:var(--rc);}
+.lista-prods{margin-top:16px;}
+.prod-item{background:var(--bl);border-radius:var(--r);box-shadow:var(--sh);padding:14px 16px;margin-bottom:8px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:var(--tr);}
+.prod-item:hover{box-shadow:var(--sh2);transform:translateX(2px);}
+.prod-sem{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.prod-nombre{flex:1;font-size:14px;font-weight:600;color:var(--ns);}
+.prod-cat{font-size:11px;color:var(--gt);}
+.prod-acts{display:flex;gap:4px;}
+.btn-ico{width:34px;height:34px;border:none;border-radius:var(--rsm);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;transition:var(--tr);}
+.btn-editar{background:var(--vs);color:var(--vd);}
+.btn-borrar{background:var(--rc);color:var(--ro);}
+.btn-ico:hover{transform:scale(1.1);}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.stat-card{background:var(--bl);border-radius:var(--r);box-shadow:var(--sh);padding:16px 12px;text-align:center;}
+.stat-num{font-size:28px;font-weight:800;margin-bottom:4px;}
+.stat-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--gt);}
+.stat-v .stat-num{color:var(--vs2);}
+.stat-a .stat-num{color:var(--am);}
+.stat-r .stat-num{color:var(--ro);}
+.acerca-header{background:linear-gradient(135deg,var(--vd),var(--vc));border-radius:var(--r);padding:28px 20px;text-align:center;color:var(--bl);margin-bottom:16px;box-shadow:var(--sh);}
+.acerca-logo{font-size:52px;margin-bottom:12px;}
+.acerca-nombre{font-size:24px;font-weight:800;margin-bottom:4px;}
+.acerca-ver{font-size:13px;opacity:0.85;background:rgba(255,255,255,0.2);display:inline-block;padding:4px 14px;border-radius:20px;margin-bottom:8px;}
+.acerca-desc{font-size:13px;opacity:0.9;line-height:1.5;}
+.chlog-item{background:var(--bl);border-radius:var(--r);box-shadow:var(--sh);padding:16px;margin-bottom:10px;border-left:4px solid var(--vm);}
+.chlog-ver{font-size:14px;font-weight:700;color:var(--vd);margin-bottom:2px;}
+.chlog-fecha{font-size:11px;color:var(--gt);margin-bottom:8px;}
+.chlog-cambio{font-size:13px;color:var(--ns);padding:3px 0 3px 14px;position:relative;line-height:1.4;}
+.chlog-cambio::before{content:'▸';position:absolute;left:0;color:var(--vm);}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px);}
+.modal-overlay.visible{display:flex;}
+.modal-panel{background:var(--bl);border-radius:var(--rlg) var(--rlg) 0 0;padding:24px 20px 36px;width:100%;max-width:600px;max-height:90vh;overflow-y:auto;animation:slideUp 0.3s ease;}
 @keyframes slideUp{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
-.modal-h{width:44px;height:4px;background:var(--gm);border-radius:3px;margin:0 auto 18px;}
-.modal-t{font-size:17px;font-weight:800;color:var(--ns);margin-bottom:14px;}
-
-/* ── TOAST ── */
-.toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%) translateY(16px);background:var(--ns);color:#fff;padding:10px 18px;border-radius:28px;font-size:12px;font-weight:600;z-index:9999;opacity:0;transition:all 0.25s ease;white-space:nowrap;max-width:88vw;text-align:center;}
-.toast.vis{opacity:1;transform:translateX(-50%) translateY(0);}
-
-/* ── OFFLINE ── */
-.offline-b{position:fixed;top:0;left:0;right:0;background:var(--ro);color:#fff;text-align:center;padding:7px;font-size:11px;font-weight:700;z-index:9998;display:none;}
-
-/* ── AJUSTES ── */
-.setting-row{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:14px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
-.setting-info .setting-title{font-size:14px;font-weight:700;color:var(--ns);}
-.setting-info .setting-desc{font-size:11px;color:var(--gt);margin-top:2px;}
-.toggle{position:relative;width:44px;height:24px;flex-shrink:0;}
-.toggle input{opacity:0;width:0;height:0;}
-.toggle-slider{position:absolute;inset:0;background:var(--gm);border-radius:12px;cursor:pointer;transition:var(--tr);}
-.toggle-slider::before{content:'';position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:var(--tr);}
-.toggle input:checked + .toggle-slider{background:var(--vc);}
-.toggle input:checked + .toggle-slider::before{transform:translateX(20px);}
-
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.ani{animation:fadeIn 0.22s ease forwards;}
-
+.modal-handle{width:48px;height:5px;background:var(--gm);border-radius:3px;margin:0 auto 20px;}
+.modal-titulo{font-size:18px;font-weight:700;color:var(--ns);margin-bottom:16px;}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ns);color:var(--bl);padding:12px 20px;border-radius:30px;font-size:13px;font-weight:500;z-index:9999;opacity:0;transition:all 0.3s ease;white-space:nowrap;max-width:90vw;text-align:center;}
+.toast.visible{opacity:1;transform:translateX(-50%) translateY(0);}
+.alerta{padding:12px 14px;border-radius:var(--rsm);font-size:13px;margin-bottom:12px;display:flex;gap:8px;align-items:flex-start;line-height:1.4;}
+.a-info{background:#cfe2ff;color:#084298;border-left:4px solid #084298;}
+.a-warn{background:var(--ac);color:#664d03;border-left:4px solid var(--am);}
+.a-ok{background:var(--vc2);color:#0f5132;border-left:4px solid var(--vs2);}
+.a-err{background:var(--rc);color:#842029;border-left:4px solid var(--ro);}
+.offline-badge{position:fixed;top:0;left:0;right:0;background:var(--ro);color:var(--bl);text-align:center;padding:8px;font-size:12px;font-weight:600;z-index:9998;display:none;}
+.meds-sug{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.med-chip{padding:6px 12px;border-radius:20px;border:2px solid var(--gm);background:var(--bl);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr);color:var(--ns);}
+.med-chip.activo{background:var(--vd);border-color:var(--vd);color:var(--bl);}
+.backup-sec{background:var(--bl);border-radius:var(--r);box-shadow:var(--sh);padding:20px;margin-bottom:16px;}
+.backup-ico{font-size:40px;text-align:center;margin-bottom:12px;}
+.backup-titulo{font-size:16px;font-weight:700;color:var(--ns);margin-bottom:4px;}
+.backup-desc{font-size:13px;color:var(--gt);margin-bottom:16px;line-height:1.5;}
+.divider{height:1px;background:var(--gm);margin:16px 0;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.animate-in{animation:fadeIn 0.25s ease forwards;}
 @media(min-width:768px){
-  .modal-p{border-radius:var(--rlg);margin:20px;max-height:80vh;}
-  .modal-ov{align-items:center;}
-  .chk-grid{grid-template-columns:repeat(3,1fr);}
+  .app-cont{display:flex;} .vista{flex:1;}
+  .modal-panel{border-radius:var(--rlg);margin:20px;max-height:80vh;}
+  .modal-overlay{align-items:center;}
+  .chk-grupo{grid-template-columns:repeat(3,1fr);}
 }
 </style>
 </head>
 <body>
-<script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.getRegistrations().then(function(regs){
-    regs.forEach(function(r){ r.unregister(); });
-  });
-}
-</script>
 
-<div class="offline-b" id="offlineBadge">📡 Sin conexión — Modo offline</div>
+<div class="offline-badge" id="offlineBadge">📡 Sin conexión — Modo offline activo</div>
 <div class="toast" id="toast"></div>
 
-<!-- INSTALL BANNER -->
-<div id="installBanner" style="display:none;">
-  <div class="ib-logo">🌿</div>
-  <div class="ib-title">Nutergia Seguro</div>
-  <div class="ib-sub">Instala la app para acceder rápido desde tu pantalla de inicio y usarla sin conexión</div>
-  <button class="ib-btn" id="btnInstall">📲 Instalar app</button>
-  <button class="ib-skip" onclick="skipInstall()">Ahora no, entrar directamente</button>
-</div>
-
-<!-- LOGIN -->
 <div id="loginScreen">
-  <div class="lc">
-    <div class="lc-logo">🌿</div>
-    <div class="lc-title">Nutergia Seguro</div>
-    <div class="lc-sub">Sistema de consulta profesional · v2.1.0</div>
-    <input type="password" class="lc-input" id="pinInput" placeholder="Contraseña"
-           autocomplete="off" spellcheck="false"
-           onkeydown="if(event.key==='Enter')login()">
-    <button class="lc-btn" onclick="login()">🔓 Acceder</button>
-    <div class="lc-err" id="loginErr"></div>
-    <button class="lc-nopin" id="btnNoPin" onclick="loginSinPin()" style="display:none;">Acceder sin contraseña</button>
+  <div class="login-card">
+    <div class="login-logo">🌿</div>
+    <div class="login-titulo">Nutergia Seguro</div>
+    <div class="login-sub">Sistema de consulta profesional</div>
+    <div class="login-input-wrap">
+      <input type="password" class="login-input" id="pinInput" placeholder="Introduce tu contraseña"
+             autocomplete="off" autocorrect="off" spellcheck="false"
+             onkeydown="if(event.key==='Enter')validarPin()">
+    </div>
+    <button class="login-btn" onclick="validarPin()">🔓 Acceder</button>
+    <div class="login-error" id="loginError"></div>
+    <div class="login-hint" id="loginHint"></div>
   </div>
 </div>
 
-<!-- APP -->
 <div id="app">
-  <header class="hdr">
-    <div class="hdr-left">
-      <div class="hdr-icon">🌿</div>
+  <header class="app-header">
+    <div class="header-logo">
+      <div class="header-logo-icon">🌿</div>
       <div>
-        <div class="hdr-title">Nutergia Seguro</div>
-        <div class="hdr-sub">Consulta profesional</div>
+        <div class="header-titulo">Nutergia Seguro</div>
+        <div class="header-sub">Consulta profesional</div>
       </div>
     </div>
-    <div class="hdr-btns">
-      <button class="hbtn" onclick="abrirBackup()" title="Backup">💾</button>
-      <button class="hbtn" id="btnCerrar" onclick="cerrarSesion()" title="Cerrar sesión">🔒</button>
+    <div class="header-btns">
+      <div class="sync-badge" id="syncBadge">
+        <div class="sync-dot syncing" id="syncDot"></div>
+        <span id="syncTxt">Conectando...</span>
+      </div>
+      <button class="btn-h" onclick="abrirBackup()" title="Copia de seguridad">💾</button>
+      <button class="btn-h" onclick="cerrarSesion()" title="Cerrar sesión">🔒</button>
     </div>
   </header>
 
   <div class="app-cont">
 
-    <!-- INICIO -->
     <div class="vista activa" id="vistaInicio">
-      <div class="stats">
-        <div class="stat sv"><div class="stat-n" id="cntV">0</div><div class="stat-l">🟢 Seguros</div></div>
-        <div class="stat sa"><div class="stat-n" id="cntA">0</div><div class="stat-l">🟡 Precaución</div></div>
-        <div class="stat sr"><div class="stat-n" id="cntR">0</div><div class="stat-l">🔴 Riesgo</div></div>
+      <div class="stats-grid">
+        <div class="stat-card stat-v"><div class="stat-num" id="cntVerde">0</div><div class="stat-label">🟢 Seguros</div></div>
+        <div class="stat-card stat-a"><div class="stat-num" id="cntAmarillo">0</div><div class="stat-label">🟡 Precaución</div></div>
+        <div class="stat-card stat-r"><div class="stat-num" id="cntRojo">0</div><div class="stat-label">🔴 Riesgo</div></div>
+      </div>
+      <div class="alerta a-info" id="alertaVacia" style="display:none;">
+        <span>ℹ️</span><span>Base de datos vacía. Ve al <strong>Editor</strong> para añadir productos.</span>
       </div>
       <div class="card">
-        <div class="card-t">🌿 Bienvenido</div>
-        <div class="card-s">Sistema de semáforo · Nutergia v2.1.0</div>
-        <p style="font-size:12px;color:var(--gt);line-height:1.6;">Busca un producto para ver con qué medicamentos es incompatible, o busca un medicamento para ver qué productos tienen interacción.</p>
+        <div class="card-titulo">🌿 Bienvenido</div>
+        <div class="card-sub">Sistema de semáforo de seguridad — Nutergia</div>
+        <p style="font-size:13px;color:var(--gt);line-height:1.6;">Consulta en segundos si un producto Nutergia es seguro para cada perfil de paciente. Usa el <strong>Buscador</strong> para encontrar productos o revisar interacciones con medicamentos.</p>
       </div>
       <div class="card">
-        <div class="card-t">🚦 Semáforo</div>
-        <div style="margin-top:8px;display:flex;flex-direction:column;gap:6px;">
-          <div style="display:flex;align-items:center;gap:10px;padding:9px;background:var(--okc);border-radius:var(--rsm);">
-            <span style="font-size:20px;">🟢</span>
-            <div><div style="font-weight:700;color:#166534;font-size:12px;">VERDE — Sin contraindicaciones</div><div style="font-size:11px;color:#166534;">Apto para uso general</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;padding:9px;background:var(--ac);border-radius:var(--rsm);">
-            <span style="font-size:20px;">🟡</span>
-            <div><div style="font-weight:700;color:#92400e;font-size:12px;">AMARILLO — Precaución</div><div style="font-size:11px;color:#92400e;">Perfiles especiales: embarazo, niños...</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;padding:9px;background:var(--rc);border-radius:var(--rsm);">
-            <span style="font-size:20px;">🔴</span>
-            <div><div style="font-weight:700;color:var(--ro);font-size:12px;">ROJO — Contraindicado</div><div style="font-size:11px;color:var(--ro);">Interacción con medicamentos</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BUSCADOR -->
-    <div class="vista" id="vistaBuscador">
-      <div class="bus-wrap">
-        <div class="btabs">
-          <button class="tbtn on" id="tabProd" onclick="setTab('prod')">🌿 Por producto</button>
-          <button class="tbtn" id="tabMed" onclick="setTab('med')">💊 Por medicamento</button>
-          <button class="tbtn" id="tabGrupo" onclick="setTab('grupo')">📂 Por grupo</button>
-        </div>
-        <div id="panelProd">
-          <div class="inp-wrap">
-            <span class="inp-ico">🔍</span>
-            <input class="inp" id="inpProd" placeholder="Nombre del producto..." oninput="buscarProd(this.value)" autocomplete="off" spellcheck="false">
-            <button class="inp-x" id="xProd" onclick="limpiar('prod')">✕</button>
-          </div>
-        </div>
-        <div id="panelMed" style="display:none;">
-          <div class="inp-wrap">
-            <span class="inp-ico">🔍</span>
-            <input class="inp" id="inpMed" placeholder="Nombre del medicamento..." oninput="buscarMed(this.value)" autocomplete="off" spellcheck="false">
-            <button class="inp-x" id="xMed" onclick="limpiar('med')">✕</button>
-          </div>
-          <div class="chips-scroll" id="chipsMeds" style="margin-top:8px;"></div>
-        </div>
-        <div id="panelGrupo" style="display:none;">
-          <div class="chips-scroll" id="chipsGrupos"></div>
-        </div>
-      </div>
-      <div class="chips-scroll" id="filtrosSem" style="margin-bottom:12px;">
-        <button class="chip on" onclick="setFiltro('todos',this)">Todos</button>
-        <button class="chip" onclick="setFiltro('rojo',this)">🔴 Riesgo</button>
-        <button class="chip" onclick="setFiltro('amarillo',this)">🟡 Precaución</button>
-        <button class="chip" onclick="setFiltro('verde',this)">🟢 Seguros</button>
-      </div>
-      <div id="resultados"></div>
-    </div>
-
-    <!-- EDITOR -->
-    <div class="vista" id="vistaEditor">
-      <div class="alerta a-warn"><span>✏️</span><span>Los cambios se guardan en el dispositivo. Haz backups regularmente.</span></div>
-
-      <!-- Tabs editor -->
-      <div class="btabs" style="margin-bottom:12px;">
-        <button class="tbtn on" id="etabProd" onclick="setEtab('prod')">🌿 Productos</button>
-        <button class="tbtn" id="etabMed" onclick="setEtab('med')">💊 Medicamentos</button>
-        <button class="tbtn" id="etabGrupo" onclick="setEtab('grupo')">📂 Grupos</button>
-      </div>
-
-      <!-- Editor Productos -->
-      <div id="epanelProd">
-        <div class="card" id="formProd">
-          <div class="card-t" id="formProdT">➕ Nuevo producto</div>
-          <input type="hidden" id="epId">
-          <div class="fg"><label class="fl">Nombre *</label><input class="fi" id="epNombre" placeholder="Ej: ERGYCARDIO"></div>
-          <div class="fg"><label class="fl">Descripción corta</label><input class="fi" id="epDesc" placeholder="Para qué sirve en una línea"></div>
-          <div class="fg">
-            <label class="fl">🔴 Grupos contraindicados</label>
-            <div class="chk-grid" id="gruposChk"></div>
-          </div>
-          <div class="fg">
-            <label class="fl">⚠️ Perfiles especiales</label>
-            <div class="chk-grid">
-              <div class="chk-item" onclick="toggleChk(this,'r')"><input type="checkbox" id="ep_emb" value="embarazo"><label for="ep_emb">🤰 Embarazo</label></div>
-              <div class="chk-item" onclick="toggleChk(this,'r')"><input type="checkbox" id="ep_lac" value="lactancia"><label for="ep_lac">🤱 Lactancia</label></div>
-              <div class="chk-item" onclick="toggleChk(this,'r')"><input type="checkbox" id="ep_nin" value="ninos"><label for="ep_nin">👶 Niños</label></div>
-              <div class="chk-item" onclick="toggleChk(this,'a')"><input type="checkbox" id="ep_epi" value="epilepsia"><label for="ep_epi">⚡ Epilepsia</label></div>
-            </div>
-          </div>
-          <div class="fg"><label class="fl">Notas para el delegado</label><textarea class="ft" id="epNotas" placeholder="Información adicional..."></textarea></div>
-          <button class="btn-pri" onclick="guardarProd()">💾 Guardar producto</button>
-          <div style="height:6px;"></div>
-          <button class="btn-sec" id="btnCancelProd" onclick="cancelProd()" style="display:none;">✕ Cancelar</button>
-        </div>
-        <div style="padding:0 2px 8px;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--gt);font-weight:700;">📋 Productos (<span id="totalProd">0</span>)</div>
-        <div id="listaProd"></div>
-      </div>
-
-      <!-- Editor Medicamentos -->
-      <div id="epanelMed" style="display:none;">
-        <div class="card">
-          <div class="card-t" id="formMedT">➕ Nuevo medicamento</div>
-          <input type="hidden" id="emId">
-          <div class="fg"><label class="fl">Nombre del medicamento *</label><input class="fi" id="emNombre" placeholder="Ej: Warfarina"></div>
-          <div class="fg">
-            <label class="fl">Grupo farmacológico *</label>
-            <select class="fs" id="emGrupo"></select>
-          </div>
-          <button class="btn-pri" onclick="guardarMed()">💾 Guardar medicamento</button>
-          <div style="height:6px;"></div>
-          <button class="btn-sec" id="btnCancelMed" onclick="cancelMed()" style="display:none;">✕ Cancelar</button>
-        </div>
-        <div style="padding:0 2px 8px;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--gt);font-weight:700;">💊 Medicamentos (<span id="totalMed">0</span>)</div>
-        <div id="listaMed"></div>
-      </div>
-
-      <!-- Editor Grupos -->
-      <div id="epanelGrupo" style="display:none;">
-        <div class="card">
-          <div class="card-t" id="formGrupoT">➕ Nuevo grupo</div>
-          <input type="hidden" id="egId">
-          <div class="fg"><label class="fl">Nombre del grupo *</label><input class="fi" id="egNombre" placeholder="Ej: Anticoagulantes"></div>
-          <div class="fg"><label class="fl">Emoji identificador</label><input class="fi" id="egEmoji" placeholder="Ej: 🩸" style="font-size:20px;"></div>
-          <button class="btn-pri" onclick="guardarGrupo()">💾 Guardar grupo</button>
-          <div style="height:6px;"></div>
-          <button class="btn-sec" id="btnCancelGrupo" onclick="cancelGrupo()" style="display:none;">✕ Cancelar</button>
-        </div>
-        <div style="padding:0 2px 8px;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--gt);font-weight:700;">📂 Grupos (<span id="totalGrupo">0</span>)</div>
-        <div id="listaGrupo"></div>
-      </div>
-    </div>
-
-    <!-- AJUSTES -->
-    <div class="vista" id="vistaAjustes">
-      <div class="about-hdr">
-        <div class="about-logo">🌿</div>
-        <div style="font-size:20px;font-weight:800;margin-bottom:4px;">Nutergia Seguro</div>
-        <div class="about-ver">v 2.1.0</div>
-        <div class="about-desc">Sistema profesional de consulta de seguridad farmacológica</div>
-      </div>
-
-      <div class="card">
-        <div class="card-t">⚙️ Seguridad</div>
-        <div style="height:8px;"></div>
-        <div class="setting-row">
-          <div class="setting-info">
-            <div class="setting-title">🔐 Contraseña de acceso</div>
-            <div class="setting-desc">Activa o desactiva el login con contraseña</div>
-          </div>
-          <label class="toggle">
-            <input type="checkbox" id="togglePin" onchange="togglePinSetting(this.checked)">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-        <div id="cambiarPinSection" style="margin-top:8px;">
-          <button class="btn-sec" onclick="abrirCambiarPin()">🔑 Cambiar contraseña</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-t">📱 Información</div>
+        <div class="card-titulo">🚦 Guía del semáforo</div>
         <div style="margin-top:8px;">
-          <div class="info-row"><span style="color:var(--gt);">Versión</span><strong>2.1.0</strong></div>
-          <div class="info-row"><span style="color:var(--gt);">Productos</span><strong id="ajustesProds">0</strong></div>
-          <div class="info-row"><span style="color:var(--gt);">Medicamentos</span><strong id="ajustesMeds">0</strong></div>
-          <div class="info-row"><span style="color:var(--gt);">Grupos</span><strong id="ajustesGrupos">0</strong></div>
-          <div class="info-row"><span style="color:var(--gt);">Modo</span><strong>PWA Offline</strong></div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:10px;background:var(--vc2);border-radius:var(--rsm);">
+            <span style="font-size:24px;">🟢</span>
+            <div><div style="font-weight:700;color:#155724;font-size:13px;">VERDE — Apto y seguro</div><div style="font-size:12px;color:#155724;">Sin contraindicaciones conocidas</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:10px;background:var(--ac);border-radius:var(--rsm);">
+            <span style="font-size:24px;">🟡</span>
+            <div><div style="font-weight:700;color:#856404;font-size:13px;">AMARILLO — Precaución</div><div style="font-size:12px;color:#856404;">Requiere consulta médica o ajuste</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px;background:var(--rc);border-radius:var(--rsm);">
+            <span style="font-size:24px;">🔴</span>
+            <div><div style="font-weight:700;color:#842029;font-size:13px;">ROJO — Contraindicado</div><div style="font-size:12px;color:#842029;">Contraindicación absoluta o riesgo clínico</div></div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="card-t">⚠️ Aviso legal</div>
-        <div style="height:6px;"></div>
-        <div class="alerta a-warn" style="margin:0;"><span>⚠️</span><span>Herramienta de soporte informativo. No sustituye el criterio clínico ni la consulta con un profesional sanitario.</span></div>
+    <div class="vista" id="vistaBuscador">
+      <div class="buscador-wrap">
+        <div class="btabs">
+          <button class="tab-btn activo" id="tabProducto" onclick="cambiarTab('producto')">🌿 Por producto</button>
+          <button class="tab-btn" id="tabMedicamento" onclick="cambiarTab('medicamento')">💊 Por medicamento/riesgo</button>
+        </div>
+        <div id="panelProducto">
+          <div class="input-wrap">
+            <span class="input-ico">🔍</span>
+            <input type="text" class="input-bus" id="inputProducto" placeholder="Escribe el nombre del producto..." oninput="buscarProducto(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
+            <button class="input-limpiar" id="limpiarProducto" onclick="limpiar('producto')">✕</button>
+          </div>
+        </div>
+        <div id="panelMedicamento" style="display:none;">
+          <div class="input-wrap">
+            <span class="input-ico">🔍</span>
+            <input type="text" class="input-bus" id="inputMedicamento" placeholder="Escribe medicamento o riesgo..." oninput="buscarMed(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
+            <button class="input-limpiar" id="limpiarMedicamento" onclick="limpiar('medicamento')">✕</button>
+          </div>
+          <div class="meds-sug" id="medsSug"></div>
+        </div>
       </div>
+      <div class="filtros-scroll" id="filtrosRapidos">
+        <button class="filtro-chip activo" onclick="filtrarSem('todos',this)">Todos</button>
+        <button class="filtro-chip" onclick="filtrarSem('verde',this)">🟢 Seguros</button>
+        <button class="filtro-chip" onclick="filtrarSem('amarillo',this)">🟡 Precaución</button>
+        <button class="filtro-chip" onclick="filtrarSem('rojo',this)">🔴 Riesgo</button>
+      </div>
+      <div id="resultados">
+        <div class="st-vacio"><div class="st-vacio-icon">🔍</div><div class="st-vacio-titulo">Busca un producto</div><div class="st-vacio-txt">Escribe el nombre de un producto Nutergia para consultar su seguridad</div></div>
+      </div>
+    </div>
 
-      <div class="card">
-        <div class="card-t">🗑️ Datos</div>
+    <div class="vista" id="vistaEditor">
+      <div class="alerta a-warn"><span>✏️</span><span>Los cambios se guardan y sincronizan automáticamente con todos los dispositivos.</span></div>
+      <div class="card" id="formularioEditor">
+        <div class="card-titulo" id="tituloForm">➕ Añadir nuevo producto</div>
+        <input type="hidden" id="editandoId">
+        <div class="form-group"><label class="form-label">Nombre del producto *</label><input type="text" class="form-input" id="edNombre" placeholder="Ej: Ergycardio Forte"></div>
+        <div class="form-group"><label class="form-label">Categoría / Línea</label><input type="text" class="form-input" id="edCategoria" placeholder="Ej: Cardiovascular, Digestivo..."></div>
+        <div class="form-group"><label class="form-label">Ingredientes / Principios activos</label><input type="text" class="form-input" id="edIngredientes" placeholder="Ej: CoQ10, Vitamina K2, Magnesio..."></div>
+        <div class="form-group"><label class="form-label">Medicamentos contraindicados (separa con comas)</label><input type="text" class="form-input" id="edMedsContra" placeholder="Ej: Warfarina, Sintrom, Pradaxa..."></div>
+        <div class="form-group">
+          <label class="form-label">🔴 Contraindicaciones absolutas</label>
+          <div class="chk-grupo" id="checkRiesgos">
+            <div class="chk-item" onclick="toggleCheck(this,'ro')"><input type="checkbox" id="r_embarazo" value="embarazo"><label for="r_embarazo">🤰 Embarazo</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'ro')"><input type="checkbox" id="r_lactancia" value="lactancia"><label for="r_lactancia">🤱 Lactancia</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'ro')"><input type="checkbox" id="r_ninos" value="ninos"><label for="r_ninos">👶 Niños (&lt;3 años)</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'ro')"><input type="checkbox" id="r_anticoag" value="anticoagulantes"><label for="r_anticoag">💊 Anticoagulantes</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'ro')"><input type="checkbox" id="r_antidep" value="antidepresivos"><label for="r_antidep">🧠 Antidepresivos</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'ro')"><input type="checkbox" id="r_estatinas" value="estatinas"><label for="r_estatinas">💉 Estatinas</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'ro')"><input type="checkbox" id="r_antibiot" value="antibioticos"><label for="r_antibiot">🔬 Antibióticos</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'ro')"><input type="checkbox" id="r_antivir" value="antivirales"><label for="r_antivir">🦠 Antivirales</label></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">🟡 Precauciones (consulta médica)</label>
+          <div class="chk-grupo" id="checkPrecauciones">
+            <div class="chk-item" onclick="toggleCheck(this,'am')"><input type="checkbox" id="p_tiroides" value="tiroides"><label for="p_tiroides">⚗️ Tiroides</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'am')"><input type="checkbox" id="p_diabetes" value="diabetes"><label for="p_diabetes">🩸 Antidiabéticos</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'am')"><input type="checkbox" id="p_renal" value="renal"><label for="p_renal">🫘 Ins. Renal</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'am')"><input type="checkbox" id="p_mayor70" value="mayor70"><label for="p_mayor70">👴 Mayores 70 años</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'am')"><input type="checkbox" id="p_biliar" value="biliar"><label for="p_biliar">🫀 Vías biliares</label></div>
+            <div class="chk-item" onclick="toggleCheck(this,'am')"><input type="checkbox" id="p_cardiaca" value="cardiaca"><label for="p_cardiaca">❤️ Ins. Cardíaca</label></div>
+          </div>
+        </div>
+        <div class="form-group"><label class="form-label">Notas y observaciones</label><textarea class="form-textarea" id="edNotas" placeholder="Información adicional, dosis, recomendaciones específicas..."></textarea></div>
+        <button class="btn-pri" onclick="guardarProducto()">💾 Guardar y sincronizar</button>
         <div style="height:8px;"></div>
-        <button class="btn-dan" onclick="confirmarReset()">♻️ Restablecer aplicación</button>
+        <button class="btn-sec" id="btnCancelarEd" onclick="cancelarEdicion()" style="display:none;">✕ Cancelar edición</button>
       </div>
+      <div class="lista-prods">
+        <div style="padding:0 4px 10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;color:var(--gt);font-weight:700;">📋 Productos registrados (<span id="totalProds">0</span>)</div>
+        <div id="itemsEditor"></div>
+      </div>
+    </div>
 
-      <div style="padding:4px 2px 8px;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--gt);font-weight:700;">📋 Versiones</div>
-      <div class="chlog">
-        <div class="chlog-v">v 2.1.0</div>
-        <div class="chlog-d">Abril 2026 — Arquitectura renovada</div>
-        <div class="chlog-i">Nueva arquitectura: Productos + Medicamentos + Grupos</div>
-        <div class="chlog-i">Búsqueda cruzada en tres dimensiones</div>
-        <div class="chlog-i">121 productos Nutergia precargados</div>
-        <div class="chlog-i">Opción de desactivar contraseña</div>
-        <div class="chlog-i">Banner de instalación PWA</div>
-        <div class="chlog-i">Editor completo de las tres entidades</div>
+    <div class="vista" id="vistaAcerca">
+      <div class="acerca-header">
+        <div class="acerca-logo">🌿</div>
+        <div class="acerca-nombre">Nutergia Seguro</div>
+        <div class="acerca-ver" id="verDisplay">v 2.2.0</div>
+        <div class="acerca-desc">Sistema profesional de consulta de seguridad farmacológica para productos Nutergia</div>
       </div>
-      <div class="chlog">
-        <div class="chlog-v">v 1.0.x</div>
-        <div class="chlog-d">Versión inicial</div>
-        <div class="chlog-i">Sistema de semáforo básico</div>
-        <div class="chlog-i">Buscador dual por producto y medicamento</div>
-        <div class="chlog-i">PWA offline funcional</div>
+      <div class="card">
+        <div class="card-titulo">⚠️ Aviso legal</div>
+        <div style="height:8px;"></div>
+        <div class="alerta a-warn" style="margin:0;"><span>⚠️</span><span>Herramienta de soporte informativo profesional. No sustituye el criterio clínico ni la consulta con un profesional sanitario cualificado.</span></div>
+      </div>
+      <div class="card">
+        <div class="card-titulo">📱 Información técnica</div>
+        <div style="margin-top:10px;">
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--gm);font-size:13px;"><span style="color:var(--gt);">Versión</span><span style="font-weight:600;" id="verTecnica">2.2.0</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--gm);font-size:13px;"><span style="color:var(--gt);">Modo</span><span style="font-weight:600;">Offline + Sync Firestore</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--gm);font-size:13px;"><span style="color:var(--gt);">Almacenamiento</span><span style="font-weight:600;">Local + Nube (Firebase)</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--gm);font-size:13px;"><span style="color:var(--gt);">Productos cargados</span><span style="font-weight:600;" id="prodsEnAcerca">0</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--gm);font-size:13px;"><span style="color:var(--gt);">Última sincronización</span><span style="font-weight:600;" id="ultimaSync">—</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:13px;"><span style="color:var(--gt);">Última actualización</span><span style="font-weight:600;" id="ultimaAct">—</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-titulo">🔐 Seguridad</div>
+        <div style="height:8px;"></div>
+        <button class="btn-sec" onclick="mostrarCambiarPin()">🔑 Cambiar contraseña de acceso</button>
+        <button class="btn-peligro" onclick="confirmarReset()">🗑️ Restablecer toda la aplicación</button>
+      </div>
+      <div style="padding:4px 4px 10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;color:var(--gt);font-weight:700;">📋 Historial de versiones</div>
+      <div class="chlog-item" style="border-left-color:var(--vd);">
+        <div class="chlog-ver">Versión 2.2.0</div>
+        <div class="chlog-fecha">Abril 2026 — Sincronización multi-dispositivo</div>
+        <div class="chlog-cambio">Sincronización automática con Firebase Firestore</div>
+        <div class="chlog-cambio">Indicador de estado de sync en la cabecera en tiempo real</div>
+        <div class="chlog-cambio">Al abrir la app: descarga datos si el servidor tiene versión más nueva</div>
+        <div class="chlog-cambio">Al guardar un producto: sube automáticamente a la nube</div>
+        <div class="chlog-cambio">Funciona offline — sincroniza al recuperar conexión</div>
+      </div>
+      <div class="chlog-item">
+        <div class="chlog-ver">Versión 1.0.3</div>
+        <div class="chlog-fecha">Abril 2026 — Datos reales Nutergia precargados</div>
+        <div class="chlog-cambio">Base de datos completa con todos los productos Nutergia</div>
+        <div class="chlog-cambio">Contraindicaciones reales extraídas de documentación oficial</div>
+        <div class="chlog-cambio">Campo de medicamentos contraindicados específicos</div>
+        <div class="chlog-cambio">Login con contraseña alfanumérica</div>
+        <div class="chlog-cambio">Categorías ampliadas: antibióticos, antivirales, estatinas, tiroides, diabetes</div>
+      </div>
+      <div class="chlog-item">
+        <div class="chlog-ver">Versión 1.0.0</div>
+        <div class="chlog-fecha">Lanzamiento inicial</div>
+        <div class="chlog-cambio">Sistema de semáforo inteligente (🔴🟡🟢)</div>
+        <div class="chlog-cambio">Buscador dual por producto y medicamento</div>
+        <div class="chlog-cambio">Editor de productos integrado</div>
+        <div class="chlog-cambio">Sistema de copia de seguridad (JSON)</div>
+        <div class="chlog-cambio">Acceso con PIN y sesión persistente</div>
+        <div class="chlog-cambio">Modo 100% offline (PWA)</div>
+        <div class="chlog-cambio">Adaptado para Pixel 9a y Galaxy Tab S6 Lite</div>
       </div>
     </div>
 
   </div>
 
-  <nav class="nav">
-    <button class="ni on" id="navI" onclick="ir('inicio')"><span class="ico">🏠</span><span>Inicio</span></button>
-    <button class="ni" id="navB" onclick="ir('buscador')"><span class="ico">🔍</span><span>Buscar</span></button>
-    <button class="ni" id="navE" onclick="ir('editor')"><span class="ico">✏️</span><span>Editor</span></button>
-    <button class="ni" id="navA" onclick="ir('ajustes')"><span class="ico">⚙️</span><span>Ajustes</span></button>
+  <nav class="nav-bottom">
+    <button class="nav-item activo" id="navInicio" onclick="navegarA('inicio')"><span class="nav-icon">🏠</span><span class="nav-label">Inicio</span></button>
+    <button class="nav-item" id="navBuscador" onclick="navegarA('buscador')"><span class="nav-icon">🔍</span><span class="nav-label">Buscar</span></button>
+    <button class="nav-item" id="navEditor" onclick="navegarA('editor')"><span class="nav-icon">✏️</span><span class="nav-label">Editor</span></button>
+    <button class="nav-item" id="navAcerca" onclick="navegarA('acerca')"><span class="nav-icon">ℹ️</span><span class="nav-label">Acerca de</span></button>
   </nav>
 </div>
 
-<!-- MODAL BACKUP -->
-<div class="modal-ov" id="modalBackup" onclick="cerrarModal('modalBackup',event)">
-  <div class="modal-p" onclick="event.stopPropagation()">
-    <div class="modal-h"></div>
-    <div class="modal-t">💾 Copia de seguridad</div>
-    <button class="btn-pri" onclick="exportar()" style="margin-bottom:8px;">📤 Exportar todo</button>
-    <button class="btn-sec" onclick="document.getElementById('impFile').click()">📥 Importar backup</button>
-    <input type="file" id="impFile" accept=".json" style="display:none" onchange="importar(event)">
-    <div style="height:8px;"></div>
-    <button class="btn-dan" onclick="cerrarModal('modalBackup')">✕ Cerrar</button>
+<!-- MODALES -->
+<div class="modal-overlay" id="modalBackup" onclick="cerrarModal('modalBackup',event)">
+  <div class="modal-panel" onclick="event.stopPropagation()">
+    <div class="modal-handle"></div>
+    <div class="modal-titulo">💾 Copia de seguridad</div>
+    <div class="backup-sec">
+      <div class="backup-ico">📤</div>
+      <div class="backup-titulo">Exportar datos</div>
+      <div class="backup-desc">Descarga todos los productos y configuración en un archivo JSON.</div>
+      <button class="btn-pri" onclick="exportarDatos()">📤 Exportar copia de seguridad</button>
+    </div>
+    <div class="divider"></div>
+    <div class="backup-sec">
+      <div class="backup-ico">📥</div>
+      <div class="backup-titulo">Importar datos</div>
+      <div class="backup-desc">Restaura desde un archivo JSON. Atención: reemplazará todos los datos actuales.</div>
+      <input type="file" id="inputImportar" accept=".json" style="display:none" onchange="importarDatos(event)">
+      <button class="btn-sec" onclick="document.getElementById('inputImportar').click()">📥 Seleccionar archivo JSON</button>
+    </div>
+    <div class="divider"></div>
+    <button class="btn-peligro" onclick="cerrarModal('modalBackup')">✕ Cerrar</button>
   </div>
 </div>
 
-<!-- MODAL CAMBIAR PIN -->
-<div class="modal-ov" id="modalPin" onclick="cerrarModal('modalPin',event)">
-  <div class="modal-p" onclick="event.stopPropagation()">
-    <div class="modal-h"></div>
-    <div class="modal-t">🔑 Cambiar contraseña</div>
-    <div class="fg"><label class="fl">Contraseña actual</label><input type="password" class="fi" id="pinAct"></div>
-    <div class="fg"><label class="fl">Nueva contraseña</label><input type="password" class="fi" id="pinNue"></div>
-    <div class="fg"><label class="fl">Confirmar</label><input type="password" class="fi" id="pinConf"></div>
-    <div class="lc-err" id="pinErr" style="text-align:left;margin-bottom:8px;"></div>
-    <button class="btn-pri" onclick="cambiarPin()">💾 Guardar</button>
-    <div style="height:6px;"></div>
+<div class="modal-overlay" id="modalPin" onclick="cerrarModal('modalPin',event)">
+  <div class="modal-panel" onclick="event.stopPropagation()">
+    <div class="modal-handle"></div>
+    <div class="modal-titulo">🔑 Cambiar contraseña</div>
+    <div class="form-group"><label class="form-label">Contraseña actual</label><input type="password" class="form-input" id="pinActual" placeholder="Introduce la contraseña actual"></div>
+    <div class="form-group"><label class="form-label">Nueva contraseña</label><input type="password" class="form-input" id="pinNuevo" placeholder="Mínimo 4 caracteres"></div>
+    <div class="form-group"><label class="form-label">Confirmar nueva contraseña</label><input type="password" class="form-input" id="pinConfirmar" placeholder="Repite la nueva contraseña"></div>
+    <div class="login-error" id="errorPin" style="text-align:left;margin-bottom:10px;"></div>
+    <button class="btn-pri" onclick="cambiarPin()">💾 Guardar nueva contraseña</button>
+    <div style="height:8px;"></div>
     <button class="btn-sec" onclick="cerrarModal('modalPin')">✕ Cancelar</button>
   </div>
 </div>
 
-<!-- MODAL COMPARTIR -->
-<div class="modal-ov" id="modalComp" onclick="cerrarModal('modalComp',event)">
-  <div class="modal-p" onclick="event.stopPropagation()">
-    <div class="modal-h"></div>
-    <div class="modal-t">📤 Compartir resultado</div>
-    <textarea class="ft" id="txtComp" style="min-height:180px;font-size:12px;" readonly></textarea>
-    <div style="height:10px;"></div>
-    <button class="btn-pri" onclick="enviarWA()">💬 WhatsApp</button>
-    <div style="height:6px;"></div>
-    <button class="btn-sec" onclick="copiar()">📋 Copiar</button>
-    <div style="height:6px;"></div>
-    <button class="btn-dan" onclick="cerrarModal('modalComp')">✕ Cerrar</button>
+<div class="modal-overlay" id="modalCompartir" onclick="cerrarModal('modalCompartir',event)">
+  <div class="modal-panel" onclick="event.stopPropagation()">
+    <div class="modal-handle"></div>
+    <div class="modal-titulo">📤 Compartir resultado</div>
+    <div class="alerta a-info" style="margin-bottom:12px;"><span>ℹ️</span><span>Incluye aviso de uso informativo profesional.</span></div>
+    <textarea class="form-textarea" id="textoCompartir" style="min-height:200px;font-size:13px;" readonly></textarea>
+    <div style="height:12px;"></div>
+    <button class="btn-pri" onclick="compartirWA()">💬 Enviar por WhatsApp</button>
+    <div style="height:8px;"></div>
+    <button class="btn-sec" onclick="copiarTexto()">📋 Copiar al portapapeles</button>
+    <div style="height:8px;"></div>
+    <button class="btn-peligro" onclick="cerrarModal('modalCompartir')">✕ Cerrar</button>
   </div>
 </div>
 
+<!-- FIREBASE SDK (módulo) -->
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js';
+  import { getFirestore, doc, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js';
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCLmL_3hy-Vnveon4zLSXsMnVqSwxAxubw",
+    authDomain: "nutergiaseguro.firebaseapp.com",
+    projectId: "nutergiaseguro",
+    storageBucket: "nutergiaseguro.firebasestorage.app",
+    messagingSenderId: "67467161742",
+    appId: "1:67467161742:web:8925a95ddf578bacf619df"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  function setSyncEstado(estado, texto) {
+    const dot = document.getElementById('syncDot');
+    const txt = document.getElementById('syncTxt');
+    if (!dot || !txt) return;
+    dot.className = 'sync-dot ' + estado;
+    txt.textContent = texto;
+  }
+
+  window._fbSync = {
+    async cargar() {
+      try {
+        setSyncEstado('syncing', 'Sincronizando...');
+        const docRef = doc(db, 'appData', 'productos');
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const remoto = docSnap.data();
+          const tsRemoto = remoto._lastSync || 0;
+          const tsLocal = parseInt(localStorage.getItem('ns_ultima_sync') || '0');
+          if (tsRemoto > tsLocal) {
+            const prods = remoto.productos || [];
+            localStorage.setItem('ns_productos', JSON.stringify(prods));
+            localStorage.setItem('ns_ultima_sync', tsRemoto.toString());
+            if (window.state) window.state.productos = prods;
+            setSyncEstado('ok', 'Sincronizado');
+            window.dispatchEvent(new CustomEvent('syncDescarga'));
+            return true;
+          } else {
+            setSyncEstado('ok', 'Actualizado');
+            return false;
+          }
+        } else {
+          await window._fbSync.subir();
+          return false;
+        }
+      } catch(e) {
+        console.error('Error sync carga:', e);
+        setSyncEstado('error', 'Sin conexión');
+        return false;
+      }
+    },
+
+    async subir() {
+      try {
+        setSyncEstado('syncing', 'Guardando...');
+        const productos = JSON.parse(localStorage.getItem('ns_productos') || '[]');
+        const ahora = Date.now();
+        await setDoc(doc(db, 'appData', 'productos'), {
+          productos,
+          _lastSync: ahora,
+          _updatedAt: new Date().toISOString()
+        });
+        localStorage.setItem('ns_ultima_sync', ahora.toString());
+        const hora = new Date().toLocaleTimeString('es-ES', {hour:'2-digit', minute:'2-digit'});
+        setSyncEstado('ok', 'Sync ' + hora);
+        const el = document.getElementById('ultimaSync');
+        if (el) el.textContent = new Date().toLocaleString('es-ES');
+        return true;
+      } catch(e) {
+        console.error('Error sync subida:', e);
+        setSyncEstado('error', 'Error al guardar');
+        return false;
+      }
+    }
+  };
+
+  window.addEventListener('online', () => { if (window._fbSync) window._fbSync.subir(); });
+  window.addEventListener('offline', () => setSyncEstado('offline', 'Sin conexión'));
+  window._firebaseReady = true;
+  window.dispatchEvent(new CustomEvent('firebaseReady'));
+</script>
+
 <script>
-// ═══════════════════════════════════════════════════
-// CONSTANTES
-// ═══════════════════════════════════════════════════
-const VER = '2.1.0';
+const APP_VERSION = '2.2.0';
 const PIN_DEFAULT = 'Nutergia12345';
-const SK = { prods:'ns2_prods', meds:'ns2_meds', grupos:'ns2_grupos', pin:'ns2_pin', sinPin:'ns2_sinPin', sesion:'ns2_sesion' };
+const SK = {
+  productos: 'ns_productos', pin: 'ns_pin',
+  sesion: 'ns_sesion', ultimaAct: 'ns_ultima_act', ultimaSync: 'ns_ultima_sync'
+};
 
-// ═══════════════════════════════════════════════════
-// ESTADO
-// ═══════════════════════════════════════════════════
-let DB = { productos:[], medicamentos:[], grupos:[] };
-let _cache = new Map(); // cache temporal para compartir
-let ST = { pin:'', sinPin:false, tab:'prod', etab:'prod', filtro:'todos' };
-let deferredInstall = null;
+const RINFO = {
+  embarazo:{label:'Embarazo',emoji:'🤰',tipo:'rojo'},
+  lactancia:{label:'Lactancia',emoji:'🤱',tipo:'rojo'},
+  ninos:{label:'Niños',emoji:'👶',tipo:'rojo'},
+  anticoagulantes:{label:'Anticoagulantes',emoji:'💊',tipo:'rojo'},
+  antidepresivos:{label:'Antidepresivos',emoji:'🧠',tipo:'rojo'},
+  estatinas:{label:'Estatinas',emoji:'💉',tipo:'rojo'},
+  antibioticos:{label:'Antibióticos',emoji:'🔬',tipo:'rojo'},
+  antivirales:{label:'Antivirales',emoji:'🦠',tipo:'rojo'},
+  tiroides:{label:'Tiroides',emoji:'⚗️',tipo:'amarillo'},
+  diabetes:{label:'Antidiabéticos',emoji:'🩸',tipo:'amarillo'},
+  renal:{label:'Ins. Renal',emoji:'🫘',tipo:'amarillo'},
+  mayor70:{label:'Mayores 70 años',emoji:'👴',tipo:'amarillo'},
+  biliar:{label:'Vías biliares',emoji:'🫀',tipo:'amarillo'},
+  cardiaca:{label:'Ins. Cardíaca',emoji:'❤️',tipo:'amarillo'}
+};
 
-// ═══════════════════════════════════════════════════
-// INIT
-// ═══════════════════════════════════════════════════
+const MEDS_RAPIDOS = ['Anticoagulantes','Sintrom','Estatinas','Tiroides','Antidiabéticos','Antidepresivos','Antibióticos','Antivirales','Embarazo','Lactancia','Niños'];
+
+const MAPA_RIESGOS = {
+  'sintrom':['anticoagulantes'],'anticoag':['anticoagulantes'],'warfar':['anticoagulantes'],
+  'xarelto':['anticoagulantes'],'eliquis':['anticoagulantes'],'pradaxa':['anticoagulantes'],
+  'plavix':['anticoagulantes'],'heparin':['anticoagulantes'],
+  'tiroxin':['tiroides'],'levotir':['tiroides'],'synthroid':['tiroides'],'tiroides':['tiroides'],
+  'antidep':['antidepresivos'],'prozac':['antidepresivos'],'sertral':['antidepresivos'],
+  'fluoxet':['antidepresivos'],'venlafax':['antidepresivos'],'paroxet':['antidepresivos'],
+  'estatina':['estatinas'],'atorvast':['estatinas'],'simvast':['estatinas'],
+  'rosuvas':['estatinas'],'lipitor':['estatinas'],'zocor':['estatinas'],
+  'antibiot':['antibioticos'],'amoxicil':['antibioticos'],'ciproflox':['antibioticos'],
+  'metronidaz':['antibioticos'],'azitromic':['antibioticos'],
+  'antivir':['antivirales'],'ritonav':['antivirales'],'zidovud':['antivirales'],
+  'embaraz':['embarazo'],'lactanc':['lactancia'],
+  'niño':['ninos'],'nino':['ninos'],'niñ':['ninos'],
+  'renal':['renal'],'diabet':['diabetes'],'metformin':['diabetes'],'insulina':['diabetes'],
+  'biliar':['biliar'],'cardiac':['cardiaca'],
+  'mayor 70':['mayor70'],'mayores':['mayor70'],'tercera edad':['mayor70']
+};
+
+const DB_PRECARGADA = [
+  {id:'p001',nombre:'ACEROL C',categoria:'Vitamina C',ingredientes:'Vitamina C (Acerola)',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Menores de 6 años, Embarazo y lactancia (consultar dosis)'},
+  {id:'p002',nombre:'BICEBE Plus',categoria:'Vitaminas B',ingredientes:'Complejo vitamínico B',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p003',nombre:'BILEINA',categoria:'Digestivo / Biliar',ingredientes:'Lecitina de soja',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p004',nombre:'ERGY C',categoria:'Vitamina C',ingredientes:'Vitamina C',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p005',nombre:'ERGY D',categoria:'Vitamina D',ingredientes:'Vitamina D3',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p006',nombre:'ERGY D Plus',categoria:'Vitamina D',ingredientes:'Vitamina D3 + K2',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p007',nombre:'ERGY3',categoria:'Omega 3',ingredientes:'Ácidos grasos omega 3',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p008',nombre:'ERGYACTIV',categoria:'Energía / Vitalidad',ingredientes:'Complejo vitamínico-mineral',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p009',nombre:'ERGYANTIOX Forte',categoria:'Antioxidante',ingredientes:'Vitamina C, E, Selenio, Zinc',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p010',nombre:'ERGYBASE',categoria:'Equilibrio ácido-base',ingredientes:'Sales minerales alcalinizantes',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p011',nombre:'ERGYCALM',categoria:'Relajante / Sueño',ingredientes:'Valeriana, Pasiflora, Lúpulo',contraindicaciones:['embarazo','lactancia','ninos'],precauciones:[],medsContra:'',notas:'Embarazo, lactancia, Niños menores de 12 años (valeriana), Epilepsia'},
+  {id:'p012',nombre:'ERGYCARDIO FORTE',categoria:'Cardiovascular',ingredientes:'CoQ10, Vitamina K2, Magnesio, L-Carnitina',contraindicaciones:['anticoagulantes'],precauciones:[],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Dabigatrán, Dalteparina, Fondaparinux, Bivalirudina, Edoxabán',notas:'OJO: hay ERGYCARDIO FORTE1 (con ajo, contraindicación adicional antivirales antirretrovirales). Embarazo y lactancia.'},
+  {id:'p013',nombre:'ERGYCARDIO FORTE1',categoria:'Cardiovascular',ingredientes:'CoQ10, Vitamina K2, Ajo, L-Carnitina',contraindicaciones:['anticoagulantes','antivirales'],precauciones:[],medsContra:'Zidovudina, Ritonavir, Lamivudina, Efavirenz, Tenofovir, Emtricitabina/tenofovir + todos los anticoagulantes',notas:'Embarazo, lactancia, antiretrovirales o anticoagulantes (ajo). Versión con ajo del ERGYCARDIO FORTE.'},
+  {id:'p014',nombre:'ERGYCARE',categoria:'Articulaciones',ingredientes:'Colágeno, Magnesio, Vitamina C',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Tomar con el estómago vacío o fuera de las comidas'},
+  {id:'p015',nombre:'ERGYCELL',categoria:'Celulitis / Drenaje',ingredientes:'Extractos vegetales drenantes',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p016',nombre:'ERGYCLEAN',categoria:'Detox / Depurativo',ingredientes:'Rábano negro, Alcachofa',contraindicaciones:['embarazo','lactancia','ninos'],precauciones:['biliar','tiroides'],medsContra:'',notas:'Obstrucción vías biliares (alcachofa), Niños, embarazo, lactancia, Hipotiroidismo o tratamiento para la tiroides (rábano negro)'},
+  {id:'p017',nombre:'ERGYCOL Balance',categoria:'Colesterol',ingredientes:'Monacolina K (levadura roja de arroz)',contraindicaciones:['estatinas'],precauciones:['mayor70'],medsContra:'Atorvastatina, Simvastatina, Rosuvastatina, Pravastatina, Lovastatina, Fluvastatina, Pitavastatina',notas:'Reservado adultos. Mayores de 70 años, embarazo, lactancia. Sensibilidad a estatinas.'},
+  {id:'p018',nombre:'ERGYCOX',categoria:'Articulaciones / Antiinflamatorio',ingredientes:'Harpagofito, Sauce (salicilatos), Té verde, Cúrcuma',contraindicaciones:['anticoagulantes'],precauciones:['biliar','renal'],medsContra:'Aspirina y derivados salicílicos',notas:'Reservado adultos. Embarazo, lactancia. Úlcera gástrica/duodenal o cálculos biliares (harpagofito). Alergia a derivados salicílicos (sauce).'},
+  {id:'p019',nombre:'ERGYCOX1',categoria:'Articulaciones / Antiinflamatorio',ingredientes:'Harpagofito, Sauce, Cúrcuma, Té verde',contraindicaciones:['anticoagulantes'],precauciones:['biliar'],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Dabigatrán, Aspirina',notas:'Versión con contraindicación anticoagulante explícita. Niños, embarazo, lactancia.'},
+  {id:'p020',nombre:'ERGYCRANBERRYL',categoria:'Urinario / Antioxidante',ingredientes:'Arándano rojo (Cranberry)',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p021',nombre:'ERGY D Plus',categoria:'Vitamina D',ingredientes:'Vitamina D3, K2, Calcio',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p022',nombre:'ERGYDIGEST',categoria:'Digestivo',ingredientes:'Rábano negro, Alcachofa, Boldo',contraindicaciones:['embarazo','lactancia','ninos'],precauciones:['biliar','tiroides'],medsContra:'Levotiroxina sódica, Liotironina sódica, Tiroides desecada',notas:'Obstrucción vías biliares (alcachofa, boldo), Niños, embarazo, lactancia. Hipotiroidismo o tratamiento para la tiroides.'},
+  {id:'p023',nombre:'ERGYDREN',categoria:'Drenante / Diurético',ingredientes:'Cola de caballo, Diente de León',contraindicaciones:[],precauciones:['renal','cardiaca'],medsContra:'',notas:'Insuficiencia cardíaca o renal (cola de caballo)'},
+  {id:'p024',nombre:'ERGYEPUR',categoria:'Depurativo',ingredientes:'Alcachofa, Boldo, Cardo mariano',contraindicaciones:[],precauciones:['biliar'],medsContra:'',notas:'Obstrucción de vías biliares (alcachofa, boldo)'},
+  {id:'p025',nombre:'ERGYFEM Cycle',categoria:'Salud femenina',ingredientes:'Extractos para ciclo menstrual',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p026',nombre:'ERGYFEM Equilibrio',categoria:'Salud femenina',ingredientes:'Extractos menopausia',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p027',nombre:'ERGYFERIL',categoria:'Hierro',ingredientes:'Hierro bisglicato, Vitamina C',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p028',nombre:'ERGYFIBRAL',categoria:'Fibra / Tránsito',ingredientes:'Psyllium, Fibra vegetal',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Menores de 6 años. Embarazo o lactancia. Uso prolongado (ruibarbo)'},
+  {id:'p029',nombre:'ERGYFLEX',categoria:'Articulaciones',ingredientes:'Condroitina, Glucosamina, Cúrcuma',contraindicaciones:['anticoagulantes'],precauciones:['diabetes','biliar'],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Dabigatrán',notas:'Reservado adultos. Embarazo, lactancia. Anticoagulantes, productos con cúrcuma. Prediabetes, diabetes. Hígado, vesícula biliar (cúrcuma).'},
+  {id:'p030',nombre:'ERGYFOSFORYL',categoria:'Memoria / Cognitivo',ingredientes:'Fosfatidilserina, Omega 3',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p031',nombre:'ERGYIM',categoria:'Sistema inmune',ingredientes:'Vitamina D, Zinc, Extractos vegetales',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p032',nombre:'ERGYKID Bien Estar',categoria:'Infantil',ingredientes:'Complejo vitamínico infantil',contraindicaciones:[],precauciones:[],medsContra:'',notas:'A partir de los 3 años'},
+  {id:'p033',nombre:'ERGYKID Defens',categoria:'Infantil / Inmunidad',ingredientes:'Vitamina C, D, Zinc infantil',contraindicaciones:[],precauciones:[],medsContra:'',notas:'A partir de los 3 años'},
+  {id:'p034',nombre:'ERGYKID MultiVit',categoria:'Infantil / Multivitamínico',ingredientes:'Multivitamínico infantil',contraindicaciones:[],precauciones:[],medsContra:'',notas:'A partir de los 3 años'},
+  {id:'p035',nombre:'ERGYLASE Plus',categoria:'Enzimas digestivas',ingredientes:'Lactasa, Proteasas, Amilasas',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Reservado adultos. Embarazo o lactancia. No abrir la cápsula. No sustituye dieta sin gluten.'},
+  {id:'p036',nombre:'ERGYLIVER Complex',categoria:'Hepático / Detox',ingredientes:'Cardo mariano, Alcachofa, Desmodium',contraindicaciones:['embarazo','lactancia','ninos'],precauciones:['biliar'],medsContra:'',notas:'Obstrucción de vías biliares (alcachofa). Niños, embarazo, lactancia.'},
+  {id:'p037',nombre:'ERGYLIXIR',categoria:'Digestivo / Biliar',ingredientes:'Rábano negro, Alcachofa, Boldo',contraindicaciones:['embarazo','lactancia','ninos'],precauciones:['biliar','tiroides'],medsContra:'Levotiroxina sódica, Liotironina sódica, Tiroides desecada',notas:'Hipotiroidismo o tratamiento para la tiroides. Obstrucción vías biliares.'},
+  {id:'p038',nombre:'ERGYMAG',categoria:'Magnesio',ingredientes:'Magnesio (bisglicato)',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p039',nombre:'ERGYMUNIL',categoria:'Inmunidad / Probiótico',ingredientes:'Lactobacilos, Beta-glucanos',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p040',nombre:'ERGYNATAL',categoria:'Embarazo / Prenatal',ingredientes:'Ácido fólico, Hierro, DHA, Yodo',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Embarazo y lactancia: dosificación específica. Consultar siempre con médico/matrona.'},
+  {id:'p041',nombre:'ERGYNUTRIL',categoria:'Proteína / Nutrición',ingredientes:'Proteínas, Aminoácidos',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p042',nombre:'ERGYOPTIM',categoria:'Visión / Cognitivo',ingredientes:'Luteína, Zeaxantina, DHA',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p043',nombre:'ERGYOSEO K2',categoria:'Huesos',ingredientes:'Vitamina K2, D3, Calcio, Magnesio',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p044',nombre:'ERGYPAINA Plus',categoria:'Articulaciones / Dolor',ingredientes:'Condroitina, Glucosamina, Colágeno, Cúrcuma',contraindicaciones:['anticoagulantes'],precauciones:['diabetes','biliar'],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Dabigatrán',notas:'Reservado adultos. Embarazo o lactancia. Anticoagulantes, cúrcuma. Problemas de hígado o vesícula biliar.'},
+  {id:'p045',nombre:'ERGYPAR',categoria:'Digestivo / Antiparasitario',ingredientes:'Extractos vegetales',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p046',nombre:'ERGYPHILUS ATB',categoria:'Probiótico / Antibiótico',ingredientes:'Lactobacilos, Bifidobacterias',contraindicaciones:['antibioticos'],precauciones:[],medsContra:'Amoxicilina, Azitromicina, Ciprofloxacino, Cefalexina, Levofloxacino, Metronidazol, Trimetoprim/sulfametoxazol, Vancomicina, Ceftriaxona',notas:'Tomar distanciado del antibiótico mínimo 2 horas. No mezclar en el tiempo.'},
+  {id:'p047',nombre:'ERGYPHILUS Bebé',categoria:'Probiótico Infantil',ingredientes:'Lactobacilos adaptados bebés',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Adaptado para bebés'},
+  {id:'p048',nombre:'ERGYPHILUS Conf',categoria:'Probiótico / Confort',ingredientes:'Lactobacilos, Cebolla, Cúrcuma',contraindicaciones:['anticoagulantes'],precauciones:['biliar'],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Dabigatrán',notas:'Reservado adultos. Embarazo o lactancia. Anticoagulantes. Problemas de hígado o vesícula biliar (cúrcuma).'},
+  {id:'p049',nombre:'ERGYPHILUS HPy',categoria:'Probiótico / Helicobacter',ingredientes:'Lactobacillus reuteri',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p050',nombre:'ERGYPHILUS Immuno Complex',categoria:'Probiótico / Inmunidad',ingredientes:'Complejo probiótico inmunológico',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p051',nombre:'ERGYPHILUS Intima',categoria:'Probiótico Íntimo',ingredientes:'Lactobacilos vaginales',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p052',nombre:'ERGYPHILUS Niños',categoria:'Probiótico Infantil',ingredientes:'Lactobacilos infantiles',contraindicaciones:[],precauciones:[],medsContra:'',notas:'A partir de 3 años'},
+  {id:'p053',nombre:'ERGYPHILUS PLUS',categoria:'Probiótico Adulto',ingredientes:'Complejo probiótico avanzado',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Tomar 2h distanciado de medicamentos'},
+  {id:'p054',nombre:'ERGYPHYTUM',categoria:'Articulaciones',ingredientes:'Harpagofito, Bambú',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Niños, embarazo o lactancia (bambú). Úlceras estomacales/duodenales o cálculos biliares (harpagofito).'},
+  {id:'p055',nombre:'ERGYPROTECT Conf',categoria:'Protector / Cardio',ingredientes:'Cebolla, Cúrcuma, Resveratrol',contraindicaciones:['anticoagulantes'],precauciones:['biliar'],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Dabigatrán',notas:'Reservado adultos. Embarazo o lactancia. Anticoagulantes, enfermedad hepática o vesícula biliar.'},
+  {id:'p056',nombre:'ERGYPROTECT Plus',categoria:'Protector / Antioxidante',ingredientes:'Resveratrol, Té verde, Trans-resveratrol',contraindicaciones:['anticoagulantes'],precauciones:[],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Dabigatrán',notas:'Reservado adultos. Embarazo o lactancia. Tomar preferiblemente con las comidas (té verde).'},
+  {id:'p057',nombre:'ERGYPROTEIN',categoria:'Proteína / Nutrición',ingredientes:'Proteína de suero de leche',contraindicaciones:[],precauciones:[],medsContra:'',notas:'100% natural, sin gluten, sin OGM, apto lactovegetarianos'},
+  {id:'p058',nombre:'ERGYQUER Forte',categoria:'Antioxidante / Inmunidad',ingredientes:'Quercetina, Vitamina C',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p059',nombre:'ERGYREG',categoria:'Regulación hormonal',ingredientes:'Extractos vegetales reguladores',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p060',nombre:'ERGYREN Support',categoria:'Renal / Urinario',ingredientes:'Arándano, Ortiga',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Embarazo, lactancia. Más de 10 años. Ortiga en la composición.'},
+  {id:'p061',nombre:'ERGYSIL Gel',categoria:'Silicio orgánico / Tópico',ingredientes:'Silicio orgánico',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p062',nombre:'ERGYSIL Solución',categoria:'Silicio orgánico',ingredientes:'Silicio orgánico bebible',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p063',nombre:'ERGYSLIM',categoria:'Control de peso',ingredientes:'Extractos vegetales termogénicos',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p064',nombre:'ERGYSPORT Esfuerzo',categoria:'Deporte',ingredientes:'Carbohidratos, Electrolitos, Cafeína',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Garantía SPORT Protect (ausencia sustancias dopantes según NF EN 17444)'},
+  {id:'p065',nombre:'ERGYSPORT OLiGOMAX',categoria:'Deporte',ingredientes:'Oligoelementos deportivos',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p066',nombre:'ERGYSPORT Recup',categoria:'Deporte / Recuperación',ingredientes:'Proteína, BCAA, Magnesio',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p067',nombre:'ERGYSPORT Regen',categoria:'Deporte / Regeneración',ingredientes:'Colágeno, Vitamina C, Silicio',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p068',nombre:'ERGYSPORT Stim',categoria:'Deporte / Estimulante',ingredientes:'Guaraná, Cafeína, Vitaminas B',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p069',nombre:'ERGYSTAM',categoria:'Antiinflamatorio / Inmunidad',ingredientes:'Quercetina, Vitamina C, Perilla',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p070',nombre:'ERGYTAURINA Detox',categoria:'Detox / Drenaje',ingredientes:'Taurina, Ajo, Extractos vegetales',contraindicaciones:['anticoagulantes'],precauciones:['tiroides','diabetes'],medsContra:'Levotiroxina, Warfarina, Enoxaparina, Clopidogrel, Metformina, Sitagliptina, Glimepirida',notas:'Medicamentos para la tiroides. Anticoagulantes. Antidiabéticos orales (Metformina, Sitagliptina, Pioglitazona, Glimepirida, Saxagliptina, Linagliptina, Glipizida).'},
+  {id:'p071',nombre:'ERGYTONYL',categoria:'Tónico / Vitalidad',ingredientes:'Ginseng, Eleuterococo',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p072',nombre:'ERGYVEN',categoria:'Circulación venosa',ingredientes:'Castaño de indias, Meliloto',contraindicaciones:['anticoagulantes'],precauciones:[],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Dabigatrán',notas:'Embarazo y lactancia (meliloto). Menores de 12 años y anticoagulantes (castaño de indias). En caso de cirugía, dejar de tomarlo 3 días antes.'},
+  {id:'p073',nombre:'ERGYVIOL',categoria:'Vitaminas / Bienestar',ingredientes:'Complejo vitamínico',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p074',nombre:'ERGYVITAL Hombre',categoria:'Salud masculina',ingredientes:'Zinc, Selenio, Extractos vegetales',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p075',nombre:'ERGYZEN',categoria:'Estrés / Relajante',ingredientes:'Rodiola, Ashwagandha, Vitaminas B',contraindicaciones:[],precauciones:[],medsContra:'',notas:''},
+  {id:'p076',nombre:"GREEN'FLOR",categoria:'Microbiota / Prebiótico',ingredientes:'FOS, Inulina, Ajo de oso',contraindicaciones:['anticoagulantes'],precauciones:['diabetes','biliar'],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Metformina, Sitagliptina, Glimepirida',notas:'Anticoagulantes, antidiabéticos orales o trastornos de la coagulación (ajo de oso). Obstrucción biliar, insuficiencia cardíaca o renal (diente de león).'},
+  {id:'p077',nombre:"MY'COKYL",categoria:'Colesterol / Cardio',ingredientes:'Ajo de oso, Diente de León, Berberina',contraindicaciones:['anticoagulantes'],precauciones:['diabetes','biliar'],medsContra:'Warfarina, Enoxaparina, Clopidogrel, Rivaroxabán, Apixabán, Metformina, Sitagliptina, Glimepirida, Glipizida',notas:'Anticoagulantes, antidiabéticos orales o trastornos de la coagulación sanguínea (ajo).'},
+  {id:'p078',nombre:'ERGYUP',categoria:'Estado de ánimo',ingredientes:'Hipérico (Hierba de San Juan)',contraindicaciones:['antidepresivos'],precauciones:[],medsContra:'Fluoxetina, Sertralina, Paroxetina, Citalopram, Escitalopram, Venlafaxina, Duloxetina, Amitriptilina, Trazodona',notas:'Interacciones graves con ISRS y antidepresivos. No usar con anticonceptivos hormonales, anticoagulantes, antiretrovirales ni ciclosporina.'},
+  {id:'p079',nombre:'ERGYPHYTUM',categoria:'Articulaciones / Movilidad',ingredientes:'Harpagofito, Bambú, Ulmaria',contraindicaciones:[],precauciones:[],medsContra:'',notas:'Úlcera gástrica/duodenal (harpagofito). Embarazo, lactancia, niños.'},
+  {id:'p080',nombre:'ERGYSPORT (Gama)',categoria:'Deporte',ingredientes:'Varios según producto',contraindicaciones:[],precauciones:[],medsContra:'',notas:'No recomendado para mujeres embarazadas o en periodo de lactancia. Solo para adultos. No usar en insuficiencia cardíaca o renal edematosa.'}
+];
+
+let state = {
+  productos: [], pin: '',
+  modoBusqueda: 'producto', filtroActivo: 'todos', busquedaActual: ''
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-  limpiarStorageViejo();
-  cargarDB();
-  ST.pin = localStorage.getItem(SK.pin) || PIN_DEFAULT;
-  ST.sinPin = localStorage.getItem(SK.sinPin) === '1';
+  cargarDatos();
   verificarSesion();
+  inicializarMedsRapidos();
   registrarSW();
   detectarOffline();
-  capturarInstall();
-  renderChipsGrupos();
-  renderChipsMeds();
+  document.getElementById('verDisplay').textContent = 'v ' + APP_VERSION;
+  document.getElementById('verTecnica').textContent = APP_VERSION;
 });
 
-function limpiarStorageViejo() {
-  // Eliminar claves del formato v1 si existen
-  ['ns_productos','ns_pin','ns_sesion','ns_ultima_act'].forEach(k => {
-    if(localStorage.getItem(k)) localStorage.removeItem(k);
-  });
-}
-
-// ═══════════════════════════════════════════════════
-// BASE DE DATOS — CARGA
-// ═══════════════════════════════════════════════════
-function cargarDB() {
-  // Grupos
-  const gRaw = localStorage.getItem(SK.grupos);
-  if (gRaw) {
-    try { DB.grupos = JSON.parse(gRaw); } catch(e){ DB.grupos = []; }
-  } else {
-    DB.grupos = [
-      {id:'G01', nombre:'Anticoagulantes', emoji:'🩸'},
-      {id:'G02', nombre:'Estatinas', emoji:'💊'},
-      {id:'G03', nombre:'Hormonas tiroideas', emoji:'⚗️'},
-      {id:'G04', nombre:'Antidiabéticos orales', emoji:'🩺'},
-      {id:'G05', nombre:'Antibióticos', emoji:'🔬'},
-      {id:'G06', nombre:'Analgésicos/AINEs', emoji:'💉'},
-      {id:'G07', nombre:'Antivirales', emoji:'🦠'},
-    ];
-    saveGrupos();
-  }
-
-  // Medicamentos
-  const mRaw = localStorage.getItem(SK.meds);
-  if (mRaw) {
-    try { DB.medicamentos = JSON.parse(mRaw); } catch(e){ DB.medicamentos = []; }
-  } else {
-    DB.medicamentos = [
-      {id:'M001',nombre:'Warfarina',grupoId:'G01'},
-      {id:'M002',nombre:'Acenocumarol (Sintrom)',grupoId:'G01'},
-      {id:'M003',nombre:'Enoxaparina',grupoId:'G01'},
-      {id:'M004',nombre:'Dalteparina',grupoId:'G01'},
-      {id:'M005',nombre:'Fondaparinux',grupoId:'G01'},
-      {id:'M006',nombre:'Bivalirudina',grupoId:'G01'},
-      {id:'M007',nombre:'Rivaroxabán (Xarelto)',grupoId:'G01'},
-      {id:'M008',nombre:'Apixabán (Eliquis)',grupoId:'G01'},
-      {id:'M009',nombre:'Dabigatrán (Pradaxa)',grupoId:'G01'},
-      {id:'M010',nombre:'Edoxabán',grupoId:'G01'},
-      {id:'M011',nombre:'Clopidogrel',grupoId:'G01'},
-      {id:'M012',nombre:'Aspirina',grupoId:'G01'},
-      {id:'M013',nombre:'Atorvastatina',grupoId:'G02'},
-      {id:'M014',nombre:'Simvastatina',grupoId:'G02'},
-      {id:'M015',nombre:'Rosuvastatina',grupoId:'G02'},
-      {id:'M016',nombre:'Pravastatina',grupoId:'G02'},
-      {id:'M017',nombre:'Lovastatina',grupoId:'G02'},
-      {id:'M018',nombre:'Fluvastatina',grupoId:'G02'},
-      {id:'M019',nombre:'Pitavastatina',grupoId:'G02'},
-      {id:'M020',nombre:'Levotiroxina sódica',grupoId:'G03'},
-      {id:'M021',nombre:'Liotironina sódica',grupoId:'G03'},
-      {id:'M022',nombre:'Tiroides desecada',grupoId:'G03'},
-      {id:'M023',nombre:'Metformina',grupoId:'G04'},
-      {id:'M024',nombre:'Sitagliptina',grupoId:'G04'},
-      {id:'M025',nombre:'Pioglitazona',grupoId:'G04'},
-      {id:'M026',nombre:'Glimepirida',grupoId:'G04'},
-      {id:'M027',nombre:'Saxagliptina',grupoId:'G04'},
-      {id:'M028',nombre:'Linagliptina',grupoId:'G04'},
-      {id:'M029',nombre:'Glipizida',grupoId:'G04'},
-      {id:'M030',nombre:'Amoxicilina',grupoId:'G05'},
-      {id:'M031',nombre:'Amoxicilina/clavulanato',grupoId:'G05'},
-      {id:'M032',nombre:'Azitromicina',grupoId:'G05'},
-      {id:'M033',nombre:'Ciprofloxacino',grupoId:'G05'},
-      {id:'M034',nombre:'Cefalexina',grupoId:'G05'},
-      {id:'M035',nombre:'Levofloxacino',grupoId:'G05'},
-      {id:'M036',nombre:'Metronidazol',grupoId:'G05'},
-      {id:'M037',nombre:'Trimetoprim/sulfametoxazol',grupoId:'G05'},
-      {id:'M038',nombre:'Vancomicina',grupoId:'G05'},
-      {id:'M039',nombre:'Ceftriaxona',grupoId:'G05'},
-      {id:'M040',nombre:'Aspirina',grupoId:'G06'},
-      {id:'M041',nombre:'Ibuprofeno',grupoId:'G06'},
-      {id:'M042',nombre:'Naproxeno',grupoId:'G06'},
-      {id:'M043',nombre:'Diclofenaco',grupoId:'G06'},
-      {id:'M044',nombre:'Celecoxib',grupoId:'G06'},
-      {id:'M045',nombre:'Zidovudina',grupoId:'G07'},
-      {id:'M046',nombre:'Ritonavir',grupoId:'G07'},
-      {id:'M047',nombre:'Lamivudina',grupoId:'G07'},
-      {id:'M048',nombre:'Efavirenz',grupoId:'G07'},
-      {id:'M049',nombre:'Tenofovir',grupoId:'G07'},
-      {id:'M050',nombre:'Emtricitabina/tenofovir',grupoId:'G07'},
-    ];
-    saveMeds();
-  }
-
-  // Productos
-  const pRaw = localStorage.getItem(SK.prods);
-  if (pRaw) {
-    try { DB.productos = JSON.parse(pRaw); } catch(e){ DB.productos = []; }
-  } else {
-    cargarProductosJSON();
-  }
-}
-
-function cargarProductosJSON() {
-  fetch('./productos.json')
-    .then(r => r.json())
-    .then(data => {
-      // Cargar grupos desde el JSON (solo si no hay datos locales)
-      if (!localStorage.getItem(SK.grupos)) {
-        DB.grupos = (data.grupos || []).map(g => ({
-          id: g.id,
-          nombre: g.nombre,
-          emoji: '💊',
-          medicamentos: g.medicamentos || []
-        }));
-        saveGrupos();
-      }
-      // Cargar medicamentos desde el JSON (solo si no hay datos locales)
-      if (!localStorage.getItem(SK.meds)) {
-        let mid = 1;
-        DB.medicamentos = (data.grupos || []).flatMap(g =>
-          (g.medicamentos || []).map(m => ({
-            id: 'M' + String(mid++).padStart(3,'0'),
-            nombre: m.nombre || m.principioActivo || '',
-            grupoId: g.id
-          }))
-        );
-        saveMeds();
-      }
-      // Cargar productos
-      DB.productos = (data.productos || []).map(p => ({
-        id: p.id || uid(),
-        nombre: p.nombre || '',
-        descripcion: p.descripcion || '',
-        grupos: p.grupos || [],
-        embarazo: !!p.embarazo,
-        lactancia: !!p.lactancia,
-        ninos: !!p.ninos,
-        epilepsia: !!p.epilepsia,
-        notas: p.notas || ''
-      }));
-      saveProds();
-      actualizarStats();
-      renderListaProd();
-      toast(`✅ ${DB.productos.length} productos cargados`);
-    })
-    .catch(() => {
-      DB.productos = [];
-      saveProds();
+window.addEventListener('firebaseReady', () => {
+  if (sessionStorage.getItem(SK.sesion) === 'activa') {
+    window._fbSync.cargar().then(descargado => {
+      if (descargado) { actualizarEstadisticas(); actualizarListaEditor(); }
     });
+  }
+});
+
+window.addEventListener('syncDescarga', () => {
+  cargarDatos(); actualizarEstadisticas(); actualizarListaEditor();
+});
+
+function cargarDatos() {
+  try {
+    const raw = localStorage.getItem(SK.productos);
+    if (raw) { state.productos = JSON.parse(raw); }
+    else { state.productos = DB_PRECARGADA.map(p => ({...p})); guardarDatos(); }
+  } catch(e) { state.productos = DB_PRECARGADA.map(p => ({...p})); }
+  state.pin = localStorage.getItem(SK.pin) || PIN_DEFAULT;
 }
 
-function saveProds(){ localStorage.setItem(SK.prods, JSON.stringify(DB.productos)); }
-function saveMeds(){ localStorage.setItem(SK.meds, JSON.stringify(DB.medicamentos)); }
-function saveGrupos(){ localStorage.setItem(SK.grupos, JSON.stringify(DB.grupos)); }
-
-// ═══════════════════════════════════════════════════
-// PWA — INSTALL
-// ═══════════════════════════════════════════════════
-function capturarInstall() {
-  window.addEventListener('beforeinstallprompt', e => {
-    e.preventDefault();
-    deferredInstall = e;
-    // Solo mostrar si nunca se ha instalado ni saltado
-    if (!localStorage.getItem('ns2_installed') && !localStorage.getItem('ns2_skipinstall')) {
-      document.getElementById('loginScreen').style.display = 'none';
-      document.getElementById('installBanner').style.display = 'flex';
-    }
-  });
-  document.getElementById('btnInstall').onclick = async () => {
-    if (!deferredInstall) return;
-    deferredInstall.prompt();
-    const { outcome } = await deferredInstall.userChoice;
-    if (outcome === 'accepted') localStorage.setItem('ns2_installed','1');
-    deferredInstall = null;
-    document.getElementById('installBanner').style.display = 'none';
-    document.getElementById('loginScreen').style.display = 'flex';
-  };
+function guardarDatos() {
+  try {
+    localStorage.setItem(SK.productos, JSON.stringify(state.productos));
+    const ahora = new Date().toLocaleDateString('es-ES', {day:'2-digit',month:'2-digit',year:'numeric'});
+    localStorage.setItem(SK.ultimaAct, ahora);
+  } catch(e) { mostrarToast('⚠️ Error al guardar. Almacenamiento lleno.'); }
 }
 
-function skipInstall() {
-  localStorage.setItem('ns2_skipinstall','1');
-  document.getElementById('installBanner').style.display = 'none';
-  document.getElementById('loginScreen').style.display = 'flex';
-}
-
-// ═══════════════════════════════════════════════════
-// LOGIN
-// ═══════════════════════════════════════════════════
 function verificarSesion() {
-  // Mostrar botón sin pin si está desactivado
-  document.getElementById('btnNoPin').style.display = ST.sinPin ? 'block' : 'none';
-  if (ST.sinPin) { mostrarApp(); return; }
-  if (sessionStorage.getItem(SK.sesion) === '1') mostrarApp();
+  if (sessionStorage.getItem(SK.sesion) === 'activa') mostrarApp();
 }
 
-function login() {
-  const v = document.getElementById('pinInput').value.trim();
-  if (v === ST.pin) {
-    sessionStorage.setItem(SK.sesion,'1');
+function inicializarMedsRapidos() {
+  document.getElementById('medsSug').innerHTML = MEDS_RAPIDOS.map(m =>
+    `<button class="med-chip" onclick="selMed('${m}')">${m}</button>`).join('');
+}
+
+function validarPin() {
+  const input = document.getElementById('pinInput').value.trim();
+  if (input === state.pin) {
+    sessionStorage.setItem(SK.sesion, 'activa');
     mostrarApp();
     document.getElementById('pinInput').value = '';
+    if (window._fbSync) window._fbSync.cargar().then(d => { if(d){actualizarEstadisticas();actualizarListaEditor();} });
   } else {
-    document.getElementById('loginErr').textContent = '❌ Contraseña incorrecta';
+    document.getElementById('loginError').textContent = '❌ Contraseña incorrecta. Inténtalo de nuevo.';
     document.getElementById('pinInput').value = '';
-    if(navigator.vibrate) navigator.vibrate([80,40,80]);
-    setTimeout(()=>document.getElementById('loginErr').textContent='', 2500);
+    if (navigator.vibrate) navigator.vibrate([100,50,100]);
+    setTimeout(() => document.getElementById('loginError').textContent = '', 2500);
   }
-}
-
-function loginSinPin() {
-  sessionStorage.setItem(SK.sesion,'1');
-  mostrarApp();
 }
 
 function mostrarApp() {
   document.getElementById('loginScreen').style.display = 'none';
   document.getElementById('app').classList.add('visible');
-  // Mostrar/ocultar botón cerrar sesión
-  document.getElementById('btnCerrar').style.display = ST.sinPin ? 'none' : 'flex';
-  actualizarStats();
-  renderListaProd();
-  renderListaMed();
-  renderListaGrupo();
-  actualizarAjustes();
-  // Sync toggle pin
-  document.getElementById('togglePin').checked = !ST.sinPin;
+  actualizarEstadisticas();
+  actualizarListaEditor();
+  const ultima = localStorage.getItem(SK.ultimaAct);
+  if (ultima) document.getElementById('ultimaAct').textContent = ultima;
+  const us = localStorage.getItem(SK.ultimaSync);
+  if (us) { const el = document.getElementById('ultimaSync'); if(el) el.textContent = new Date(parseInt(us)).toLocaleString('es-ES'); }
 }
 
 function cerrarSesion() {
@@ -814,668 +757,355 @@ function cerrarSesion() {
   document.getElementById('app').classList.remove('visible');
 }
 
-// ═══════════════════════════════════════════════════
-// NAVEGACIÓN
-// ═══════════════════════════════════════════════════
-const VMAP = {
-  inicio: {v:'vistaInicio', n:'navI'},
-  buscador:{v:'vistaBuscador',n:'navB'},
-  editor: {v:'vistaEditor', n:'navE'},
-  ajustes:{v:'vistaAjustes',n:'navA'}
+const VISTAS_MAP = {
+  inicio:{v:'vistaInicio',n:'navInicio'}, buscador:{v:'vistaBuscador',n:'navBuscador'},
+  editor:{v:'vistaEditor',n:'navEditor'}, acerca:{v:'vistaAcerca',n:'navAcerca'}
 };
 
-function ir(sec) {
-  document.querySelectorAll('.vista').forEach(v=>v.classList.remove('activa'));
-  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('on'));
-  const c = VMAP[sec];
-  if(!c) return;
-  document.getElementById(c.v).classList.add('activa');
-  document.getElementById(c.n).classList.add('on');
-  if(sec==='inicio') actualizarStats();
-  if(sec==='ajustes') actualizarAjustes();
-  if(sec==='buscador') {
-    document.getElementById('resultados').innerHTML = renderEmpty('🔍','Busca un producto o medicamento','Usa las pestañas para cambiar el modo de búsqueda');
+function navegarA(sec) {
+  document.querySelectorAll('.vista').forEach(v => v.classList.remove('activa'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('activo'));
+  const cfg = VISTAS_MAP[sec]; if (!cfg) return;
+  document.getElementById(cfg.v).classList.add('activa');
+  document.getElementById(cfg.n).classList.add('activo');
+  if (sec === 'inicio') actualizarEstadisticas();
+  if (sec === 'editor') actualizarListaEditor();
+  if (sec === 'acerca') {
+    document.getElementById('prodsEnAcerca').textContent = state.productos.length;
+    const u = localStorage.getItem(SK.ultimaAct); document.getElementById('ultimaAct').textContent = u || '—';
+    const us = localStorage.getItem(SK.ultimaSync);
+    const elSync = document.getElementById('ultimaSync');
+    if (elSync) elSync.textContent = us ? new Date(parseInt(us)).toLocaleString('es-ES') : '—';
   }
+  if (sec === 'buscador') document.getElementById('resultados').innerHTML = renderVacio();
 }
 
-// ═══════════════════════════════════════════════════
-// STATS
-// ═══════════════════════════════════════════════════
-function semaforo(p) {
-  if((p.grupos||[]).length > 0) return 'rojo';
-  if(p.embarazo||p.lactancia||p.ninos||p.epilepsia) return 'amarillo';
+function actualizarEstadisticas() {
+  let v=0,a=0,r=0;
+  state.productos.forEach(p => { const n=nivelSem(p); if(n==='verde')v++; else if(n==='amarillo')a++; else r++; });
+  document.getElementById('cntVerde').textContent = v;
+  document.getElementById('cntAmarillo').textContent = a;
+  document.getElementById('cntRojo').textContent = r;
+  const al = document.getElementById('alertaVacia');
+  if (al) al.style.display = state.productos.length === 0 ? 'flex' : 'none';
+}
+
+function nivelSem(p) {
+  if ((p.contraindicaciones||[]).length > 0) return 'rojo';
+  if ((p.precauciones||[]).length > 0) return 'amarillo';
   return 'verde';
 }
 
-function actualizarStats() {
-  let v=0,a=0,r=0;
-  DB.productos.forEach(p=>{const s=semaforo(p);if(s==='verde')v++;else if(s==='amarillo')a++;else r++;});
-  document.getElementById('cntV').textContent=v;
-  document.getElementById('cntA').textContent=a;
-  document.getElementById('cntR').textContent=r;
+function cambiarTab(tab) {
+  state.modoBusqueda = tab;
+  document.getElementById('tabProducto').classList.toggle('activo', tab==='producto');
+  document.getElementById('tabMedicamento').classList.toggle('activo', tab==='medicamento');
+  document.getElementById('panelProducto').style.display = tab==='producto' ? 'block' : 'none';
+  document.getElementById('panelMedicamento').style.display = tab==='medicamento' ? 'block' : 'none';
+  document.getElementById('filtrosRapidos').style.display = tab==='producto' ? 'flex' : 'none';
+  document.getElementById('resultados').innerHTML = renderVacio();
 }
 
-function actualizarAjustes() {
-  document.getElementById('ajustesProds').textContent = DB.productos.length;
-  document.getElementById('ajustesMeds').textContent = DB.medicamentos.length;
-  document.getElementById('ajustesGrupos').textContent = DB.grupos.length;
-  document.getElementById('togglePin').checked = !ST.sinPin;
+function buscarProducto(txt) {
+  state.busquedaActual = txt;
+  document.getElementById('limpiarProducto').classList.toggle('visible', txt.length > 0);
+  if (!txt) { document.getElementById('resultados').innerHTML = renderVacio(); return; }
+  const q = normalizar(txt);
+  let res = state.productos.filter(p =>
+    normalizar(p.nombre).includes(q) || normalizar(p.categoria||'').includes(q) ||
+    normalizar(p.ingredientes||'').includes(q) || normalizar(p.medsContra||'').includes(q));
+  if (state.filtroActivo !== 'todos') res = res.filter(p => nivelSem(p) === state.filtroActivo);
+  renderResultados(res);
 }
 
-// ═══════════════════════════════════════════════════
-// BÚSQUEDA
-// ═══════════════════════════════════════════════════
-function setTab(t) {
-  ST.tab = t;
-  ['prod','med','grupo'].forEach(x=>{
-    document.getElementById('tab'+cap(x)).classList.toggle('on',x===t);
-    document.getElementById('panel'+cap(x)).style.display = x===t?'block':'none';
+function buscarMed(txt) {
+  document.getElementById('limpiarMedicamento').classList.toggle('visible', txt.length > 0);
+  document.querySelectorAll('.med-chip').forEach(c => c.classList.remove('activo'));
+  if (txt.length < 2) { document.getElementById('resultados').innerHTML = renderVacio(); return; }
+  ejecutarBusquedaMed(txt);
+}
+
+function selMed(med) {
+  document.getElementById('inputMedicamento').value = med;
+  document.getElementById('limpiarMedicamento').classList.add('visible');
+  document.querySelectorAll('.med-chip').forEach(c => c.classList.toggle('activo', c.textContent === med));
+  ejecutarBusquedaMed(med);
+}
+
+function ejecutarBusquedaMed(txt) {
+  const q = normalizar(txt);
+  let claves = [];
+  Object.keys(MAPA_RIESGOS).forEach(k => { if(q.includes(k)) claves.push(...MAPA_RIESGOS[k]); });
+  const res = state.productos.filter(p => {
+    const ci = (p.contraindicaciones||[]).join(' ').toLowerCase();
+    const pr = (p.precauciones||[]).join(' ').toLowerCase();
+    const no = normalizar(p.notas||''); const mc = normalizar(p.medsContra||'');
+    if (claves.length > 0) return claves.some(c => ci.includes(c) || pr.includes(c));
+    return ci.includes(q) || pr.includes(q) || no.includes(q) || mc.includes(q);
   });
-  // Semáforo filter solo en prod
-  document.getElementById('filtrosSem').style.display = t==='prod'?'flex':'none';
-  document.getElementById('resultados').innerHTML = renderEmpty('🔍','Escribe para buscar','');
+  renderResultadosMed(res, txt);
 }
 
-function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
-
-function buscarProd(q) {
-  document.getElementById('xProd').classList.toggle('vis', q.length>0);
-  if(!q){document.getElementById('resultados').innerHTML=renderEmpty('🔍','Escribe el nombre del producto','');return;}
-  const nq = norm(q);
-  let res = DB.productos.filter(p => norm(p.nombre).includes(nq) || norm(p.descripcion||'').includes(nq));
-  if(ST.filtro!=='todos') res=res.filter(p=>semaforo(p)===ST.filtro);
-  renderResProd(res);
+function filtrarSem(f, btn) {
+  state.filtroActivo = f;
+  document.querySelectorAll('.filtro-chip').forEach(c => c.classList.remove('activo'));
+  btn.classList.add('activo');
+  const input = document.getElementById('inputProducto');
+  if (input.value.length > 0) { buscarProducto(input.value); }
+  else { if (f === 'todos') { document.getElementById('resultados').innerHTML = renderVacio(); return; }
+    renderResultados(state.productos.filter(p => nivelSem(p) === f)); }
 }
 
-function buscarMed(q) {
-  document.getElementById('xMed').classList.toggle('vis', q.length>0);
-  document.querySelectorAll('#chipsMeds .chip').forEach(c=>c.classList.remove('on'));
-  if(q.length<2){document.getElementById('resultados').innerHTML=renderEmpty('💊','Escribe el medicamento','Ej: Warfarina, Sintrom, Metformina...');return;}
-  ejecutarBusquedaMed(q);
+function limpiar(tipo) {
+  if (tipo === 'producto') { document.getElementById('inputProducto').value = ''; document.getElementById('limpiarProducto').classList.remove('visible'); state.busquedaActual = ''; }
+  else { document.getElementById('inputMedicamento').value = ''; document.getElementById('limpiarMedicamento').classList.remove('visible'); document.querySelectorAll('.med-chip').forEach(c => c.classList.remove('activo')); }
+  document.getElementById('resultados').innerHTML = renderVacio();
 }
 
-// Alias: nombre común → términos de búsqueda en la BD
-const ALIAS = {
-  'heparina':['enoxaparina','dalteparina','fondaparinux','bivalirudina'],
-  'sintrom':['acenocumarol'],
-  'pradaxa':['dabigatr'],
-  'xarelto':['rivaroxab'],
-  'eliquis':['apixab'],
-  'plavix':['clopidogrel'],
-  'insulina':['metformina','sitagliptina','glimepirida','glipizida','pioglitazona','saxagliptina','linagliptina'],
-  'antidiabetico':['metformina','sitagliptina','glimepirida'],
-  'tiroxina':['levotiroxina'],
-  'eutirox':['levotiroxina'],
-  'zocor':['simvastatina'],
-  'lipitor':['atorvastatina'],
-  'penicilina':['amoxicilina'],
-  'augmentine':['amoxicilina/clavulanato'],
-  'flagyl':['metronidazol'],
-};
-
-function ejecutarBusquedaMed(q) {
-  const nq = norm(q);
-  // Expandir con alias
-  let terminos = [nq];
-  Object.keys(ALIAS).forEach(alias => {
-    if(nq.includes(alias) || alias.includes(nq)) terminos.push(...ALIAS[alias]);
-  });
-  // Encontrar medicamentos que coincidan con cualquier término
-  const medsMatch = DB.medicamentos.filter(m => terminos.some(t => norm(m.nombre).includes(t)));
-  const gruposMatch = new Set(medsMatch.map(m=>m.grupoId));
-  const prods = DB.productos.filter(p => (p.grupos||[]).some(g=>gruposMatch.has(g)));
-  renderResMed(prods, q, medsMatch, gruposMatch);
+function renderVacio() {
+  if (state.productos.length === 0) return `<div class="st-vacio"><div class="st-vacio-icon">📭</div><div class="st-vacio-titulo">Sin productos cargados</div><div class="st-vacio-txt">Ve al Editor para añadir productos</div></div>`;
+  return `<div class="st-vacio"><div class="st-vacio-icon">🔍</div><div class="st-vacio-titulo">Escribe para buscar</div><div class="st-vacio-txt">Busca por nombre de producto, categoría o ingrediente</div></div>`;
 }
 
-function buscarPorGrupo(gid) {
-  document.querySelectorAll('#chipsGrupos .chip').forEach(c=>c.classList.remove('on'));
-  const chip = document.querySelector(`#chipsGrupos .chip[data-gid="${gid}"]`);
-  if(chip) chip.classList.add('on');
-  const prods = DB.productos.filter(p=>(p.grupos||[]).includes(gid));
-  const g = DB.grupos.find(x=>x.id===gid);
-  const meds = DB.medicamentos.filter(m=>m.grupoId===gid);
-  const cab = `<div class="alerta a-info" style="margin-bottom:10px;">
-    <span>${g?.emoji||'📂'}</span>
-    <span><strong>${g?.nombre||gid}</strong> — ${meds.length} medicamentos — ${prods.length} producto(s) con interacción</span>
-  </div>`;
-  const medsTxt = meds.length ? `<div class="card" style="margin-bottom:10px;">
-    <div class="card-t">${g?.emoji||'📂'} Medicamentos del grupo</div>
-    <div class="meds-list">${meds.map(m=>`<span class="med-tag">${esc(m.nombre)}</span>`).join('')}</div>
-  </div>` : '';
-  document.getElementById('resultados').innerHTML = cab + medsTxt + (prods.length ? prods.map((p,i)=>renderTarjeta(p,i)).join('') : renderEmpty('✅','Sin productos contraindicados','Ningún producto tiene contraindicación con este grupo'));
-}
-
-function setFiltro(f, btn) {
-  ST.filtro = f;
-  document.querySelectorAll('#filtrosSem .chip').forEach(c=>c.classList.remove('on'));
-  btn.classList.add('on');
-  const q = document.getElementById('inpProd').value;
-  if(q) buscarProd(q);
-  else if(f!=='todos') renderResProd(DB.productos.filter(p=>semaforo(p)===f));
-  else document.getElementById('resultados').innerHTML = renderEmpty('🔍','Escribe para buscar','');
-}
-
-function selMedChip(nombre) {
-  document.getElementById('inpMed').value = nombre;
-  document.getElementById('xMed').classList.add('vis');
-  document.querySelectorAll('#chipsMeds .chip').forEach(c=>c.classList.toggle('on',c.textContent===nombre));
-  ejecutarBusquedaMed(nombre);
-}
-
-function limpiar(t) {
-  if(t==='prod'){document.getElementById('inpProd').value='';document.getElementById('xProd').classList.remove('vis');}
-  else{document.getElementById('inpMed').value='';document.getElementById('xMed').classList.remove('vis');document.querySelectorAll('#chipsMeds .chip').forEach(c=>c.classList.remove('on'));}
-  document.getElementById('resultados').innerHTML=renderEmpty('🔍','Escribe para buscar','');
-}
-
-// ═══════════════════════════════════════════════════
-// RENDER RESULTADOS
-// ═══════════════════════════════════════════════════
-function renderResProd(res) {
+function renderResultados(res) {
   const c = document.getElementById('resultados');
-  if(!res.length){c.innerHTML=renderEmpty('🤷','Sin resultados','Prueba con otro término');return;}
-  c.innerHTML = res.map((p,i)=>renderTarjeta(p,i)).join('');
+  if (!res.length) { c.innerHTML = `<div class="st-vacio"><div class="st-vacio-icon">🤷</div><div class="st-vacio-titulo">Sin resultados</div><div class="st-vacio-txt">No se encontraron productos. Prueba con otra búsqueda.</div></div>`; return; }
+  c.innerHTML = res.map((p,i) => renderTarjeta(p,i)).join('');
 }
 
-function renderResMed(prods, q, medsMatch, gruposMatch) {
+function renderResultadosMed(res, med) {
   const c = document.getElementById('resultados');
-  if(!prods.length){
-    c.innerHTML=renderEmpty('✅','Sin interacciones','No hay productos contraindicados con este medicamento');
-    return;
-  }
-  const g = DB.grupos.filter(x=>gruposMatch.has(x.id));
-  const cab = `<div class="alerta a-warn" style="margin-bottom:10px;">
-    <span>⚠️</span>
-    <span><strong>${prods.length} producto(s)</strong> contraindicados con medicamentos que contienen <strong>${esc(q)}</strong>
-    ${g.length?` (Grupo: ${g.map(x=>x.emoji+' '+x.nombre).join(', ')})`:''}
-    </span>
-  </div>`;
-  c.innerHTML = cab + prods.map((p,i)=>renderTarjeta(p,i)).join('');
+  if (!res.length) { c.innerHTML = `<div class="st-vacio"><div class="st-vacio-icon">✅</div><div class="st-vacio-titulo">Sin interacciones encontradas</div><div class="st-vacio-txt">No hay productos con interacción registrada para <strong>${esc(med)}</strong></div></div>`; return; }
+  c.innerHTML = `<div class="alerta a-warn" style="margin-bottom:12px;"><span>⚠️</span><span>Se encontraron <strong>${res.length} producto(s)</strong> con posible interacción con <strong>${esc(med)}</strong></span></div>` + res.map((p,i) => renderTarjeta(p,i)).join('');
 }
 
 function renderTarjeta(p, idx) {
-  const s = semaforo(p);
-  const em = s==='rojo'?'🔴':s==='amarillo'?'🟡':'🟢';
-  const scls = `sem-${s}`;
-  const id = `det_${p.id||idx}`;
-
-  // Grupos contraindicados con sus medicamentos
-  const grupos = (p.grupos||[]).map(gid=>{
-    const g = DB.grupos.find(x=>x.id===gid);
-    const meds = DB.medicamentos.filter(m=>m.grupoId===gid);
-    return `<div style="margin-bottom:8px;">
-      <span class="badge badge-r">${g?.emoji||'📂'} ${g?.nombre||gid}</span>
-      ${meds.length?`<div class="meds-list">${meds.map(m=>`<span class="med-tag">${esc(m.nombre)}</span>`).join('')}</div>`:''}
-    </div>`;
-  }).join('');
-
-  // Perfiles especiales
-  const perfiles = [];
-  if(p.embarazo) perfiles.push('<span class="badge badge-a">🤰 Embarazo</span>');
-  if(p.lactancia) perfiles.push('<span class="badge badge-a">🤱 Lactancia</span>');
-  if(p.ninos) perfiles.push('<span class="badge badge-a">👶 Niños</span>');
-  if(p.epilepsia) perfiles.push('<span class="badge badge-a">⚡ Epilepsia</span>');
-
-  const sinNada = !(p.grupos||[]).length && !perfiles.length;
-
-  const cacheKey = 'p_' + (p.id||idx);
-  _cache.set(cacheKey, p);
-
-  return `<div class="res-item ani" style="animation-delay:${idx*0.03}s">
-    <div class="res-hdr" onclick="toggleDet('${id}')">
-      <div class="sem ${scls}">${em}</div>
-      <div class="res-info">
-        <div class="res-nom">${esc(p.nombre)}</div>
-        <div class="res-cat">${esc(p.descripcion||'Sin descripción')}</div>
-      </div>
-      <div class="res-chev" id="ch_${id}">›</div>
+  const niv = nivelSem(p);
+  const emoji = niv==='rojo'?'🔴':niv==='amarillo'?'🟡':'🟢';
+  const ci = (p.contraindicaciones||[]), pr = (p.precauciones||[]);
+  const chipsR = ci.map(c => { const i=RINFO[c]; return i?`<span class="riesgo-chip chip-rojo">${i.emoji} ${i.label}</span>`:''; }).join('');
+  const chipsA = pr.map(c => { const i=RINFO[c]; return i?`<span class="riesgo-chip chip-amarillo">${i.emoji} ${i.label}</span>`:''; }).join('');
+  const chipV = (!ci.length && !pr.length) ? '<span class="riesgo-chip chip-verde">✅ Sin contraindicaciones registradas</span>' : '';
+  const idEl = `r_${p.id||idx}`;
+  const pJson = esc(JSON.stringify(p));
+  return `<div class="res-item animate-in" style="animation-delay:${idx*0.04}s">
+    <div class="res-header" onclick="toggleDet('${idEl}')">
+      <div class="sem-badge sem-${niv}">${emoji}</div>
+      <div class="res-info"><div class="res-nombre">${esc(p.nombre)}</div><div class="res-cat">${esc(p.categoria||'Sin categoría')}</div></div>
+      <div class="res-chev" id="ch_${idEl}">›</div>
     </div>
-    <div class="res-det" id="${id}">
-      ${grupos ? `<div class="det-sec"><div class="det-lbl">🔴 Grupos contraindicados</div>${grupos}</div>` : ''}
-      ${perfiles.length ? `<div class="det-sec"><div class="det-lbl">⚠️ Perfiles especiales</div><div>${perfiles.join('')}</div></div>` : ''}
-      ${sinNada ? '<div class="badge badge-v">✅ Sin contraindicaciones registradas</div>' : ''}
-      ${p.notas ? `<div class="det-sec" style="margin-top:8px;"><div class="det-lbl">📌 Notas</div><div class="det-txt">${esc(p.notas)}</div></div>` : ''}
-      <button class="btn-comp" onclick="prepComp('${cacheKey}')">📤 Compartir</button>
+    <div class="res-detalle" id="${idEl}">
+      ${p.ingredientes?`<div class="det-sec"><div class="det-label">Ingredientes / Principios activos</div><div class="det-txt">${esc(p.ingredientes)}</div></div>`:''}
+      <div class="det-sec"><div class="det-label">Seguridad</div><div>${chipsR}${chipsA}${chipV}</div></div>
+      ${p.medsContra?`<div class="det-sec"><div class="det-label">💊 Medicamentos contraindicados</div><div class="det-txt" style="color:var(--ro);font-weight:500;">${esc(p.medsContra)}</div></div>`:''}
+      ${p.notas?`<div class="det-sec"><div class="det-label">📌 Observaciones</div><div class="det-txt">${esc(p.notas)}</div></div>`:''}
+      <button class="btn-comp-res" onclick="prepCompartir(${pJson})">📤 Compartir por WhatsApp / Email</button>
     </div>
   </div>`;
 }
 
 function toggleDet(id) {
-  const det = document.getElementById(id);
-  const ch = document.getElementById('ch_'+id);
-  const ab = det.classList.contains('open');
-  document.querySelectorAll('.res-det.open').forEach(d=>d.classList.remove('open'));
-  document.querySelectorAll('.res-chev').forEach(c=>c.style.transform='');
-  if(!ab){det.classList.add('open');if(ch)ch.style.transform='rotate(90deg)';}
+  const det = document.getElementById(id), chev = document.getElementById('ch_'+id);
+  const ab = det.classList.contains('abierto');
+  document.querySelectorAll('.res-detalle.abierto').forEach(d => d.classList.remove('abierto'));
+  document.querySelectorAll('.res-chev').forEach(c => { c.style.transform=''; });
+  if (!ab) { det.classList.add('abierto'); if (chev) chev.style.transform = 'rotate(90deg)'; }
 }
 
-function renderEmpty(ico,t,s) {
-  return `<div class="empty"><div class="empty-ico">${ico}</div><div class="empty-t">${t}</div><div class="empty-s">${s}</div></div>`;
-}
-
-// ═══════════════════════════════════════════════════
-// CHIPS
-// ═══════════════════════════════════════════════════
-function renderChipsGrupos() {
-  const c = document.getElementById('chipsGrupos');
-  c.innerHTML = DB.grupos.map(g =>
-    `<button class="chip" data-gid="${g.id}" onclick="buscarPorGrupo('${g.id}')">${g.emoji} ${esc(g.nombre)}</button>`
-  ).join('');
-  // También actualizar checkboxes de editor
-  actualizarGruposChk();
-  // Select del editor medicamentos
-  actualizarSelectGrupo();
-}
-
-function renderChipsMeds() {
-  // Chips rápidos de medicamentos más buscados
-  const rapidos = ['Heparina','Sintrom','Warfarina','Aspirina','Metformina','Atorvastatina','Levotiroxina','Pradaxa','Xarelto','Eliquis'];
-  document.getElementById('chipsMeds').innerHTML = rapidos.map(m=>
-    `<button class="chip" onclick="selMedChip('${m}')">${m}</button>`
-  ).join('');
-}
-
-// ═══════════════════════════════════════════════════
-// EDITOR — PRODUCTOS
-// ═══════════════════════════════════════════════════
-function setEtab(t) {
-  ST.etab = t;
-  ['prod','med','grupo'].forEach(x=>{
-    document.getElementById('etab'+cap(x)).classList.toggle('on',x===t);
-    document.getElementById('epanel'+cap(x)).style.display=x===t?'block':'none';
-  });
-}
-
-function actualizarGruposChk() {
-  const c = document.getElementById('gruposChk');
-  c.innerHTML = DB.grupos.map(g =>
-    `<div class="chk-item" onclick="toggleChk(this,'r')">
-      <input type="checkbox" id="eg_${g.id}" value="${g.id}">
-      <label for="eg_${g.id}">${g.emoji} ${esc(g.nombre)}</label>
-    </div>`
-  ).join('');
-}
-
-function toggleChk(el, tipo) {
+function toggleCheck(el, tipo) {
   const cb = el.querySelector('input[type=checkbox]');
   cb.checked = !cb.checked;
-  el.classList.remove('sel-r','sel-a');
-  if(cb.checked) el.classList.add(tipo==='r'?'sel-r':'sel-a');
+  el.classList.remove('sel','sel-ro','sel-am');
+  if (cb.checked) el.classList.add(tipo==='ro'?'sel-ro':tipo==='am'?'sel-am':'sel');
 }
 
-function guardarProd() {
-  const nombre = document.getElementById('epNombre').value.trim().toUpperCase();
-  if(!nombre){toast('❌ El nombre es obligatorio');return;}
-  const grupos = [...document.querySelectorAll('#gruposChk input:checked')].map(c=>c.value);
-  const p = {
-    id: document.getElementById('epId').value || uid(),
-    nombre,
-    descripcion: document.getElementById('epDesc').value.trim(),
-    grupos,
-    embarazo: document.getElementById('ep_emb').checked,
-    lactancia: document.getElementById('ep_lac').checked,
-    ninos: document.getElementById('ep_nin').checked,
-    epilepsia: document.getElementById('ep_epi').checked,
-    notas: document.getElementById('epNotas').value.trim()
+async function guardarProducto() {
+  const nombre = document.getElementById('edNombre').value.trim().toUpperCase();
+  if (!nombre) { mostrarToast('❌ El nombre es obligatorio'); return; }
+  const ci = [], pr = [];
+  document.querySelectorAll('#checkRiesgos input[type=checkbox]:checked').forEach(cb => ci.push(cb.value));
+  document.querySelectorAll('#checkPrecauciones input[type=checkbox]:checked').forEach(cb => pr.push(cb.value));
+  const prod = {
+    id: document.getElementById('editandoId').value || generarId(),
+    nombre, categoria: document.getElementById('edCategoria').value.trim(),
+    ingredientes: document.getElementById('edIngredientes').value.trim(),
+    medsContra: document.getElementById('edMedsContra').value.trim(),
+    contraindicaciones: ci, precauciones: pr,
+    notas: document.getElementById('edNotas').value.trim()
   };
-  const eid = document.getElementById('epId').value;
-  if(eid){const i=DB.productos.findIndex(x=>x.id===eid);if(i>=0)DB.productos[i]=p;}
-  else DB.productos.push(p);
-  saveProds(); actualizarStats(); renderListaProd(); cancelProd();
-  toast(`✅ Producto ${eid?'actualizado':'añadido'}`);
+  const eid = document.getElementById('editandoId').value;
+  if (eid) { const idx = state.productos.findIndex(p => p.id === eid); if (idx >= 0) state.productos[idx] = prod; }
+  else { state.productos.push(prod); }
+  guardarDatos(); actualizarListaEditor(); actualizarEstadisticas(); cancelarEdicion();
+  if (window._fbSync) await window._fbSync.subir();
+  else mostrarToast(`✅ Producto ${eid?'actualizado':'añadido'} correctamente`);
 }
 
-function editarProd(id) {
-  const p = DB.productos.find(x=>x.id===id); if(!p) return;
-  document.getElementById('epId').value=p.id;
-  document.getElementById('epNombre').value=p.nombre;
-  document.getElementById('epDesc').value=p.descripcion||'';
-  document.getElementById('epNotas').value=p.notas||'';
-  document.getElementById('ep_emb').checked=!!p.embarazo;
-  document.getElementById('ep_lac').checked=!!p.lactancia;
-  document.getElementById('ep_nin').checked=!!p.ninos;
-  document.getElementById('ep_epi').checked=!!p.epilepsia;
-  ['ep_emb','ep_lac','ep_nin','ep_epi'].forEach(id=>{
-    const el=document.getElementById(id);
-    el.closest('.chk-item').classList.toggle('sel-r',el.checked);
+function editarProducto(id) {
+  const p = state.productos.find(x => x.id === id); if (!p) return;
+  document.getElementById('editandoId').value = p.id;
+  document.getElementById('edNombre').value = p.nombre;
+  document.getElementById('edCategoria').value = p.categoria||'';
+  document.getElementById('edIngredientes').value = p.ingredientes||'';
+  document.getElementById('edMedsContra').value = p.medsContra||'';
+  document.getElementById('edNotas').value = p.notas||'';
+  document.querySelectorAll('#checkRiesgos .chk-item, #checkPrecauciones .chk-item').forEach(el => {
+    el.classList.remove('sel','sel-ro','sel-am'); el.querySelector('input').checked = false;
   });
-  // Grupos
-  document.querySelectorAll('#gruposChk input').forEach(cb=>{
-    cb.checked=(p.grupos||[]).includes(cb.value);
-    cb.closest('.chk-item').classList.toggle('sel-r',cb.checked);
-  });
-  document.getElementById('formProdT').textContent='✏️ Editando: '+p.nombre;
-  document.getElementById('btnCancelProd').style.display='block';
-  document.getElementById('formProd').scrollIntoView({behavior:'smooth'});
+  (p.contraindicaciones||[]).forEach(v => { const cb = document.querySelector(`#checkRiesgos input[value="${v}"]`); if (cb) { cb.checked = true; cb.closest('.chk-item').classList.add('sel-ro'); } });
+  (p.precauciones||[]).forEach(v => { const cb = document.querySelector(`#checkPrecauciones input[value="${v}"]`); if (cb) { cb.checked = true; cb.closest('.chk-item').classList.add('sel-am'); } });
+  document.getElementById('tituloForm').textContent = '✏️ Editando: ' + p.nombre;
+  document.getElementById('btnCancelarEd').style.display = 'block';
+  document.getElementById('formularioEditor').scrollIntoView({behavior:'smooth'});
 }
 
-function borrarProd(id) {
-  const p=DB.productos.find(x=>x.id===id); if(!p) return;
-  if(confirm(`¿Eliminar "${p.nombre}"?`)){
-    DB.productos=DB.productos.filter(x=>x.id!==id);
-    saveProds(); actualizarStats(); renderListaProd();
-    toast('🗑️ Eliminado');
+async function borrarProducto(id) {
+  const p = state.productos.find(x => x.id === id); if (!p) return;
+  if (confirm(`⚠️ ¿Eliminar "${p.nombre}"?\n\nEsta acción no se puede deshacer.`)) {
+    state.productos = state.productos.filter(x => x.id !== id);
+    guardarDatos(); actualizarListaEditor(); actualizarEstadisticas();
+    if (window._fbSync) await window._fbSync.subir();
+    else mostrarToast('🗑️ Producto eliminado');
   }
 }
 
-function cancelProd() {
-  document.getElementById('epId').value='';
-  document.getElementById('epNombre').value='';
-  document.getElementById('epDesc').value='';
-  document.getElementById('epNotas').value='';
-  ['ep_emb','ep_lac','ep_nin','ep_epi'].forEach(id=>{
-    document.getElementById(id).checked=false;
-    document.getElementById(id).closest('.chk-item').classList.remove('sel-r','sel-a');
-  });
-  document.querySelectorAll('#gruposChk input').forEach(cb=>{
-    cb.checked=false; cb.closest('.chk-item').classList.remove('sel-r','sel-a');
-  });
-  document.getElementById('formProdT').textContent='➕ Nuevo producto';
-  document.getElementById('btnCancelProd').style.display='none';
+function cancelarEdicion() {
+  document.getElementById('editandoId').value = '';
+  ['edNombre','edCategoria','edIngredientes','edMedsContra','edNotas'].forEach(id => document.getElementById(id).value = '');
+  document.querySelectorAll('#checkRiesgos .chk-item, #checkPrecauciones .chk-item').forEach(el => { el.classList.remove('sel','sel-ro','sel-am'); el.querySelector('input').checked = false; });
+  document.getElementById('tituloForm').textContent = '➕ Añadir nuevo producto';
+  document.getElementById('btnCancelarEd').style.display = 'none';
 }
 
-function renderListaProd() {
-  document.getElementById('totalProd').textContent=DB.productos.length;
-  const c=document.getElementById('listaProd');
-  if(!DB.productos.length){c.innerHTML=renderEmpty('📭','Sin productos','Añade productos usando el formulario');return;}
-  const sorted=[...DB.productos].sort((a,b)=>a.nombre.localeCompare(b.nombre));
-  c.innerHTML=sorted.map(p=>{
-    const s=semaforo(p);
-    const e=s==='rojo'?'🔴':s==='amarillo'?'🟡':'🟢';
-    return `<div class="prod-row">
-      <div class="prod-sem">${e}</div>
-      <div style="flex:1;min-width:0;">
-        <div style="font-size:13px;font-weight:700;color:var(--ns);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(p.nombre)}</div>
-        <div style="font-size:10px;color:var(--gt);">${(p.grupos||[]).map(gid=>{const g=DB.grupos.find(x=>x.id===gid);return g?g.emoji+' '+g.nombre:gid;}).join(', ')||'Sin grupos'}</div>
-      </div>
-      <div class="prod-acts">
-        <button class="bico bico-e" onclick="editarProd('${p.id}')">✏️</button>
-        <button class="bico bico-d" onclick="borrarProd('${p.id}')">🗑️</button>
-      </div>
-    </div>`;
+function actualizarListaEditor() {
+  document.getElementById('totalProds').textContent = state.productos.length;
+  const c = document.getElementById('itemsEditor');
+  if (!state.productos.length) { c.innerHTML = `<div class="st-vacio" style="padding:32px 16px;"><div class="st-vacio-icon">📭</div><div class="st-vacio-titulo">Sin productos</div><div class="st-vacio-txt">Añade tu primer producto usando el formulario</div></div>`; return; }
+  const sorted = [...state.productos].sort((a,b) => a.nombre.localeCompare(b.nombre));
+  c.innerHTML = sorted.map(p => {
+    const n = nivelSem(p); const e = n==='rojo'?'🔴':n==='amarillo'?'🟡':'🟢';
+    return `<div class="prod-item"><div class="prod-sem">${e}</div><div style="flex:1;min-width:0;"><div class="prod-nombre">${esc(p.nombre)}</div><div class="prod-cat">${esc(p.categoria||'Sin categoría')}</div></div><div class="prod-acts"><button class="btn-ico btn-editar" onclick="editarProducto('${p.id}')" title="Editar">✏️</button><button class="btn-ico btn-borrar" onclick="borrarProducto('${p.id}')" title="Borrar">🗑️</button></div></div>`;
   }).join('');
 }
 
-// ═══════════════════════════════════════════════════
-// EDITOR — MEDICAMENTOS
-// ═══════════════════════════════════════════════════
-function actualizarSelectGrupo() {
-  const sel=document.getElementById('emGrupo');
-  sel.innerHTML=DB.grupos.map(g=>`<option value="${g.id}">${g.emoji} ${g.nombre}</option>`).join('');
+function prepCompartir(p) {
+  try {
+    const prod = typeof p === 'string' ? JSON.parse(p) : p;
+    const niv = nivelSem(prod);
+    const semTxt = niv==='rojo'?'🔴 CONTRAINDICADO':niv==='amarillo'?'🟡 PRECAUCIÓN':'🟢 SEGURO';
+    const ci = (prod.contraindicaciones||[]).map(c => RINFO[c]?`${RINFO[c].emoji} ${RINFO[c].label}`:c);
+    const pr = (prod.precauciones||[]).map(c => RINFO[c]?`${RINFO[c].emoji} ${RINFO[c].label}`:c);
+    let txt = `🌿 *INFORME DE SEGURIDAD — NUTERGIA*\n━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    txt += `📦 *Producto:* ${prod.nombre}\n📂 *Categoría:* ${prod.categoria||'—'}\n🚦 *Semáforo:* ${semTxt}\n`;
+    if (prod.ingredientes) txt += `🧪 *Ingredientes:* ${prod.ingredientes}\n`;
+    if (ci.length) txt += `\n🔴 *Contraindicaciones:*\n${ci.map(x=>'  • '+x).join('\n')}\n`;
+    if (pr.length) txt += `\n🟡 *Precauciones:*\n${pr.map(x=>'  • '+x).join('\n')}\n`;
+    if (prod.medsContra) txt += `\n💊 *Medicamentos contraindicados:*\n${prod.medsContra}\n`;
+    if (prod.notas) txt += `\n📌 *Observaciones:* ${prod.notas}\n`;
+    txt += `━━━━━━━━━━━━━━━━━━━━━━━━━\n⚠️ _Respuesta generada por IA para soporte informativo profesional. No sustituye el criterio clínico._`;
+    document.getElementById('textoCompartir').value = txt;
+    document.getElementById('modalCompartir').classList.add('visible');
+  } catch(e) { mostrarToast('❌ Error al preparar el mensaje'); }
 }
 
-function guardarMed() {
-  const nombre=document.getElementById('emNombre').value.trim();
-  const grupoId=document.getElementById('emGrupo').value;
-  if(!nombre){toast('❌ El nombre es obligatorio');return;}
-  if(!grupoId){toast('❌ Selecciona un grupo');return;}
-  const m={id:document.getElementById('emId').value||uid(),nombre,grupoId};
-  const eid=document.getElementById('emId').value;
-  if(eid){const i=DB.medicamentos.findIndex(x=>x.id===eid);if(i>=0)DB.medicamentos[i]=m;}
-  else DB.medicamentos.push(m);
-  saveMeds(); renderListaMed(); cancelMed();
-  toast(`✅ Medicamento ${eid?'actualizado':'añadido'}`);
+function compartirWA() {
+  const txt = document.getElementById('textoCompartir').value;
+  window.open('https://wa.me/?text=' + encodeURIComponent(txt), '_blank');
+  cerrarModal('modalCompartir');
 }
 
-function editarMed(id) {
-  const m=DB.medicamentos.find(x=>x.id===id); if(!m) return;
-  document.getElementById('emId').value=m.id;
-  document.getElementById('emNombre').value=m.nombre;
-  document.getElementById('emGrupo').value=m.grupoId;
-  document.getElementById('formMedT').textContent='✏️ Editando: '+m.nombre;
-  document.getElementById('btnCancelMed').style.display='block';
-  document.getElementById('formMedT').scrollIntoView({behavior:'smooth'});
+async function copiarTexto() {
+  const txt = document.getElementById('textoCompartir').value;
+  try { await navigator.clipboard.writeText(txt); mostrarToast('✅ Texto copiado al portapapeles'); }
+  catch(e) { const ta = document.getElementById('textoCompartir'); ta.select(); document.execCommand('copy'); mostrarToast('✅ Texto copiado'); }
 }
 
-function borrarMed(id) {
-  const m=DB.medicamentos.find(x=>x.id===id); if(!m) return;
-  if(confirm(`¿Eliminar "${m.nombre}"?`)){
-    DB.medicamentos=DB.medicamentos.filter(x=>x.id!==id);
-    saveMeds(); renderListaMed();
-    toast('🗑️ Eliminado');
-  }
+function abrirBackup() { document.getElementById('modalBackup').classList.add('visible'); }
+
+function exportarDatos() {
+  const backup = { version: APP_VERSION, fecha: new Date().toISOString(), app: 'NutergiaSeg', productos: state.productos };
+  const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `nutergia_backup_${new Date().toLocaleDateString('es-ES').replace(/\//g,'-')}.json`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+  mostrarToast('✅ Copia de seguridad exportada'); cerrarModal('modalBackup');
 }
 
-function cancelMed() {
-  document.getElementById('emId').value='';
-  document.getElementById('emNombre').value='';
-  document.getElementById('formMedT').textContent='➕ Nuevo medicamento';
-  document.getElementById('btnCancelMed').style.display='none';
+function importarDatos(evt) {
+  const file = evt.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = async e => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!data.productos || !Array.isArray(data.productos)) { mostrarToast('❌ Archivo no válido'); return; }
+      if (confirm(`Se importarán ${data.productos.length} productos.\n\n⚠️ Esto reemplazará TODOS los datos actuales.\n\n¿Continuar?`)) {
+        state.productos = data.productos; guardarDatos(); actualizarListaEditor(); actualizarEstadisticas();
+        if (window._fbSync) await window._fbSync.subir();
+        else mostrarToast(`✅ Importados ${data.productos.length} productos`);
+        cerrarModal('modalBackup');
+      }
+    } catch(e) { mostrarToast('❌ Error al leer el archivo. ¿Es un JSON válido?'); }
+    evt.target.value = '';
+  };
+  reader.readAsText(file);
 }
 
-function renderListaMed() {
-  document.getElementById('totalMed').textContent=DB.medicamentos.length;
-  const c=document.getElementById('listaMed');
-  if(!DB.medicamentos.length){c.innerHTML=renderEmpty('💊','Sin medicamentos','');return;}
-  const sorted=[...DB.medicamentos].sort((a,b)=>a.nombre.localeCompare(b.nombre));
-  c.innerHTML=sorted.map(m=>{
-    const g=DB.grupos.find(x=>x.id===m.grupoId);
-    return `<div class="prod-row">
-      <div style="font-size:20px;">${g?.emoji||'💊'}</div>
-      <div style="flex:1;min-width:0;">
-        <div style="font-size:13px;font-weight:700;color:var(--ns);">${esc(m.nombre)}</div>
-        <div style="font-size:10px;color:var(--gt);">${g?.nombre||'Sin grupo'}</div>
-      </div>
-      <div class="prod-acts">
-        <button class="bico bico-e" onclick="editarMed('${m.id}')">✏️</button>
-        <button class="bico bico-d" onclick="borrarMed('${m.id}')">🗑️</button>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-// ═══════════════════════════════════════════════════
-// EDITOR — GRUPOS
-// ═══════════════════════════════════════════════════
-function guardarGrupo() {
-  const nombre=document.getElementById('egNombre').value.trim();
-  const emoji=document.getElementById('egEmoji').value.trim()||'📂';
-  if(!nombre){toast('❌ El nombre es obligatorio');return;}
-  const g={id:document.getElementById('egId').value||'G'+Date.now(),nombre,emoji};
-  const eid=document.getElementById('egId').value;
-  if(eid){const i=DB.grupos.findIndex(x=>x.id===eid);if(i>=0)DB.grupos[i]=g;}
-  else DB.grupos.push(g);
-  saveGrupos(); renderListaGrupo(); renderChipsGrupos(); cancelGrupo();
-  toast(`✅ Grupo ${eid?'actualizado':'añadido'}`);
-}
-
-function editarGrupo(id) {
-  const g=DB.grupos.find(x=>x.id===id); if(!g) return;
-  document.getElementById('egId').value=g.id;
-  document.getElementById('egNombre').value=g.nombre;
-  document.getElementById('egEmoji').value=g.emoji||'';
-  document.getElementById('formGrupoT').textContent='✏️ Editando: '+g.nombre;
-  document.getElementById('btnCancelGrupo').style.display='block';
-}
-
-function borrarGrupo(id) {
-  const g=DB.grupos.find(x=>x.id===id); if(!g) return;
-  const enUso=DB.productos.some(p=>(p.grupos||[]).includes(id))||DB.medicamentos.some(m=>m.grupoId===id);
-  if(enUso){toast('⚠️ Grupo en uso, no se puede eliminar');return;}
-  if(confirm(`¿Eliminar grupo "${g.nombre}"?`)){
-    DB.grupos=DB.grupos.filter(x=>x.id!==id);
-    saveGrupos(); renderListaGrupo(); renderChipsGrupos();
-    toast('🗑️ Eliminado');
-  }
-}
-
-function cancelGrupo() {
-  document.getElementById('egId').value='';
-  document.getElementById('egNombre').value='';
-  document.getElementById('egEmoji').value='';
-  document.getElementById('formGrupoT').textContent='➕ Nuevo grupo';
-  document.getElementById('btnCancelGrupo').style.display='none';
-}
-
-function renderListaGrupo() {
-  document.getElementById('totalGrupo').textContent=DB.grupos.length;
-  const c=document.getElementById('listaGrupo');
-  c.innerHTML=DB.grupos.map(g=>{
-    const nMeds=DB.medicamentos.filter(m=>m.grupoId===g.id).length;
-    const nProds=DB.productos.filter(p=>(p.grupos||[]).includes(g.id)).length;
-    return `<div class="prod-row">
-      <div style="font-size:22px;">${g.emoji}</div>
-      <div style="flex:1;">
-        <div style="font-size:13px;font-weight:700;color:var(--ns);">${esc(g.nombre)}</div>
-        <div style="font-size:10px;color:var(--gt);">${nMeds} medicamentos · ${nProds} productos</div>
-      </div>
-      <div class="prod-acts">
-        <button class="bico bico-e" onclick="editarGrupo('${g.id}')">✏️</button>
-        <button class="bico bico-d" onclick="borrarGrupo('${g.id}')">🗑️</button>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-// ═══════════════════════════════════════════════════
-// AJUSTES — PIN
-// ═══════════════════════════════════════════════════
-function togglePinSetting(activo) {
-  ST.sinPin = !activo;
-  localStorage.setItem(SK.sinPin, ST.sinPin?'1':'0');
-  document.getElementById('cambiarPinSection').style.display = activo?'block':'none';
-  document.getElementById('btnCerrar').style.display = ST.sinPin?'none':'flex';
-  toast(activo?'🔐 Contraseña activada':'🔓 Contraseña desactivada');
-}
-
-function abrirCambiarPin() {
-  ['pinAct','pinNue','pinConf'].forEach(id=>document.getElementById(id).value='');
-  document.getElementById('pinErr').textContent='';
-  document.getElementById('modalPin').classList.add('vis');
+function mostrarCambiarPin() {
+  ['pinActual','pinNuevo','pinConfirmar'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('errorPin').textContent = '';
+  document.getElementById('modalPin').classList.add('visible');
 }
 
 function cambiarPin() {
-  const act=document.getElementById('pinAct').value.trim();
-  const nue=document.getElementById('pinNue').value.trim();
-  const conf=document.getElementById('pinConf').value.trim();
-  const err=document.getElementById('pinErr');
-  if(act!==ST.pin){err.textContent='❌ Contraseña actual incorrecta';return;}
-  if(nue.length<4){err.textContent='❌ Mínimo 4 caracteres';return;}
-  if(nue!==conf){err.textContent='❌ No coinciden';return;}
-  ST.pin=nue; localStorage.setItem(SK.pin,nue);
-  cerrarModal('modalPin'); toast('✅ Contraseña actualizada');
+  const actual = document.getElementById('pinActual').value.trim();
+  const nuevo = document.getElementById('pinNuevo').value.trim();
+  const conf = document.getElementById('pinConfirmar').value.trim();
+  const err = document.getElementById('errorPin');
+  if (actual !== state.pin) { err.textContent = '❌ La contraseña actual no es correcta'; return; }
+  if (nuevo.length < 4) { err.textContent = '❌ La nueva contraseña debe tener mínimo 4 caracteres'; return; }
+  if (nuevo !== conf) { err.textContent = '❌ Las contraseñas no coinciden'; return; }
+  state.pin = nuevo; localStorage.setItem(SK.pin, nuevo);
+  cerrarModal('modalPin'); mostrarToast('✅ Contraseña actualizada correctamente');
 }
 
-// ═══════════════════════════════════════════════════
-// COMPARTIR
-// ═══════════════════════════════════════════════════
-function prepComp(key) {
-  const p = _cache.get(key); if(!p){toast('❌ Error al compartir');return;}
-  const s=semaforo(p);
-  const semTxt=s==='rojo'?'🔴 CONTRAINDICADO':s==='amarillo'?'🟡 PRECAUCIÓN':'🟢 SEGURO';
-  let txt=`🌿 *INFORME NUTERGIA SEGURO*\n━━━━━━━━━━━━━━━━━━━━━\n`;
-  txt+=`📦 *Producto:* ${p.nombre}\n`;
-  txt+=`🚦 *Semáforo:* ${semTxt}\n`;
-  if((p.grupos||[]).length){
-    txt+=`\n🔴 *Grupos contraindicados:*\n`;
-    p.grupos.forEach(gid=>{
-      const g=DB.grupos.find(x=>x.id===gid);
-      const meds=DB.medicamentos.filter(m=>m.grupoId===gid);
-      txt+=`  ${g?.emoji||''} ${g?.nombre||gid}\n`;
-      if(meds.length) txt+=`  Medicamentos: ${meds.map(m=>m.nombre).join(', ')}\n`;
-    });
-  }
-  const perf=[];
-  if(p.embarazo)perf.push('🤰 Embarazo');
-  if(p.lactancia)perf.push('🤱 Lactancia');
-  if(p.ninos)perf.push('👶 Niños');
-  if(p.epilepsia)perf.push('⚡ Epilepsia');
-  if(perf.length) txt+=`\n⚠️ *Perfiles especiales:* ${perf.join(', ')}\n`;
-  if(p.notas) txt+=`\n📌 *Notas:* ${p.notas}\n`;
-  txt+=`━━━━━━━━━━━━━━━━━━━━━\n⚠️ _Uso informativo profesional. No sustituye criterio clínico._`;
-  document.getElementById('txtComp').value=txt;
-  document.getElementById('modalComp').classList.add('vis');
-}
-
-function enviarWA(){window.open('https://wa.me/?text='+encodeURIComponent(document.getElementById('txtComp').value),'_blank');cerrarModal('modalComp');}
-async function copiar(){try{await navigator.clipboard.writeText(document.getElementById('txtComp').value);}catch(e){document.getElementById('txtComp').select();document.execCommand('copy');}toast('✅ Copiado');}
-
-// ═══════════════════════════════════════════════════
-// BACKUP
-// ═══════════════════════════════════════════════════
-function abrirBackup(){document.getElementById('modalBackup').classList.add('vis');}
-
-function exportar() {
-  const data={ver:VER,fecha:new Date().toISOString(),productos:DB.productos,medicamentos:DB.medicamentos,grupos:DB.grupos};
-  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');
-  a.href=url;a.download=`nutergia_backup_${new Date().toLocaleDateString('es-ES').replace(/\//g,'-')}.json`;
-  document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
-  toast('✅ Backup exportado');cerrarModal('modalBackup');
-}
-
-function importar(evt) {
-  const f=evt.target.files[0]; if(!f) return;
-  const r=new FileReader();
-  r.onload=e=>{
-    try{
-      const d=JSON.parse(e.target.result);
-      if(!d.productos){toast('❌ Archivo no válido');return;}
-      if(confirm(`Importar ${d.productos.length} productos, ${(d.medicamentos||[]).length} medicamentos, ${(d.grupos||[]).length} grupos?\n\nSe reemplazarán los datos actuales.`)){
-        if(d.productos) {DB.productos=d.productos;saveProds();}
-        if(d.medicamentos) {DB.medicamentos=d.medicamentos;saveMeds();}
-        if(d.grupos) {DB.grupos=d.grupos;saveGrupos();}
-        actualizarStats();renderListaProd();renderListaMed();renderListaGrupo();renderChipsGrupos();
-        toast(`✅ Importado`);cerrarModal('modalBackup');
-      }
-    }catch(e){toast('❌ Error al leer archivo');}
-    evt.target.value='';
-  };
-  r.readAsText(f);
-}
-
-// ═══════════════════════════════════════════════════
-// RESET
-// ═══════════════════════════════════════════════════
 function confirmarReset() {
-  if(confirm('⚠️ Esto eliminará todos los datos y restaurará los valores de fábrica.\n\n¿Continuar?')){
-    if(confirm('🚨 Última confirmación. ¿Seguro?')){
-      Object.values(SK).forEach(k=>localStorage.removeItem(k));
-      sessionStorage.clear();
-      toast('♻️ Restableciendo...');
-      setTimeout(()=>location.reload(),1200);
+  if (confirm('⚠️ ATENCIÓN\n\nEsto eliminará TODOS los productos y la configuración personalizada.\n\nLos datos precargados de Nutergia se restaurarán.\n\n¿Estás seguro?')) {
+    if (confirm('🚨 Última confirmación\n\n¿Realmente deseas restablecer todo?')) {
+      [SK.productos, SK.pin, SK.ultimaAct, SK.ultimaSync].forEach(k => localStorage.removeItem(k));
+      sessionStorage.clear(); mostrarToast('♻️ Aplicación restablecida');
+      setTimeout(() => location.reload(), 1500);
     }
   }
 }
 
-// ═══════════════════════════════════════════════════
-// MODALES
-// ═══════════════════════════════════════════════════
-function cerrarModal(id,evt){
-  if(!evt||evt.target===document.getElementById(id)) document.getElementById(id).classList.remove('vis');
+function cerrarModal(id, evt) {
+  if (!evt || evt.target === document.getElementById(id)) document.getElementById(id).classList.remove('visible');
 }
 
-// ═══════════════════════════════════════════════════
-// TOAST
-// ═══════════════════════════════════════════════════
-let _tt=null;
-function toast(msg,dur=2600){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.classList.add('vis');
-  if(_tt)clearTimeout(_tt);
-  _tt=setTimeout(()=>t.classList.remove('vis'),dur);
+let toastTimer = null;
+function mostrarToast(msg, dur=2500) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('visible');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('visible'), dur);
 }
 
-// ═══════════════════════════════════════════════════
-// UTILS
-// ═══════════════════════════════════════════════════
-function uid(){return 'x'+Date.now().toString(36)+Math.random().toString(36).substr(2,5);}
-function norm(s){return(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
-function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-
-// ═══════════════════════════════════════════════════
-// OFFLINE + PWA
-// ═══════════════════════════════════════════════════
-function detectarOffline(){
-  const b=document.getElementById('offlineBadge');
-  window.addEventListener('offline',()=>{if(b)b.style.display='block';});
-  window.addEventListener('online',()=>{if(b)b.style.display='none';});
-  if(!navigator.onLine&&b)b.style.display='block';
+function generarId() { return 'p_' + Date.now() + '_' + Math.random().toString(36).substr(2,6); }
+function normalizar(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+function esc(s) {
+  if (!s) return ''; if (typeof s !== 'string') return String(s);
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
 }
 
-function registrarSW(){
-  // Service Worker desactivado - usando Firebase
+function registrarSW() {
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});
+}
+
+function detectarOffline() {
+  const badge = document.getElementById('offlineBadge');
+  const update = () => { if (badge) badge.style.display = navigator.onLine ? 'none' : 'block'; };
+  window.addEventListener('online', update); window.addEventListener('offline', update); update();
 }
 </script>
 </body>
