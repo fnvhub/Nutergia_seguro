@@ -1,32 +1,31 @@
-// ██ FIREBASE INIT ██
-// Inicializa Firebase y autentica de forma anónima
+// ============================================================
+// FIREBASE INITIALIZATION
+// ============================================================
 
+// Importar Firebase SDK
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js';
+import { getFirestore, collection, doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js';
+
+// Configuración Firebase — Nutergia Seguro
 const firebaseConfig = {
-  apiKey: "AIzaSyCu1MMXSzg1A0DSK30ABch0gkWKAHLS3U",
-  authDomain: "cmr-franez.firebaseapp.com",
-  projectId: "cmr-franez",
-  storageBucket: "cmr-franez.firebasestorage.app",
-  messagingSenderId: "1083773900994",
-  appId: "1:1083773900994:web:a51fbffc904da8d9a2435b"
+  apiKey: "AIzaSyCLmL_3hy-Vnveon4zLSXsMnVqSwxAxubw",
+  authDomain: "nutergiaseguro.firebaseapp.com",
+  projectId: "nutergiaseguro",
+  storageBucket: "nutergiaseguro.firebasestorage.app",
+  messagingSenderId: "67467161742",
+  appId: "1:67467161742:web:8925a95ddf578bacf619df"
 };
 
 // Inicializar Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore(app);
-const auth = firebase.auth(app);
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-// Login anónimo automático
-auth.signInAnonymously().catch(function(error) {
-  console.error("Error en login anónimo:", error);
-});
+// Exponer globalmente para que sync.js pueda acceder
+window.firebaseApp = app;
+window.firebaseDb = db;
+window.firebaseReady = true;
 
-// Esperar a que el usuario esté autenticado
-let fbUser = null;
-auth.onAuthStateChanged(function(user) {
-  fbUser = user;
-  if (user) {
-    console.log("✓ Autenticado en Firebase (anónimo)");
-    // Disparar evento para que sync.js sepa que puede empezar
-    window.dispatchEvent(new CustomEvent('firebaseReady'));
-  }
-});
+console.log('✓ Firebase inicializado correctamente');
+
+// Disparar evento para que sync.js sepa que Firebase está listo
+window.dispatchEvent(new CustomEvent('firebaseReady'));
